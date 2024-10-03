@@ -144,7 +144,7 @@ footer {
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     h1, h2 {
         font-size: 1.5em;
     }
@@ -155,11 +155,3 @@ footer {
         
     }
 
-header{
-        width: 100%;
-    }
-    
-     .container {
-       display: none;
-        }
-}
