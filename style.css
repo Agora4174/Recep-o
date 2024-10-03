@@ -28,7 +28,7 @@ width: 50px;
 }
 main {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
 }
 
 h1, h2 {
@@ -144,7 +144,7 @@ footer {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     h1, h2 {
         font-size: 1.5em;
     }
@@ -154,7 +154,7 @@ footer {
     }
 
      main {
-    width: 200px;
+    width: 500px;
     }
     
      .container {
