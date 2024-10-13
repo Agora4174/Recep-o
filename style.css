@@ -21,9 +21,9 @@ header {
 }
 
 header img{
-width: 30px;
-    border-radius: 20px;
-    height: 40px;
+width: 50px;
+    border-radius: 50px;
+    height: 50px;
     float: left;
 }
 main {
@@ -38,15 +38,17 @@ h1, h2 {
 
 ul {
     list-style-type: none;
-    padding: 0;
+ 
+    
 }
 
 ul li a{
   padding: 1px 10px 1px 1px;
     color:black;
      text-decoration: none;
-    width: 110px;
+    width: 1010px;
     border-radius: 20px;
+   align-content: center; 
 
    
 
@@ -64,6 +66,7 @@ color:black;
     border-radius: 10px;
      text-align: center;
     display:inline-block;
+   
 
     
  
@@ -98,9 +101,9 @@ footer {
 
 
  .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 700px;
+            margin: 100px auto;
+            padding: 200px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
