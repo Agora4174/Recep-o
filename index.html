@@ -1,133 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recepção A Gabriel</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Gestão Receoção</title>
+  <!-- Link para o Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>RECEPÇÃO<img src="receoo.jpg"></h1>
-    </header>
 
-    <main>
-        <section class="pdf-list">
-            <h2>Linha de Frente</h2>
+  <!-- Header -->
+  <header class="header">
+    <h1>Outubro Rosa - Sistema de Gestão Repção</h1>
+  </header>
+
+  <!-- Menu Lateral -->
+  <nav class="menu-lateral">
+    <ul>
+      <li><a href="#" onclick="mostrarPagina('sistemas')"><i class="fas fa-cogs"></i> Sistemas</a></li>
+      <li><a href="#" onclick="mostrarPagina('agenda')"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+      <li><a href="#" onclick="mostrarPagina('webmail')"><i class="fas fa-envelope"></i> Webmail</a></li>
+      <li><a href="#" onclick="mostrarPagina('fichas')"><i class="fas fa-file-alt"></i> Fichas</a></li>
+      <li><a href="#" onclick="mostrarPagina('cadernos')"><i class="fas fa-book"></i> Cadernos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="conteudo">
+    <div id="sistemas" class="pagina ativa">
+      <h2>Sistemas</h2>
+      <p>Bem-vindo ao sistema de gestão  Repção.</p>
+        
+         
+              <section class="pdf-list">
             
-            
-            
-            
-               
                           <ul>
                  <li><a href="http://www.cmdpro.com.br/mairipora/login">Cmd Pro<img src="cn.png"></a></li>
                 <li><a href="https://www.siresp.saude.sp.gov.br/">Cross<img src="sire.png"></a></li>
                 <li><a href="https://webhopediagnostica.ar.srv.br/arWebLaudo/login">Hope<img src="hope.png"></a></li>
-                
-           
                 <li><a href="https://cadastro.saude.gov.br/segcartao/?contextType=external&username=string&contextValue=%2Foam&password=sercure_string&challenge_url=https%3A%2F%2Fcadastro.saude.gov.br%2Fsegcartao&request_id=6256906401440934955&authn_try_count=0&locale=pt_BR&resource_url=http%253A%252F%252Fcadastro.saude.gov.br%252Fnovocartao%252Frestrito%252FusuarioConsulta.jsp" target="_blank">Cadsus<img src="cad.png"></a></li>
                 <li><a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Busca Cep<img src="cep.png"></a></li>
                 <li><a href="https://webmail.alphainstituto.com.br/" target="_blank">Webmail<img src="weeb.png"></a></li>
                 
                   </ul>   
+             </section> 
+        
+        
+    </div>
+
+    <div id="agenda" class="pagina">
+      <h2>Agenda</h2>
+      <p>Gerencie os horários de atendimento dos pacientes.</p>
+        
+        
+        <section class="pdf-list">
+            <ul>
+              
+             <li><a href="agenda.html">Agenda Tell<img src="tel.png"></a></li>
+             <li><a href="ramal.html">Ramais<img src="teer.jpg"></a></li>
+             <li><a href="ambu.html">Motoristas<img src="amb.png"></a></li>
+      
+            </ul>
+
+             </section>
+        
+        
+    </div>
+
+    <div id="webmail" class="pagina">
+      <h2>Webmail</h2>
+      <p>Acesse e gerencie seus e-mails diretamente do sistema.</p>
+        
+        
+         <ul>
+                <li><a href="web.html">Webmail<img src="em.png"></a></li>
+                <li><a href="https://webmail.alphainstituto.com.br/" target="_blank">Webmail<img src="weeb.png"></a></li>
+   
+        </ul>
+
+        
+        
+        
+    </div>
+
+    <div id="fichas" class="pagina">
+      <h2>Fichas</h2>
+      <p>Aqui você pode gerenciar as fichas dos pacientes.</p>
+        
+        
+        <section class="pdf-list">
+        
+         <ul>
+       
             
+          
+               <li><a href="deconteudo.pdf" target="_blank">Declaração<img src="ates.png"></a></li>
+               <li><a href="APAC.pdf">Laudo Ambu<img src="lau.png"></a></li>
+               <li><a href="AtestadoMedico.docx">ATESTADO 1<img src="AtestadoMedico.png"></a></li>
+               <li><a href="ANTIRABICO.pdf">ANT RABICO<img src="rabico.png"></a></li>
+               <li><a href="intoxicacao.pdf">EXÓGENA<img src="intoxicacao.png"></a></li>
+                      <li><a href="febream.pdf">FEBRE AMA<img src="febre.jpg"></a></li>
+                 <li><a href="sifilis_adquirida.pdf">SIFILIS<img src="sifilis.png"></a></li>
+        </ul>
+        <ul>
+           
+                 <li><a href="Ficha_Hepatites_Virais.pdf">HEPATITE<img src="hepatite.png"></a></li>
+                 <li><a href="Tuberculose_v5.pdf">TUBERCULOSE<img src="tuber.png"></a></li>
+                <li><a href="Acidente_rabalhoBiologico.pdf">ACIDENTE BIO<img src="acbio.png"></a></li> <li><a href="peconha.pdf">PEÇONHA<img src="peconha.jpg"></a></li>  
+    <li><a href="DENGUE.pdf">DENGUE<img src="dengue.png"></a></li>
+    <li><a href="Tetano_Acidental_v5.pdf">TETANO<img src="tetano.png"></a></li>
+    <li><a href="Aids_adulto_v5.pdf">AIDS ADULTO<img src="aids.png"></a></li>
+    <li><a href="Meningite_v5.pdf">MENINGITE<img src="meningite.jpg"></a></li>
+
+            </ul></section>
+
+    </div>
+
+    <div id="cadernos" class="pagina">
+      <h2>Cadernos</h2>
+      <p>Organize e visualize os cadernos de registros.</p>
+        
+          <main>
+        <section class="pdf-list">
             
-            
-            
-            
-            
-            
+           
             <ul>
                 <li><a href="acom.pdf" target="_blank">Acompanhante<img src="ACOMPANHANTE.png"></a></li>
                 <li><a href="amb.pdf" target="_blank">Ambulancia<img src="AMBU-1.png"></a></li>
                 <li><a href="cross.pdf" target="_blank">Cross<img src="CROSS.png"></a></li>
                  <li><a href="atm.pdf">Avaliação<img src="servatem.png"></a></li>
            
-                <li><a href="AtestadoMedico.docx">ATESTADO 1<img src="AtestadoMedico.png"></a></li>
+                
                 <li><a href="papeltimbrado1.docx">TIMBRADO<img src="timbrado.png"></a></li>
                 
-                 
-                 
-               
             </ul>
-            
-            
-           <ul>
-                <li><a href="web.html">Webmail<img src="em.png"></a></li>
-             <li><a href="agenda.html">Agenda Tell<img src="tel.png"></a></li>
-             <li><a href="ramal.html">Ramais<img src="teer.jpg"></a></li>
-            
-          
-                  <li><a href="ambu.html">Motoristas<img src="amb.png"></a></li>
-               <li><a href="deconteudo.pdf" target="_blank">Declaração<img src="ates.webp"></a></li>
-                   <li><a href="APAC.pdf">Laudo Ambu<img src="lau.png"></a></li>
-               
-            </ul>
-            
-            
-            
-            
-            
-            
-            <ul>
-                    
-                 <li><a href="ANTIRABICO.pdf">ANT RABICO<img src="rabico.png"></a></li>
-                   <li><a href="intoxicacao.pdf">EXÓGENA<img src="intoxicacao.png"></a></li>
-                 <li><a href="febream.pdf">FEBRE AMA<img src="febre.jpg"></a></li>
-                <li><a href="sifilis_adquirida.pdf">SIFILIS<img src="sifilis.png"></a></li>
-          
-                 <li><a href="Ficha_Hepatites_Virais.pdf">HEPATITE<img src="hepatite.png"></a></li>
-                 <li><a href="Tuberculose_v5.pdf">TUBERCULOSE<img src="tuber.png"></a></li>
-                
-                
-                
-                </ul>
-<ul>                
-             <li><a href="Acidente_rabalhoBiologico.pdf">ACIDENTE BIO<img src="acbio.png"></a></li>
-                <li><a href="peconha.pdf">PEÇONHA<img src="peconha.jpg"></a></li>
-     <li><a href="DENGUE.pdf">DENGUE<img src="dengue.png"></a></li>
-    <li><a href="Tetano_Acidental_v5.pdf">TETANO<img src="tetano.png"></a></li>
-    <li><a href="Aids_adulto_v5.pdf">AIDS ADULTO<img src="aids.png"></a></li>
-    <li><a href="Meningite_v5.pdf">MENINGITE<img src="meningite.jpg"></a></li>
-              
-               
-               
-            
-            
-            </ul>
-            
-           
-            
-             
-      
-
-                
-            
-         
-            
-            
-            
-            <ul>
-            
-             
-                 <li><a href="viodomestica.pdf">VIOLENCIA DM<img src="violencia.png"></a></li>
-                 <li><a href="viointer.pdf">VIOLENCIA IN<img src="violenciain.jpeg"></a></li>
-               
-                 
-                <li><a href="ACIDENTEDETRABALHO.pdf">ACIDENTE <img src="acidentetb.png"></a></li>
-                 
-            </ul>
-  
-
-            
-       
-           
         </section>
-    </main>
+        </main>
+        
+    </div>
+  </div>
 
     
-    <footer>
-        <p>&copy; 2024 Alexandre. Todos os direitos reservados.</p>
-    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 - Hospital Outubro Rosa | Todos os direitos reservados</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

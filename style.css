@@ -1,35 +1,116 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 90vh;
-    background-color:#EE82EE;
-
-
-
-    
+  font-family: Arial, sans-serif;
+  background-color: #fce4ec; /* Rosa claro de fundo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header {
-    background-color: #FF00FF;
-    color: white;
-    text-align: center;
-    left: auto;
+/* Header */
+.header {
+  background-color: #ad1457; /* Rosa forte */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
-header img{
-width: 50px;
-    border-radius: 50px;
-    height: 50px;
-    float: left;
+.header h1 {
+  font-size: 24px;
 }
+
+/* Menu Lateral */
+.menu-lateral {
+  width: 250px;
+  background-color: #ad1457;
+  height: calc(100vh - 80px); /* Ajusta a altura considerando o header */
+  position: fixed;
+  top: 65px; /* Espaço abaixo do header */
+  left: 0;
+  padding-top: 20px;
+  overflow-y: auto; /* Adiciona rolagem se necessário */
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral ul li {
+  margin-bottom: 20px;
+}
+
+.menu-lateral ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #d81b60;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.menu-lateral ul li a i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.menu-lateral ul li a:hover {
+  background-color: #ec407a;
+}
+
+/* Conteúdo Principal */
+.conteudo {
+  margin-left: 270px; /* Espaço para o menu lateral */
+  padding: 20px;
+  padding-top: 100px; /* Ajuste para compensar o header */
+  flex: 1;
+}
+
+.pagina {
+  display: none; /* Esconde as páginas */
+}
+
+.ativa {
+  display: block; /* Mostra apenas a página ativa */
+}
+
+h2 {
+  font-size: 28px;
+  color: #880e4f; /* Rosa escuro */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #5c6bc0; /* Cinza-azulado para contraste */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main {
     padding: 10px;
 }
@@ -90,75 +171,88 @@ color:black;
 }
 
 
-footer {
-    background-color:#FF00FF;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #880e4f;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-lateral {
+    width: 200px;
+    height: calc(100vh - 80px);
+  }
 
+  .conteudo {
+    margin-left: 220px;
+  }
+}
 
+@media (max-width: 576px) {
+  .menu-lateral {
+    width: 180px;
+    height: calc(100vh - 80px);
+  }
 
+  .conteudo {
+    margin-left: 190px;
+  }
 
+  .menu-lateral ul li a {
+    font-size: 16px; /* Fonte um pouco menor em dispositivos móveis */
+  }
 
+  .menu-lateral ul li a i {
+    font-size: 18px;
+  }
 
- .container {
-            max-width: 700px;
-            margin: 100px auto;
-            padding: 200px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+  .header h1 {
+    font-size: 20px; /* Ajuste do tamanho do texto no header em telas pequenas */
+  }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+  h2 {
+    font-size: 24px;
+  }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-
-
-
-
-
-@media (max-width: 600px) {
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    ul li a {
-        font-size: 1em;
-
-        
-    }
-
-
+  p {
+    font-size: 16px;
+  }
 }
