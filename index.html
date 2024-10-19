@@ -1,180 +1,270 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sistema de Gestão Receoção</title>
-  <!-- Link para o Font Awesome (ícones) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Navbar</title>
 </head>
+
 <body>
-
-  <!-- Header -->
-  <header class="header">
-    <h1>Outubro Rosa - Sistema de Gestão Repção</h1>
-  </header>
-
-  <!-- Menu Lateral -->
-  <nav class="menu-lateral">
-    <ul>
-      <li><a href="#" onclick="mostrarPagina('sistemas')"><i class="fas fa-cogs"></i> Sistemas</a></li>
-      <li><a href="#" onclick="mostrarPagina('agenda')"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
-      <li><a href="#" onclick="mostrarPagina('webmail')"><i class="fas fa-envelope"></i> Webmail</a></li>
-      <li><a href="#" onclick="mostrarPagina('fichas')"><i class="fas fa-file-alt"></i> Fichas</a></li>
-      <li><a href="#" onclick="mostrarPagina('cadernos')"><i class="fas fa-book"></i> Cadernos</a></li>
-    </ul>
-  </nav>
-
-  <!-- Conteúdo Principal -->
-  <div class="conteudo">
-    <div id="sistemas" class="pagina ativa">
-      <h2>Sistemas</h2>
-      <p>Bem-vindo ao sistema de gestão  Repção.</p>
-        
-         
-              <section class="pdf-list">
+    
+  
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
             
-                          <ul>
-                 <li><a href="http://www.cmdpro.com.br/mairipora/login">Cmd Pro<img src="cn.png"></a></li>
-                <li><a href="https://www.siresp.saude.sp.gov.br/">Cross<img src="sire.png"></a></li>
-                <li><a href="https://webhopediagnostica.ar.srv.br/arWebLaudo/login">Hope<img src="hope.png"></a></li>
-                <li><a href="https://cadastro.saude.gov.br/segcartao/?contextType=external&username=string&contextValue=%2Foam&password=sercure_string&challenge_url=https%3A%2F%2Fcadastro.saude.gov.br%2Fsegcartao&request_id=6256906401440934955&authn_try_count=0&locale=pt_BR&resource_url=http%253A%252F%252Fcadastro.saude.gov.br%252Fnovocartao%252Frestrito%252FusuarioConsulta.jsp" target="_blank">Cadsus<img src="cad.png"></a></li>
-                <li><a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Busca Cep<img src="cep.png"></a></li>
-                <li><a href="https://webmail.alphainstituto.com.br/" target="_blank">Webmail<img src="weeb.png"></a></li>
-                
-                  </ul>   
-             </section> 
-        
-        
-    </div>
+            <div class="logo-container">
+                <h3 class="logo">Sup.<span>Adm</span></h3>
+            </div>
 
-    <div id="agenda" class="pagina">
-      <h2>Agenda</h2>
-      <p>Gerencie os horários de atendimento dos pacientes.</p>
-        
-        
-        <section class="pdf-list">
-            <ul>
-              
-             <li><a href="agenda.html">Agenda Tell<img src="tel.png"></a></li>
-             <li><a href="ramal.html">Ramais<img src="teer.jpg"></a></li>
-             <li><a href="ambu.html">Motoristas<img src="amb.png"></a></li>
-      
-            </ul>
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Sistemas<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="http://www.cmdpro.com.br/mairipora/login">CMD PRO</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="https://www.siresp.saude.sp.gov.br/">CROSS</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="https://webhopediagnostica.ar.srv.br/arWebLaudo/login">HOPE</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="https://cadastro.saude.gov.br/segcartao/?contextType=external&username=string&contextValue=%2Foam&password=sercure_string&challenge_url=https%3A%2F%2Fcadastro.saude.gov.br%2Fsegcartao&request_id=6256906401440934955&authn_try_count=0&locale=pt_BR&resource_url=http%253A%252F%252Fcadastro.saude.gov.br%252Fnovocartao%252Frestrito%252FusuarioConsulta.jsp">CADSUS</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">BUSCA CEP</a>
+                                    </li>
+                                    
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="#">WEBMAIL<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="https://webmail.alphainstituto.com.br/">WEBMAIL</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="web.html">LISTA DE EMAIL</a>
+                                                </li>
+                                                
+                                               
+                                                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    
+                                   
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                         <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">Agendas</a>
+                                   <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="ambu.html">Motoristas</a>
+                                    </li>
+                                             <li class="dropdown-link">
+                                        <a href="agenda.html">Lista de Contatos</a>
+                                    </li>
+                                             <li class="dropdown-link">
+                                        <a href="ramal.html">Ramais</a>
+                                    </li>
+                                    
+                                       </ul>
+                        
+                        
+                        
+                             </div>
+                        
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Declarações<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="unimed.pdf">Unimed</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="deconteudo.pdf">Declarção Acm</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="APAC.pdf">Laudo Amb</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="AtestadoMedico.docx">Atestado</a>
+                                    </li>
+                                    
+                                  
+                                </ul>
+                            </div>
+                        </li>
+                          
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Sinan<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Violencia<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="viointer.pdf">Pessoal</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="viodomestica.pdf">Domestica</a>
+                                                </li>
+                                                
+                                               
+                                                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                     <li class="dropdown-link">
+                                        <a href="peconha.pdf">Peçonha</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="DENGUE.pdf">Dengue</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="Tetano_Acidental_v5.pdf">Tetano</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="Aids_adulto_v5.pdf">Aids</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="Meningite_v5.pdf">Miningite</a>
+                                    </li>
+                                    </ul>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">Sinan</a>
+                                   <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="ANTIRABICO.pdf">Ant-Rabico</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="intoxicacao.pdf"> Intoxicaça Exógena</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="febream.pdf">Febre Amarela</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="sifilis_adquirida.pdf">Sifils Adquirida</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="Ficha_Hepatites_Virais.pdf">Hepatites Virais</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="Tuberculose_v5.pdf">Tuberculose</a>
+                                    </li>
+                                    
+                                    <li class="dropdown-link">
+                                        <a href="Acidente_rabalhoBiologico.pdf">Biologico</a>
+                                    </li>
+                                    
+                                   
+                                    
+                              
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+                    
+                      
+                        
+                         <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">Cadernos</a>
+                        <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Acompanhante</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="#">Ambulancia</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="#">Caderno Cross</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="#">Avaliação</a>
+                                    </li>
+                                    
+                                     <li class="dropdown-link">
+                                        <a href="#">Papel timbrado</a>
+                                    </li>
+                                    
+                            </ul></div>
+                            
+                         
+                            </li>  </ul>
+                    </div>
 
-             </section>
         
-        
-    </div>
+            </div>
 
-    <div id="webmail" class="pagina">
-      <h2>Webmail</h2>
-      <p>Acesse e gerencie seus e-mails diretamente do sistema.</p>
-        
-        
-         <ul>
-                <li><a href="web.html">Webmail<img src="em.png"></a></li>
-                <li><a href="https://webmail.alphainstituto.com.br/" target="_blank">Webmail<img src="weeb.png"></a></li>
-   
-        </ul>
-
-        
-        
-        
-    </div>
-
-    <div id="fichas" class="pagina">
-      <h2>Fichas</h2>
-      <p>Aqui você pode gerenciar as fichas dos pacientes.</p>
-        
-        
-        <section class="pdf-list">
-        
-         <ul>
-       
-            
-          <li><a href="unic.pdf" target="_blank">Remoção<img src="uni.jpeg"></a></li>
-               <li><a href="deconteudo.pdf" target="_blank">Declaração<img src="ates.png"></a></li>
-               <li><a href="APAC.pdf">Laudo Ambu<img src="lau.png"></a></li>
-               <li><a href="AtestadoMedico.docx">ATESTADO 1<img src="AtestadoMedico.png"></a></li>
-               <li><a href="ANTIRABICO.pdf">ANT RABICO<img src="rabico.png"></a></li>
-               <li><a href="intoxicacao.pdf">EXÓGENA<img src="intoxicacao.png"></a></li>
-                      <li><a href="febream.pdf">FEBRE AMA<img src="febre.jpg"></a></li>
-                 <li><a href="sifilis_adquirida.pdf">SIFILIS<img src="sifilis.png"></a></li>
-        </ul>
-        <ul>
-           
-                 <li><a href="Ficha_Hepatites_Virais.pdf">HEPATITE<img src="hepatite.png"></a></li>
-                 <li><a href="Tuberculose_v5.pdf">TUBERCULOSE<img src="tuber.png"></a></li>
-                <li><a href="Acidente_rabalhoBiologico.pdf">ACIDENTE BIO<img src="acbio.png"></a></li> <li><a href="peconha.pdf">PEÇONHA<img src="peconha.jpg"></a></li>  
-    <li><a href="DENGUE.pdf">DENGUE<img src="dengue.png"></a></li>
-    <li><a href="Tetano_Acidental_v5.pdf">TETANO<img src="tetano.png"></a></li>
-    <li><a href="Aids_adulto_v5.pdf">AIDS ADULTO<img src="aids.png"></a></li>
-    <li><a href="Meningite_v5.pdf">MENINGITE<img src="meningite.jpg"></a></li>
-
-            </ul></section>
-
-    </div>
-
-    <div id="cadernos" class="pagina">
-      <h2>Cadernos</h2>
-      <p>Organize e visualize os cadernos de registros.</p>
-        
-          <main>
-        <section class="pdf-list">
-            
-           
-            <ul>
-                <li><a href="acom.pdf" target="_blank">Acompanhante<img src="ACOMPANHANTE.png"></a></li>
-                <li><a href="amb.pdf" target="_blank">Ambulancia<img src="AMBU-1.png"></a></li>
-                <li><a href="cross.pdf" target="_blank">Cross<img src="CROSS.png"></a></li>
-                 <li><a href="atm.pdf">Avaliação<img src="servatem.png"></a></li>
-           
-                
-                <li><a href="papeltimbrado1.docx">TIMBRADO<img src="timbrado.png"></a></li>
-                
-            </ul>
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="overlay"></div>
         </section>
-        </main>
-        
-    </div>
-  </div>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2024 - Hospital Outubro Rosa | Todos os direitos reservados</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    </main>
 </body>
+
 </html>
+
