@@ -26,7 +26,7 @@ a{
 header{
     position: sticky;
     
-    background-color:rgb(56, 15, 238, 0.5);
+    background-color:#166;
     width: 100%;
     z-index: 1000;
 }
@@ -35,7 +35,7 @@ section{
     position: relative;
     height: calc(100vh - 3rem);
     width: 100%;
-    background: url('outu.jpeg') no-repeat top center / cover;
+    background: url('') no-repeat top center / cover;
     overflow: hidden;
 }
 
@@ -52,18 +52,14 @@ section{
     height: 100%;
     top:0;
     left: 0;
-    background-color: rgb(56, 15, 238, 0.5);
+    
   
- 
-    
-    
 }
 
 
     
     
-    
-
+ 
 
 
 .container{
@@ -77,7 +73,7 @@ section{
 .logo-container{
     flex: 1;
     display: flex;
-    align-items: center;
+
 }
 
 .nav-btn{
@@ -87,22 +83,23 @@ section{
 
 .nav-links{
     flex: 2;
+    
+
 }
 
 
 
 .logo{
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    line-height: 3rem;
+    height: 40px;
+width: 80px;
+margin: 5px;
+ border-radius: 10px;
+    background-color: azure;
+    float: left;
+    margin-left: 1px;
 }
 
-.logo span{
-    font-weight: 300;
-}
+
 
 .btn{
     display: inline-block;
@@ -118,12 +115,12 @@ section{
 
 .btn.solid, .btn.transparent:hover{
     background-color: #fff;
-    color: #69bde7;
+    color: white;
 }
 
 .btn.transparent, .btn.solid:hover{
     background-color: transparent;
-    color: #fff;
+    color: black;
 }
 
 .nav-links > ul{
@@ -154,6 +151,9 @@ section{
 
 .nav-link:hover > a{
     transform: scale(1.1);
+    background-color: aliceblue;
+    color:#166;
+    
 }
 
 .dropdown{
@@ -165,6 +165,7 @@ section{
     opacity: 0;
     pointer-events: none;
     transition: .5s;
+    
 }
 
 .dropdown ul{
@@ -174,17 +175,19 @@ section{
 .dropdown-link > a{
     display: flex;
     background-color: #fff;
-    color: #3498db;
+    color: #166;
     padding: .5rem 1rem;
     font-size: .9rem;
     align-items: center;
     justify-content: space-between;
     transition: .3s;
+    
 }
 
 .dropdown-link:hover > a{
-    background-color: #3498db;
+    background-color: #166;
     color: #fff;
+    
 }
 
 .dropdown-link:not(:nth-last-child(2)){
@@ -353,10 +356,12 @@ section{
     .nav-links{
         flex: initial;
         width: 100%;
+    
     }
 
     .nav-links > ul{
         flex-direction: column;
+        background-color:cadetblue;
     }
 
     .nav-link{
@@ -372,7 +377,7 @@ section{
 
     .nav-link:hover > a{
         transform: scale(1);
-        background-color: rgb(56, 15, 238, 0.5);
+        background-color:#166;
     }
 
     .dropdown, .dropdown.second{
@@ -384,7 +389,7 @@ section{
         pointer-events: auto;
         width: 100%;
         padding: 0;
-        background-color:rgb(56, 15, 238, 0.5);
+        background-color:#166;
         display: none;
     }
     
