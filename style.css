@@ -35,7 +35,7 @@ section{
     position: relative;
     height: calc(100vh - 3rem);
     width: 100%;
-    background: url('') no-repeat top center / cover;
+    background: url('hosp1.jpg') no-repeat top center / cover;
     overflow: hidden;
 }
 
@@ -170,7 +170,11 @@ margin: 5px;
 
 .dropdown ul{
     position: relative;
+    
 }
+
+
+
 
 .dropdown-link > a{
     display: flex;
@@ -307,6 +311,8 @@ margin: 5px;
 #check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
     transform: translateY(0) rotate(45deg);
 }
+
+
 
 @keyframes animation{
     from{
