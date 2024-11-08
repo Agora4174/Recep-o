@@ -32,10 +32,10 @@ header{
 }
 
 section{
-    position: relative;
+    
     height: calc(100vh - 3rem);
     width: 100%;
-    background: url('hosp1.jpg') no-repeat top center / cover;
+    background: url('bg.jpg') no-repeat top center / cover;
     overflow: hidden;
 }
 
@@ -47,7 +47,7 @@ section{
 
 
 .overlay{
-    position: absolute;
+   
     width: 100%;
     height: 100%;
     top:0;
@@ -55,6 +55,48 @@ section{
     
   
 }
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #166; /* Cor de fundo */
+    color: #fff; /* Cor do texto */ /* Espaçamento interno */
+    font-family: Arial, sans-serif; /* Fonte */
+}
+
+.footer-container {
+    position:relative; /* Usando Flexbox para layout */
+    justify-content: space-between; /* Espaçamento entre seções */
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.footer-section {
+    flex: 1; /* Cada seção ocupa espaço igual */
+    margin: 0 20px; /* Espaçamento entre seções */
+}
+
+.footer-section h4 {
+    margin-bottom: 1px; /* Espaçamento abaixo do título */
+}
+
+.footer-section p {
+    margin: 10; /* Remove margens */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+
+
+
+
+
+
+
 
 
     
@@ -152,6 +194,7 @@ margin: 5px;
 .nav-link:hover > a{
     transform: scale(1.1);
     background-color: aliceblue;
+    border-radius: 4px;
     color:#166;
     
 }
@@ -216,7 +259,7 @@ margin: 5px;
 }
 
 .dropdown-link:first-child:hover ~ .arrow{
-    background-color: #3498db;
+    background-color: #166;
 }
 
 .dropdown-link{
@@ -340,7 +383,8 @@ margin: 5px;
         top: 3rem;
         left: 0;
         width: 100%;
-        background-color: #69bde7;
+        background-color: #166;
+        color: #fff;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -348,6 +392,7 @@ margin: 5px;
         overflow-y: auto;
         transform: translateX(100%);
         transition: .65s;
+        
     }
 
     #check:checked ~ .nav-btn{
@@ -383,7 +428,7 @@ margin: 5px;
 
     .nav-link:hover > a{
         transform: scale(1);
-        background-color:#166;
+        background-color:#fff;
     }
 
     .dropdown, .dropdown.second{
@@ -468,7 +513,6 @@ margin: 5px;
  
  
 
- 
 
    
  
