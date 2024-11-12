@@ -47,12 +47,43 @@
                                     <li class="dropdown-link">
                                         <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">BUSCA CEP</a>
                                     </li>
+                                      
 
                                 </ul>
                             </div>
-                        </li>
+                            
+                        <li class="nav-link" style="--i: 1.35s">
+                                        <a href="#">Pesquisa<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="https://drive.google.com/file/d/1CaxRYZsb2R50XL8XWpN9OLM2sp9MTTq1/view?usp=drive_link">Baixar Video Aula</a>
+                                                </li>
+                                           
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                            
+                            
+                             <li class="nav-link" style="--i: 1.35s">
+                                        <a href="#">Recepção<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="escalanov.jpeg">Escala novembro</a>
+                                                </li>
+                                            <li class="dropdown-link">
+                                                    <a href="contato.pdf">Cartao</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                            
+                        
                          <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Agendas</a>
+                            <a href="#">Agendas<i class="fas fa-caret-down"></i></a>
                                    <div class="dropdown">
                                 <ul>
                                     <li class="dropdown-link">
@@ -69,7 +100,7 @@
 
                              </div>
 <li class="nav-link" style="--i: 1.35s">
-                                        <a href="#">Webmail</a>
+                                        <a href="#">Webmail<i class="fas fa-caret-down"></i></a>
                                         <div class="dropdown">
                                             <ul>
                                                 <li class="dropdown-link">
@@ -142,14 +173,8 @@
                                      <li class="dropdown-link">
                                         <a href="Meningite_v5.pdf">Miningite</a>
                                     </li>
-                                    </ul>
-                            </div>
-                        </li>
                          
-                        <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Sinan</a>
-                                   <div class="dropdown">
-                                <ul>
+                     
                                     <li class="dropdown-link">
                                         <a href="ANTIRABICO.pdf">Ant-Rabico</a>
                                     </li>
@@ -184,7 +209,7 @@
                         </li>
                         
                          <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Cadernos</a>
+                            <a href="#">Cadernos<i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                                 <ul>
                                     <li class="dropdown-link">
@@ -251,11 +276,23 @@
         
     </header>
     <main>
+  
         <section>
-            <div class="overlay"></div>
+         
+            <div class="overlay">  
+
+    <input type="date" id="calendario">
+
+    <script>
+        // Obter a data atual
+        const hoje = new Date().toISOString().split('T')[0];
+        // Definir a data atual como valor do campo de entrada
+        document.getElementById('calendario').value = hoje;
+    </script>   
+            </div>
+          
         </section>
     </main>
-    
 
 
 

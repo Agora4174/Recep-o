@@ -7,7 +7,14 @@
 }
 
 
-
+ #calendario {
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+     border-radius: 15px
+        }
 
 
 body{
@@ -61,34 +68,6 @@ section{
 
 
 
-
-
-.footer {
-    background-color: #166; /* Cor de fundo */
-    color: #fff; /* Cor do texto */ /* Espaçamento interno */
-    font-family: Arial, sans-serif; /* Fonte */
-}
-
-.footer-container {
-    position:relative; /* Usando Flexbox para layout */
-    justify-content: space-between; /* Espaçamento entre seções */
-    max-width: 1200px; /* Limita a largura do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-}
-
-.footer-section {
-    flex: 1; /* Cada seção ocupa espaço igual */
-    margin: 0 20px; /* Espaçamento entre seções */
-}
-
-.footer-section h4 {
-    margin-bottom: 1px; /* Espaçamento abaixo do título */
-}
-
-.footer-section p {
-    margin: 10; /* Remove margens */
-    line-height: 1.6; /* Melhora a legibilidade */
-}
 
 
 
@@ -510,7 +489,14 @@ margin: 5px;
 
     
     
- 
+ section{
+    
+    height: calc(100vh - 0rem);
+    width: 100%;
+    background: url('gi2.gif') no-repeat top center / cover;
+    overflow: hidden;
+}
+
  
 
 
