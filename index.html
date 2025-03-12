@@ -3,140 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Imagens</title>
-    <meta name="description" content="Galeria de imagens com links para diversos conteúdos interessantes.">
+    <title>Minha Biblioteca Particular</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; color: #fff; text-align: center; margin: 0; }
-        h1 { margin: 20px 0; }
-        .carousel-container { width: 90%; margin: auto; overflow: hidden; }
-        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding: 10px; }
-        .carousel a { flex: 0 0 auto; width: 250px; scroll-snap-align: start; text-decoration: none; }
-        .carousel img { width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(255,255,255,0.2); }
-        .carousel::-webkit-scrollbar { display: none; }
-        nav { background: #1f1f1f; padding: 15px; display: flex; justify-content: center; gap: 20px; position: relative; }
-        nav a { color: white; text-decoration: none; font-size: 18px; }
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background-color: #1f1f1f; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; }
-        .dropdown-content a { color: white; padding: 10px; display: block; text-align: left; }
-        .dropdown:hover .dropdown-content { display: block; }
-        footer { margin-top: 20px; padding: 10px; background: #1f1f1f; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00b140;
+        }
+        .movies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .movie {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        .movie:hover {
+            background-color: #444;
+        }
+        .movie img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .movie-info h2 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Suporte para controles de videogame */
+        .focused {
+            border: 2px solid #00b140;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#">Início</a>
-    <div class="dropdown">
-            <a href="#">filmes</a>
-            <div class="dropdown-content">
-                <a href="#">Torrents</a>
-                <a href="#">Google Drive</a>
+    <div class="container">
+        <h1>Minha Biblioteca Particular</h1>
+        <div class="movies-list">
+            <div class="movie" id="movie1">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg" alt="Mad Max: Estrada da Fúria">
+                <div class="movie-info">
+                    <h2>Mad Max: Estrada da Fúria (2015)</h2>
+                </div>
             </div>
-        </div>
-      <div class="dropdown">
-            <a href="#">Series</a>
-            <div class="dropdown-content">
-                <a href="#">Torrents</a>
-                <a href="#">Google Drive</a> 
+       
+            <div class="movie" id="movie3">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg" alt="Vingadores: Ultimato">
+                <div class="movie-info">
+                    <h2>Vingadores: Ultimato (2019)</h2>
+                </div>
             </div>
-        </div>
-       <div class="dropdown">
-            <a href="#">Sistemas</a>
-            <div class="dropdown-content">
-                <a href="#">Android X86</a>
-                <a href="#">Android Mod Apk</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">Jogos</a>
-            <div class="dropdown-content">
-                <a href="#">PS1</a>
-                <a href="#">PS2</a>
-                 <a href="#">PS3</a>
-                <a href="#">PSP</a>
-                <a href="#">Nintendo Wii</a>
-                <a href="#">GameCube</a>
-                <a href="#">Xbox 360</a>
-                <a href="#">Xbox</a>
-                <a href="#">GameBoy AD</a>
-            </div>
-        </div>
-    </nav>
-    
-    <h1>Galeria de Imagens</h1>
-    <p>Confira nossa coleção de imagens e clique para mais detalhes!</p>
-    
-    <div class="carousel-container">
-        <div class="carousel">
-            <a href="https://exemplo.com/link1" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 1">
-            </a>
-            <a href="https://exemplo.com/link2" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 2">
-            </a>
-            <a href="https://exemplo.com/link3" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 3">
-            </a>
-            <a href="https://exemplo.com/link4" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 4">
-            </a>
-            <a href="https://exemplo.com/link5" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 5">
-            </a>
-            <a href="https://exemplo.com/link6" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 6">
-            </a>
-            <a href="https://exemplo.com/link7" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 7">
-            </a>
-            <a href="https://exemplo.com/link8" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 8">
-            </a>
-            <a href="https://exemplo.com/link9" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 9">
-            </a>
-            <a href="https://exemplo.com/link10" target="_blank">
-                <img src="https://via.placeholder.com/250" alt="Título 10">
-            </a>
+            <div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/pt/c/c0/ForrestGumpPoster.jpg" alt="Forrest Gump">
+    <div class="movie-info">
+        <h2>Forrest Gump (1994)</h2>
+        <p>A vida de Forrest Gump e suas aventuras extraordinárias durante momentos históricos dos EUA.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://br.web.img3.acsta.net/medias/nmedia/18/94/89/49/20363466.jpg" alt="12 Homens e uma Sentença">
+    <div class="movie-info">
+        <h2>12 Homens e uma Sentença (1957)</h2>
+        <p>Doze jurados têm que decidir o destino de um adolescente acusado de assassinato.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Back_to_the_Future_Poster.jpg" alt="De Volta para o Futuro">
+    <div class="movie-info">
+        <h2>De Volta para o Futuro (1985)</h2>
+        <p>Um adolescente viaja no tempo com a ajuda de uma máquina do tempo construída por um cientista excêntrico.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Fight_Club_1999_poster.jpg" alt="Clube da Luta">
+    <div class="movie-info">
+        <h2>Clube da Luta (1999)</h2>
+        <p>Um homem insatisfeito com sua vida cria um clube clandestino para combater o tédio da sociedade.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/The_Green_Mile_poster.jpg" alt="À Espera de um Milagre">
+    <div class="movie-info">
+        <h2>À Espera de um Milagre (1999)</h2>
+        <p>A história de um homem condenado injustamente e de como ele afeta a vida de todos ao seu redor.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Star_Wars_Episode_IV_A_New_Hope.jpg" alt="Star Wars: Uma Nova Esperança">
+    <div class="movie-info">
+        <h2>Star Wars: Uma Nova Esperança (1977)</h2>
+        <p>Luke Skywalker e seus amigos se juntam à resistência para combater o Império Galáctico.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Terminator_2_poster.jpg" alt="O Exterminador do Futuro 2">
+    <div class="movie-info">
+        <h2>O Exterminador do Futuro 2 (1991)</h2>
+        <p>O Exterminador retorna para proteger John Connor, o futuro líder da resistência humana contra as máquinas.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/The_Shawshank_Redemption_movie.jpg" alt="Um Sonho de Liberdade">
+    <div class="movie-info">
+        <h2>Um Sonho de Liberdade (1994)</h2>
+        <p>Um homem é condenado injustamente e cria uma amizade com um prisioneiro enquanto luta pela liberdade.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7b/The_Usual_Suspects.jpg" alt="Os Suspeitos">
+    <div class="movie-info">
+        <h2>Os Suspeitos (1995)</h2>
+        <p>Após um roubo, a polícia investiga os cinco suspeitos principais, mas a verdade é mais complicada.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Dr._Strangelove_poster.jpg" alt="Dr. Fantástico">
+    <div class="movie-info">
+        <h2>Dr. Fantástico (1964)</h2>
+        <p>Uma sátira sobre a guerra nuclear e a ameaça de destruição global.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Goodfellas.jpg" alt="Os Bons Companheiros">
+    <div class="movie-info">
+        <h2>Os Bons Companheiros (1990)</h2>
+        <p>A história de um jovem que sobe na hierarquia da máfia, enfrentando lealdades e traições.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/The_Godfather_Part_II_poster.jpg" alt="O Poderoso Chefão - Parte II">
+    <div class="movie-info">
+        <h2>O Poderoso Chefão - Parte II (1974)</h2>
+        <p>O filho de Vito Corleone, Michael, continua o legado da família, enfrentando seus próprios dilemas.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/BladeRunner_%281982%29_poster.jpg" alt="Blade Runner - O Caçador de Andróides">
+    <div class="movie-info">
+        <h2>Blade Runner - O Caçador de Andróides (1982)</h2>
+        <p>Em um futuro distópico, um caçador de androides busca eliminar replicantes fugidos.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/12_angry_men_%281957%29.jpg" alt="12 Homens e uma Sentença">
+    <div class="movie-info">
+        <h2>12 Homens e uma Sentença (1957)</h2>
+        <p>Doze jurados devem decidir o destino de um jovem acusado de assassinato.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/74/King_Kong_1933_poster.jpg" alt="King Kong">
+    <div class="movie-info">
+        <h2>King Kong (1933)</h2>
+        <p>Uma expedição a uma ilha remota encontra um gorila gigante que se torna a atração principal de um espetáculo.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Dracula_1992_poster.jpg" alt="Drácula de Bram Stoker">
+    <div class="movie-info">
+        <h2>Drácula de Bram Stoker (1992)</h2>
+        <p>A história de como o conde Drácula tenta seduzir uma jovem mulher enquanto enfrenta a resistência de seu amado.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Die_Hard_poster.jpg" alt="Duro de Matar">
+    <div class="movie-info">
+        <h2>Duro de Matar (1988)</h2>
+        <p>Um policial luta sozinho contra um grupo de terroristas que sequestra um prédio em Los Angeles.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/2001ASpaceOdyssey_Logo.jpg" alt="2001: Uma Odisseia no Espaço">
+    <div class="movie-info">
+        <h2>2001: Uma Odisseia no Espaço (1968)</h2>
+        <p>Uma missão espacial em direção a Júpiter é interrompida por uma inteligência artificial ameaçadora.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/CityLightsPoster.jpg" alt="Luzes da Cidade">
+    <div class="movie-info">
+        <h2>Luzes da Cidade (1931)</h2>
+        <p>A comédia de Charlie Chaplin sobre um vagabundo que tenta ajudar uma florista cega.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/ec/The_Great_Escape_poster.jpg" alt="A Grande Fuga">
+    <div class="movie-info">
+        <h2>A Grande Fuga (1963)</h2>
+        <p>Prisioneiros de guerra aliados tentam escapar de um campo de concentração nazista durante a Segunda Guerra Mundial.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/The_Dark_Knight_Rises.jpg" alt="O Cavaleiro das Trevas Ressurge">
+    <div class="movie-info">
+        <h2>O Cavaleiro das Trevas Ressurge (2012)</h2>
+        <p>Bane ameaça Gotham e Batman retorna para restaurar a paz na cidade.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Transformers_poster.jpg" alt="Transformers">
+    <div class="movie-info">
+        <h2>Transformers (2007)</h2>
+        <p>Autobots e Decepticons, robôs alienígenas, travam uma batalha pela supremacia na Terra.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Fury_2014_film_poster.jpg" alt="Corações de Ferro">
+    <div class="movie-info">
+        <h2>Corações de Ferro (2014)</h2>
+        <p>Durante a Segunda Guerra Mundial, um grupo de soldados enfrenta o inimigo em um tanque de guerra.</p>
+    </div>
+</div>
+
+<div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/79/Finding_Nemo_Poster.jpg" alt="Procurando Nemo">
+    <div class="movie-info">
+        <h2>Procurando Nemo (2003)</h2>
+        <p>A jornada de um peixe-palhaço em busca
+
+            
+            <!-- Adicione mais filmes aqui -->
         </div>
     </div>
-    
-    <footer>
-        <p><a href="/politica-privacidade.html">Política de Privacidade</a> | <a href="/termos-de-uso.html">Termos de Uso</a></p>
-    </footer>
+
+    <script>
+        const movies = document.querySelectorAll('.movie');
+        let focusedIndex = 0;
+
+        function updateFocus() {
+            movies.forEach((movie, index) => {
+                if (index === focusedIndex) {
+                    movie.classList.add('focused');
+                } else {
+                    movie.classList.remove('focused');
+                }
+            });
+        }
+
+        function navigate(direction) {
+            if (direction === 'left') {
+                focusedIndex = (focusedIndex === 0) ? movies.length - 1 : focusedIndex - 1;
+            } else if (direction === 'right') {
+                focusedIndex = (focusedIndex === movies.length - 1) ? 0 : focusedIndex + 1;
+            } else if (direction === 'up') {
+                focusedIndex = (focusedIndex - 3 < 0) ? movies.length - 1 : focusedIndex - 3;  // Ajuste de acordo com o número de colunas
+            } else if (direction === 'down') {
+                focusedIndex = (focusedIndex + 3 >= movies.length) ? 0 : focusedIndex + 3;  // Ajuste de acordo com o número de colunas
+            }
+            updateFocus();
+        }
+
+        function selectMovie() {
+            alert('Selecionado: ' + movies[focusedIndex].querySelector('h2').innerText);
+        }
+
+        function back() {
+            alert('Voltando...');
+        }
+
+        document.addEventListener('keydown', function(event) {
+            switch (event.key) {
+                case 'ArrowLeft':
+                    navigate('left');
+                    break;
+                case 'ArrowRight':
+                    navigate('right');
+                    break;
+                case 'ArrowUp':
+                    navigate('up');
+                    break;
+                case 'ArrowDown':
+                    navigate('down');
+                    break;
+                case 'Enter':
+                    selectMovie();
+                    break;
+                case 'Backspace':
+                    back();
+                    break;
+            }
+        });
+
+        // Suporte para o controle de videogame
+        function handleGamepad() {
+            const gamepads = navigator.getGamepads();
+            if (gamepads[0]) {
+                const gamepad = gamepads[0];
+
+                // Movimentação
+                if (gamepad.axes[0] < -0.5) {
+                    navigate('left');
+                } else if (gamepad.axes[0] > 0.5) {
+                    navigate('right');
+                } else if (gamepad.axes[1] < -0.5) {
+                    navigate('up');
+                } else if (gamepad.axes[1] > 0.5) {
+                    navigate('down');
+                }
+
+                // Seleção (botão A / X)
+                if (gamepad.buttons[0].pressed) {
+                    selectMovie();
+                }
+
+                // Voltar (botão B / O)
+                if (gamepad.buttons[1].pressed) {
+                    back();
+                }
+            }
+        }
+
+        // Atualiza o status do controle a cada quadro
+        function gameLoop() {
+            handleGamepad();
+            requestAnimationFrame(gameLoop);
+        }
+
+        window.addEventListener('gamepadconnected', (e) => {
+            console.log('Controle conectado: ', e.gamepad);
+            gameLoop(); // Inicia o loop de captura dos inputs do controle
+        });
+
+        window.addEventListener('gamepaddisconnected', (e) => {
+            console.log('Controle desconectado: ', e.gamepad);
+        });
+
+        // Inicializa a navegação
+        updateFocus();
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
