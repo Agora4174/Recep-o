@@ -8,7 +8,6 @@
       font-family: Arial, sans-serif;
       margin: 50px;
     }
-
     header {
       display: flex;
       align-items: center;
@@ -18,20 +17,17 @@
       border-bottom: 2px solid #000;
       margin-bottom: 30px;
     }
-
     header h1 {
       flex: 1;
       text-align: center;
       font-size: 24px;
       margin: 0;
     }
-
     .logo-esquerda,
     .logo-direita {
       width: 150px;
       height: auto;
     }
-
     form {
       max-width: 800px;
       margin: 0 auto 80px auto;
@@ -39,88 +35,83 @@
       padding: 20px;
       border-radius: 6px;
     }
-
     label {
       font-weight: bold;
     }
-
-    .topo-centralizado {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-      align-items: flex-start;
-    }
-
-    .topo-centralizado > div {
-      flex: 1;
-      min-width: 200px;
-      max-width: 250px;
-    }
-
-    .topo-centralizado > div:nth-child(1),
-    .topo-centralizado > div:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .topo-centralizado > div:nth-child(3) {
-      display: block;
-    }
-
     input[type="text"],
     input[type="date"],
     select,
     textarea,
-    input[type="number"] {
-      width: 100%;
+    input[type="number"],
+    input[type="time"] {
       padding: 8px;
       margin-top: 5px;
       border: 1px solid #aaa;
       border-radius: 4px;
       box-sizing: border-box;
+      font-size: 14px;
     }
-
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+    }
+    input[type="number"],
     input[type="time"] {
-      width: 80px;
-      padding: 5px;
-      margin-top: 5px;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      box-sizing: border-box;
+      width: 100%;
     }
-
     .idade-input {
-      width: 80px !important;
+      width: 70px !important;
     }
-
     .linha {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 15px;
     }
-
     .linha > div {
       flex: 1;
       min-width: 200px;
     }
-
-    .assinatura {
-      margin-top: 40px;
-      text-align: center;
+    /* Ajustes Origem - linhas pequenas */
+    #form-origem .linha.pequena {
+      gap: 15px;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
     }
-
-    .assinatura p {
-      margin-bottom: 60px;
+    #form-origem .linha.pequena > div {
+      flex: none;
     }
-
+    #form-origem .linha.pequena .data {
+      width: 150px;
+    }
+    #form-origem .linha.pequena .idade {
+      width: 80px;
+    }
+    #form-origem .linha.pequena .especialidade {
+      width: 180px;
+    }
+    #form-origem .linha.pequena-medico {
+      gap: 15px;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    #form-origem .linha.pequena-medico > div {
+      flex: none;
+    }
+    #form-origem .linha.pequena-medico .medico {
+      width: 200px;
+    }
+    #form-origem .linha.pequena-medico .horario-aviso,
+    #form-origem .linha.pequena-medico .horario-saida {
+      width: 120px;
+    }
     .botoes {
       text-align: center;
       margin-top: 30px;
     }
-
     button {
       padding: 10px 20px;
       margin: 10px;
@@ -129,14 +120,20 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 16px;
     }
-
     button:hover {
       background-color: #246d45;
     }
-
+    .assinatura {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .assinatura p {
+      margin-bottom: 60px;
+    }
     @media print {
-      button {
+      button, #tipo {
         display: none;
       }
       form {
@@ -144,8 +141,8 @@
         padding: 0;
       }
     }
-
     .footer-form {
+      white-space: pre-line;
       margin-top: 40px;
       padding-top: 15px;
       border-top: 1px solid #ccc;
@@ -153,147 +150,534 @@
       font-size: 14px;
       color: #555;
     }
-
-    .footer-form a {
-      color: #2e8b57;
-      text-decoration: none;
+    /* Responsividade */
+    @media (max-width: 700px) {
+      .linha.pequena,
+      .linha.pequena-medico {
+        flex-wrap: wrap;
+      }
+      #form-origem .linha.pequena > div,
+      #form-origem .linha.pequena-medico > div {
+        width: 100% !important;
+        margin-bottom: 10px;
+      }
+      .linha > div {
+        min-width: 100% !important;
+      }
     }
-
-    .footer-form a:hover {
-      text-decoration: underline;
+    /* Feedback de erro */
+    .erro {
+      border-color: red !important;
+      background-color: #ffe6e6;
+    }
+    .mensagem-erro {
+      color: red;
+      font-size: 13px;
+      margin-top: 4px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://www.alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Instituto Alpha" class="logo-esquerda" />
-    <h1>HOSPITAL DE CLÍNICA ANJO GABRIEL</h1>
-    <img src="imagem2.png" alt="Logo direita" class="logo-direita" />
-  </header>
+<header>
+  <img src="https://www.alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Instituto Alpha" class="logo-esquerda" />
+  <h1>HOSPITAL DE CLÍNICA ANJO GABRIEL</h1>
+  <img src="imagem2.png" alt="Logo direita" class="logo-direita" />
+</header>
 
-  <form>
-    <div class="topo-centralizado">
-      <div>
-        <label>Destino:</label>
-        <input type="text" value="HOSPITAL ALBANO FRANCO" />
-      </div>
-      <div>
-        <label>Data:</label>
-        <input type="date" />
-      </div>
-      <div>
-        <label>Hora de Chegada:</label><br />
-        <input type="time" />
-      </div>
+<div style="text-align: center; margin-bottom: 20px;">
+  <label for="tipo">Tipo:</label>
+  <select id="tipo" onchange="alternarFormulario()">
+    <option value="">-- Selecione --</option>
+    <option value="origem">Origem</option>
+    <option value="destino">Destino</option>
+  </select>
+</div>
+
+<!-- Formulário Origem -->
+<form id="form-origem" style="display:none" onsubmit="return validarFormulario('origem')">
+  <div class="linha">
+    <div><label>Origem:</label><input type="text" value="HOSPITAL ANJO GABRIEL" readonly /></div>
+  </div>
+
+  <div class="linha pequena">
+    <div class="data">
+      <label>Data: <span class="obrigatorio">*</span></label>
+      <input type="date" id="dataOrigem" />
+      <div id="erroDataOrigem" class="mensagem-erro"></div>
     </div>
-
-    <div class="linha">
-      <div>
-        <label>Paciente:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Idade:</label>
-        <input type="number" class="idade-input" min="0" max="120" placeholder="0-120" />
-      </div>
+    <div class="idade">
+      <label>Idade: <span class="obrigatorio">*</span></label>
+      <input type="number" class="idade-input" id="idadeOrigem" min="0" max="120" placeholder="0-120" />
+      <div id="erroIdadeOrigem" class="mensagem-erro"></div>
     </div>
-
-    <div class="linha">
-      <div>
-        <label>Horário Triagem:</label>
-        <input type="time" />
-      </div>
-      <div>
-        <label>Especialidade de Atendimento:</label>
-        <select>
-          <option value="">-- Selecione --</option>
-          <option>Retorno Ambulatorial</option>
-          <option>Clínico</option>
-          <option>Ortopedista</option>
-          <option>Retorno</option>
-          <option>Emergência</option>
-          <option>Ginecologista</option>
-        </select>
-      </div>
+    <div class="especialidade">
+      <label>Especialidade do Médico: <span class="obrigatorio">*</span></label>
+      <select id="especialidadeMedOrigem">
+        <option value="">-- Selecione --</option>
+        <option>Clínico Geral</option>
+        <option>Ortopedista</option>
+        <option>Ginecologista</option>
+        <option>Pediatra</option>
+        <option>Cardiologista</option>
+        <option>Outro</option>
+      </select>
+      <div id="erroEspecialidadeMedOrigem" class="mensagem-erro"></div>
     </div>
+  </div>
 
-    <div class="linha">
-      <div>
-        <label>Enfermeiro da Triagem:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Médico Receptor:</label>
-        <select id="medicoReceptor">
-          <option value="">-- Selecione --</option>
-        </select>
-      </div>
+  <div class="linha pequena-medico">
+    <div class="medico">
+      <label>Médico: <span class="obrigatorio">*</span></label>
+      <select id="medicoOrigem"></select>
+      <div id="erroMedicoOrigem" class="mensagem-erro"></div>
     </div>
-
-    <div class="linha">
-      <div>
-        <label>Horário de Aviso:</label><br />
-        <input type="time" />
-      </div>
-      <div>
-        <label>Horário de Saída:</label><br />
-        <input type="time" />
-      </div>
-      <div>
-        <label>Retorno:</label>
-        <select>
-          <option value="">-- Selecione --</option>
-          <option value="sim">Sim</option>
-          <option value="nao">Não</option>
-        </select>
-      </div>
+    <div class="horario-aviso">
+      <label>Horário de Aviso: <span class="obrigatorio">*</span></label>
+      <input type="time" id="horarioAvisoOrigem" />
+      <div id="erroHorarioAvisoOrigem" class="mensagem-erro"></div>
     </div>
-
-    <div class="assinatura">
-      <p><strong>Carimbo de Liberação</strong></p>
-      <p>_____________________________________________</p>
+    <div class="horario-saida">
+      <label>Horário de Saída: <span class="obrigatorio">*</span></label>
+      <input type="time" id="horarioSaidaOrigem" />
+      <div id="erroHorarioSaidaOrigem" class="mensagem-erro"></div>
     </div>
+  </div>
 
-    <label>Observações:</label>
-    <textarea rows="5"></textarea>
-
-    <footer class="footer-form">
-      <p><strong>Razão Social:</strong> Instituto Alpha de Medicina para Saúde &nbsp;|&nbsp; <strong>CNPJ:</strong> 14.512.229/0007-10</p>
-      <p><strong>Endereço:</strong> Rua Amador Bueno, nº 333, Ci. 1816, Centro - Santos/SP &nbsp;|&nbsp; CEP: 11013-153</p>
-      <p><strong>Telefone:</strong> (13) 3394-5103 &nbsp;|&nbsp; <strong>E-mail:</strong> <a href="mailto:contato@alphainstituto.com.br">contato@alphainstituto.com.br</a></p>
-      <p><strong>Site:</strong> <a href="https://alphainstituto.com.br" target="_blank" rel="noopener">alphainstituto.com.br</a></p>
-    </footer>
-
-    <div class="botoes">
-      <button type="button" onclick="window.print()">Imprimir</button>
+  <div class="linha" style="margin-top:15px;">
+    <div>
+      <label>Paciente: <span class="obrigatorio">*</span></label>
+      <input type="text" id="pacienteOrigem" />
+      <div id="erroPacienteOrigem" class="mensagem-erro"></div>
     </div>
-  </form>
+    <div>
+      <label>Destino: <span class="obrigatorio">*</span></label>
+      <input type="text" id="destinoOrigem" />
+      <div id="erroDestinoOrigem" class="mensagem-erro"></div>
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Motivo: <span class="obrigatorio">*</span></label>
+      <input type="text" id="motivoOrigem" />
+      <div id="erroMotivoOrigem" class="mensagem-erro"></div>
+    </div>
+    <div>
+      <label>Motorista:</label>
+      <input type="text" id="motoristaOrigem" />
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Auxiliar:</label>
+      <input type="text" id="auxiliarOrigem" />
+    </div>
+    <div>
+      <label>Enfermeiro:</label>
+      <input type="text" id="enfermeiroOrigem" />
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Retorno:</label>
+      <select id="retornoOrigem">
+        <option value="">-- Selecione --</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Recepção:</label>
+      <input type="text" id="recepcaoOrigem" />
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Observações:</label>
+      <textarea id="obsOrigem" rows="5"></textarea>
+    </div>
+  </div>
 
-  <script>
-    async function carregarMedicos() {
-      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRjKqOrjsMnF1Ks5epmKqkwCb2yJrCQM-9PBT8FHWIIzFfwzFc37T8LRuqkC5JA4A/pub?gid=306874211&single=true&output=csv';
+  <div class="botoes">
+    <button type="submit">Salvar e Imprimir</button>
+    <button type="button" onclick="exportarPDF('origem')">Exportar PDF</button>
+  </div>
 
-      try {
-        const resposta = await fetch(url);
-        const texto = await resposta.text();
-        const linhas = texto.trim().split('\n');
-        const nomes = linhas.slice(1).map(l => l.split(',')[0]);
+  <footer class="footer-form">
+Razão Social: Instituto Alpha de Medicina para Saúde  |  CNPJ: 14.512.229/0007-10
 
-        const select = document.getElementById('medicoReceptor');
-        nomes.forEach(nome => {
-          const option = document.createElement('option');
-          option.value = nome;
-          option.textContent = nome;
-          select.appendChild(option);
-        });
-      } catch (erro) {
-        console.error('Erro ao carregar médicos:', erro);
-      }
+Endereço: Rua Amador Bueno, nº 333, Ci. 1816, Centro - Santos/SP  |  CEP: 11013-153
+
+Telefone: (13) 3394-5103  |  E-mail: contato@alphainstituto.com.br
+
+Site: alphainstituto.com.br
+  </footer>
+</form>
+
+<!-- Formulário Destino -->
+<form id="form-destino" style="display:none" onsubmit="return validarFormulario('destino')">
+  <div class="linha">
+    <div><label>Destino: <span class="obrigatorio">*</span></label><input type="text" id="destinoDestino" value="HOSPITAL ALBANO FRANCO" /></div>
+    <div class="data">
+      <label>Data: <span class="obrigatorio">*</span></label>
+      <input type="date" id="dataDestino" />
+      <div id="erroDataDestino" class="mensagem-erro"></div>
+    </div>
+    <div>
+      <label>Hora de Chegada: <span class="obrigatorio">*</span></label>
+      <input type="time" id="horaChegadaDestino" />
+      <div id="erroHoraChegadaDestino" class="mensagem-erro"></div>
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Paciente: <span class="obrigatorio">*</span></label>
+      <input type="text" id="pacienteDestino" />
+      <div id="erroPacienteDestino" class="mensagem-erro"></div>
+    </div>
+    <div>
+      <label>Idade: <span class="obrigatorio">*</span></label>
+      <input type="number" class="idade-input" id="idadeDestino" min="0" max="120" placeholder="0-120" />
+      <div id="erroIdadeDestino" class="mensagem-erro"></div>
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Horário Triagem: <span class="obrigatorio">*</span></label>
+      <input type="time" id="horarioTriagemDestino" />
+      <div id="erroHorarioTriagemDestino" class="mensagem-erro"></div>
+    </div>
+    <div>
+      <label>Especialidade de Atendimento: <span class="obrigatorio">*</span></label>
+      <select id="especialidadeAtendimentoDestino">
+        <option value="">-- Selecione --</option>
+        <option>Retorno Ambulatorial</option>
+        <option>Clínico</option>
+        <option>Ortopedista</option>
+        <option>Retorno</option>
+        <option>Retorno de Trauma</option>
+        <option>Psicologia</option>
+        <option>Social</option>
+        <option>Emergência</option>
+        <option>Ginecologista</option>
+      </select>
+      <div id="erroEspecialidadeAtendimentoDestino" class="mensagem-erro"></div>
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Enfermeiro da Triagem:</label>
+      <input type="text" id="enfermeiroTriagemDestino" />
+    </div>
+    <div>
+      <label>Médico Receptor: <span class="obrigatorio">*</span></label>
+      <select id="medicoReceptor"></select>
+      <div id="erroMedicoReceptor" class="mensagem-erro"></div>
+    </div>
+    <div>
+      <label>Especialidade do Médico:</label>
+      <select id="especialidadeMedicoDestino">
+        <option value="">-- Selecione --</option>
+        <option>Clínico Geral</option>
+        <option>Ortopedista</option>
+        <option>Ginecologista</option>
+        <option>Pediatra</option>
+        <option>Cardiologista</option>
+        <option>Outro</option>
+      </select>
+    </div>
+  </div>
+  <div class="linha">
+    <div>
+      <label>Horário de Aviso:</label>
+      <input type="time" id="horarioAvisoDestino" />
+    </div>
+    <div>
+      <label>Horário de Saída:</label>
+      <input type="time" id="horarioSaidaDestino" />
+    </div>
+    <div>
+      <label>Retorno:</label>
+      <select id="retornoDestino">
+        <option value="">-- Selecione --</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+    </div>
+  </div>
+  <div class="assinatura">
+    <p><strong>Carimbo de Liberação</strong></p>
+    <p>_____________________________________________</p>
+  </div>
+  <label>Observações:</label>
+  <textarea id="obsDestino" rows="5"></textarea>
+
+  <div class="botoes">
+    <button type="submit">Salvar e Imprimir</button>
+    <button type="button" onclick="exportarPDF('destino')">Exportar PDF</button>
+  </div>
+
+  <footer class="footer-form">
+Razão Social: Instituto Alpha de Medicina para Saúde  |  CNPJ: 14.512.229/0007-10
+
+Endereço: Rua Amador Bueno, nº 333, Ci. 1816, Centro - Santos/SP  |  CEP: 11013-153
+
+Telefone: (13) 3394-5103  |  E-mail: contato@alphainstituto.com.br
+
+Site: alphainstituto.com.br
+  </footer>
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+  // Alterna qual formulário aparece
+  function alternarFormulario() {
+    const tipo = document.getElementById('tipo').value;
+    document.getElementById('form-origem').style.display = tipo === 'origem' ? 'block' : 'none';
+    document.getElementById('form-destino').style.display = tipo === 'destino' ? 'block' : 'none';
+    if(tipo) carregarLocalStorage(tipo);
+  }
+
+  // Carregar lista médicos da planilha google no select dos dois formulários
+  async function carregarMedicos() {
+    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRjKqOrjsMnF1Ks5epmKqkwCb2yJrCQM-9PBT8FHWIIzFfwzFc37T8LRuqkC5JA4A/pub?gid=306874211&single=true&output=csv';
+    try {
+      const resposta = await fetch(url);
+      const texto = await resposta.text();
+      const linhas = texto.trim().split('\n');
+      const nomes = linhas.slice(1).map(linha => {
+        const colunas = linha.split(',');
+        return colunas[0].replace(/(^"|"$)/g, '').trim();
+      });
+      const medicoOrigem = document.getElementById('medicoOrigem');
+      const medicoReceptor = document.getElementById('medicoReceptor');
+      medicoOrigem.innerHTML = '<option value="">-- Selecione --</option>';
+      medicoReceptor.innerHTML = '<option value="">-- Selecione --</option>';
+      nomes.forEach(nome => {
+        const option1 = document.createElement('option');
+        option1.value = nome;
+        option1.textContent = nome;
+        medicoOrigem.appendChild(option1);
+
+        const option2 = document.createElement('option');
+        option2.value = nome;
+        option2.textContent = nome;
+        medicoReceptor.appendChild(option2);
+      });
+    } catch (erro) {
+      console.error('Erro ao carregar médicos:', erro);
+    }
+  }
+  window.onload = carregarMedicos;
+
+  // Validação do formulário (origem ou destino)
+  function validarFormulario(tipo) {
+    let valido = true;
+
+    // Limpa erros anteriores
+    document.querySelectorAll(`#form-${tipo} .erro`).forEach(el => el.classList.remove('erro'));
+    document.querySelectorAll(`#form-${tipo} .mensagem-erro`).forEach(el => el.textContent = '');
+
+    // Campos obrigatórios e validações específicas
+    function marcarErro(id, msg) {
+      const campo = document.getElementById(id);
+      campo.classList.add('erro');
+      document.getElementById('erro' + id.charAt(0).toUpperCase() + id.slice(1)).textContent = msg;
+      valido = false;
     }
 
-    window.onload = carregarMedicos;
-  </script>
+    if(tipo === 'origem') {
+      // Data
+      const data = document.getElementById('dataOrigem').value;
+      if (!data) marcarErro('dataOrigem', 'Data é obrigatória');
+      else if (new Date(data) > new Date()) marcarErro('dataOrigem', 'Data não pode ser futura');
+
+      // Idade
+      const idade = document.getElementById('idadeOrigem').value;
+      if (!idade) marcarErro('idadeOrigem', 'Idade é obrigatória');
+      else if (idade < 0 || idade > 120) marcarErro('idadeOrigem', 'Idade inválida');
+
+      // Especialidade médico
+      const espec = document.getElementById('especialidadeMedOrigem').value;
+      if (!espec) marcarErro('especialidadeMedOrigem', 'Especialidade é obrigatória');
+
+      // Médico
+      const medico = document.getElementById('medicoOrigem').value;
+      if (!medico) marcarErro('medicoOrigem', 'Médico é obrigatório');
+
+      // Horário Aviso
+      const aviso = document.getElementById('horarioAvisoOrigem').value;
+      if (!aviso) marcarErro('horarioAvisoOrigem', 'Horário de aviso obrigatório');
+
+      // Horário Saída
+      const saida = document.getElementById('horarioSaidaOrigem').value;
+      if (!saida) marcarErro('horarioSaidaOrigem', 'Horário de saída obrigatório');
+
+      // Paciente
+      const paciente = document.getElementById('pacienteOrigem').value.trim();
+      if (!paciente) marcarErro('pacienteOrigem', 'Paciente obrigatório');
+
+      // Destino
+      const destino = document.getElementById('destinoOrigem').value.trim();
+      if (!destino) marcarErro('destinoOrigem', 'Destino obrigatório');
+
+      // Motivo
+      const motivo = document.getElementById('motivoOrigem').value.trim();
+      if (!motivo) marcarErro('motivoOrigem', 'Motivo obrigatório');
+
+      // Validar horários lógicos (ex: saída > aviso)
+      if (aviso && saida && aviso >= saida) {
+        marcarErro('horarioSaidaOrigem', 'Horário de saída deve ser após horário de aviso');
+        marcarErro('horarioAvisoOrigem', 'Horário de aviso deve ser antes do horário de saída');
+      }
+
+    } else if(tipo === 'destino') {
+      // Data
+      const data = document.getElementById('dataDestino').value;
+      if (!data) marcarErro('dataDestino', 'Data é obrigatória');
+      else if (new Date(data) > new Date()) marcarErro('dataDestino', 'Data não pode ser futura');
+
+      // Hora chegada
+      const horaChegada = document.getElementById('horaChegadaDestino').value;
+      if (!horaChegada) marcarErro('horaChegadaDestino', 'Hora de chegada obrigatória');
+
+      // Paciente
+      const paciente = document.getElementById('pacienteDestino').value.trim();
+      if (!paciente) marcarErro('pacienteDestino', 'Paciente obrigatório');
+
+      // Idade
+      const idade = document.getElementById('idadeDestino').value;
+      if (!idade) marcarErro('idadeDestino', 'Idade é obrigatória');
+      else if (idade < 0 || idade > 120) marcarErro('idadeDestino', 'Idade inválida');
+
+      // Horário triagem
+      const triagem = document.getElementById('horarioTriagemDestino').value;
+      if (!triagem) marcarErro('horarioTriagemDestino', 'Horário triagem obrigatório');
+
+      // Especialidade atendimento
+      const espec = document.getElementById('especialidadeAtendimentoDestino').value;
+      if (!espec) marcarErro('especialidadeAtendimentoDestino', 'Especialidade obrigatória');
+
+      // Médico receptor
+      const medico = document.getElementById('medicoReceptor').value;
+      if (!medico) marcarErro('medicoReceptor', 'Médico receptor obrigatório');
+    }
+
+    if (!valido) {
+      alert('Por favor, corrija os erros destacados no formulário antes de enviar.');
+    } else {
+      salvarLocalStorage(tipo);
+      window.print();
+    }
+
+    return false; // para evitar envio real
+  }
+
+  // Salvar dados no localStorage
+  function salvarLocalStorage(tipo) {
+    const camposOrigem = [
+      'dataOrigem', 'idadeOrigem', 'especialidadeMedOrigem', 'medicoOrigem', 'horarioAvisoOrigem', 'horarioSaidaOrigem',
+      'pacienteOrigem', 'destinoOrigem', 'motivoOrigem', 'motoristaOrigem', 'auxiliarOrigem', 'enfermeiroOrigem',
+      'retornoOrigem', 'recepcaoOrigem', 'obsOrigem'
+    ];
+    const camposDestino = [
+      'destinoDestino', 'dataDestino', 'horaChegadaDestino', 'pacienteDestino', 'idadeDestino',
+      'horarioTriagemDestino', 'especialidadeAtendimentoDestino', 'enfermeiroTriagemDestino', 'medicoReceptor',
+      'especialidadeMedicoDestino', 'horarioAvisoDestino', 'horarioSaidaDestino', 'retornoDestino', 'obsDestino'
+    ];
+
+    const campos = tipo === 'origem' ? camposOrigem : camposDestino;
+
+    const dados = {};
+    campos.forEach(id => {
+      const el = document.getElementById(id);
+      if(el) dados[id] = el.value;
+    });
+    localStorage.setItem('form_' + tipo, JSON.stringify(dados));
+  }
+
+  // Carregar dados do localStorage
+  function carregarLocalStorage(tipo) {
+    const dados = localStorage.getItem('form_' + tipo);
+    if (!dados) return;
+    const obj = JSON.parse(dados);
+    for (const id in obj) {
+      const el = document.getElementById(id);
+      if (el) el.value = obj[id];
+    }
+  }
+
+  // Exportar PDF (usando jsPDF)
+  async function exportarPDF(tipo) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    let y = 10;
+    doc.setFontSize(16);
+    doc.text("Formulário " + (tipo === 'origem' ? "Origem" : "Destino"), 10, y);
+    y += 10;
+    doc.setFontSize(12);
+
+    const camposOrigem = {
+      "Origem": "HOSPITAL ANJO GABRIEL",
+      "Data": "dataOrigem",
+      "Idade": "idadeOrigem",
+      "Especialidade do Médico": "especialidadeMedOrigem",
+      "Médico": "medicoOrigem",
+      "Horário de Aviso": "horarioAvisoOrigem",
+      "Horário de Saída": "horarioSaidaOrigem",
+      "Paciente": "pacienteOrigem",
+      "Destino": "destinoOrigem",
+      "Motivo": "motivoOrigem",
+      "Motorista": "motoristaOrigem",
+      "Auxiliar": "auxiliarOrigem",
+      "Enfermeiro": "enfermeiroOrigem",
+      "Retorno": "retornoOrigem",
+      "Recepção": "recepcaoOrigem",
+      "Observações": "obsOrigem"
+    };
+    const camposDestino = {
+      "Destino": "destinoDestino",
+      "Data": "dataDestino",
+      "Hora de Chegada": "horaChegadaDestino",
+      "Paciente": "pacienteDestino",
+      "Idade": "idadeDestino",
+      "Horário Triagem": "horarioTriagemDestino",
+      "Especialidade de Atendimento": "especialidadeAtendimentoDestino",
+      "Enfermeiro da Triagem": "enfermeiroTriagemDestino",
+      "Médico Receptor": "medicoReceptor",
+      "Especialidade do Médico": "especialidadeMedicoDestino",
+      "Horário de Aviso": "horarioAvisoDestino",
+      "Horário de Saída": "horarioSaidaDestino",
+      "Retorno": "retornoDestino",
+      "Observações": "obsDestino"
+    };
+
+    const campos = tipo === 'origem' ? camposOrigem : camposDestino;
+
+    for (const label in campos) {
+      const id = campos[label];
+      let valor = '';
+      if(typeof id === 'string') {
+        const el = document.getElementById(id);
+        if(el) valor = el.value;
+        else valor = id; // para origem fixo
+      } else {
+        valor = id; // direto string
+      }
+      if(valor === '') valor = '-';
+      const linhas = doc.splitTextToSize(label + ": " + valor, 180);
+      doc.text(linhas, 10, y);
+      y += linhas.length * 7;
+      if(y > 270) { doc.addPage(); y = 10; }
+    }
+
+    doc.save("formulario_" + tipo + ".pdf");
+  }
+</script>
 
 </body>
 </html>
