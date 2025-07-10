@@ -28,7 +28,7 @@
 
     .logo-esquerda,
     .logo-direita {
-      width: 150px; /* tamanho maior */
+      width: 150px;
       height: auto;
     }
 
@@ -44,7 +44,6 @@
       font-weight: bold;
     }
 
-    /* Topo centralizado */
     .topo-centralizado {
       display: flex;
       justify-content: center;
@@ -60,14 +59,12 @@
       max-width: 250px;
     }
 
-    /* Destino e Data: label e input empilhados */
     .topo-centralizado > div:nth-child(1),
     .topo-centralizado > div:nth-child(2) {
       display: flex;
       flex-direction: column;
     }
 
-    /* Hora de Chegada: label e input empilhados */
     .topo-centralizado > div:nth-child(3) {
       display: block;
     }
@@ -94,7 +91,6 @@
       box-sizing: border-box;
     }
 
-    /* Idade menor largura */
     .idade-input {
       width: 80px !important;
     }
@@ -149,7 +145,6 @@
       }
     }
 
-    /* Footer personalizado */
     .footer-form {
       margin-top: 40px;
       padding-top: 15px;
@@ -157,7 +152,6 @@
       text-align: center;
       font-size: 14px;
       color: #555;
-      font-style: normal;
     }
 
     .footer-form a {
@@ -179,7 +173,6 @@
   </header>
 
   <form>
-    <!-- topo com destino, data e hora de chegada centralizados -->
     <div class="topo-centralizado">
       <div>
         <label>Destino:</label>
@@ -232,7 +225,9 @@
       </div>
       <div>
         <label>Médico Receptor:</label>
-        <input type="text" />
+        <select id="medicoReceptor">
+          <option value="">-- Selecione --</option>
+        </select>
       </div>
     </div>
 
@@ -263,7 +258,6 @@
     <label>Observações:</label>
     <textarea rows="5"></textarea>
 
-    <!-- Footer com informações da empresa -->
     <footer class="footer-form">
       <p><strong>Razão Social:</strong> Instituto Alpha de Medicina para Saúde &nbsp;|&nbsp; <strong>CNPJ:</strong> 14.512.229/0007-10</p>
       <p><strong>Endereço:</strong> Rua Amador Bueno, nº 333, Ci. 1816, Centro - Santos/SP &nbsp;|&nbsp; CEP: 11013-153</p>
@@ -275,6 +269,31 @@
       <button type="button" onclick="window.print()">Imprimir</button>
     </div>
   </form>
+
+  <script>
+    async function carregarMedicos() {
+      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRjKqOrjsMnF1Ks5epmKqkwCb2yJrCQM-9PBT8FHWIIzFfwzFc37T8LRuqkC5JA4A/pub?gid=306874211&single=true&output=csv';
+
+      try {
+        const resposta = await fetch(url);
+        const texto = await resposta.text();
+        const linhas = texto.trim().split('\n');
+        const nomes = linhas.slice(1).map(l => l.split(',')[0]);
+
+        const select = document.getElementById('medicoReceptor');
+        nomes.forEach(nome => {
+          const option = document.createElement('option');
+          option.value = nome;
+          option.textContent = nome;
+          select.appendChild(option);
+        });
+      } catch (erro) {
+        console.error('Erro ao carregar médicos:', erro);
+      }
+    }
+
+    window.onload = carregarMedicos;
+  </script>
 
 </body>
 </html>
