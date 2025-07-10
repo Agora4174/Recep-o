@@ -1,313 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Formulário - Hospital Anjo Gabriel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
 
-    <title>Medico</title>
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 2px solid #000;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .logo-esquerda,
+    .logo-direita {
+      width: 150px;
+      height: auto;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 0 auto 80px auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .topo-centralizado {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      align-items: flex-start;
+    }
+
+    .topo-centralizado > div {
+      flex: 1;
+      min-width: 200px;
+      max-width: 250px;
+    }
+
+    .topo-centralizado > div:nth-child(1),
+    .topo-centralizado > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topo-centralizado > div:nth-child(3) {
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea,
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="time"] {
+      width: 80px;
+      padding: 5px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .idade-input {
+      width: 80px !important;
+    }
+
+    .linha {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .linha > div {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .assinatura {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .assinatura p {
+      margin-bottom: 60px;
+    }
+
+    .botoes {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #246d45;
+    }
+
+    @media print {
+      button {
+        display: none;
+      }
+      form {
+        border: none;
+        padding: 0;
+      }
+    }
+
+    .footer-form {
+      margin-top: 40px;
+      padding-top: 15px;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer-form a {
+      color: #2e8b57;
+      text-decoration: none;
+    }
+
+    .footer-form a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-        <div class="container">
-            <input type="checkbox" name="" id="check">
-            
-            <div class="logo-container">
-                <h3 class="logo"><a href="index.html"><img src="alpha.png" width="80"></a><span></span></h3>
-            </div>
+  <header>
+    <img src="https://www.alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Instituto Alpha" class="logo-esquerda" />
+    <h1>HOSPITAL DE CLÍNICA ANJO GABRIEL</h1>
+    <img src="imagem2.png" alt="Logo direita" class="logo-direita" />
+  </header>
 
-            <div class="nav-btn">
-                <div class="nav-links">
-                    <ul>
-                        
-                        <li class="nav-link" style="--i: .85s">
-                            <a href="#">Sistemas<i class="fas fa-caret-down"></i></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link">
-                                        <a href="http://www.cmdpro.com.br/mairipora/login">CMD PRO</a>
-                                    </li>
-                                    <li class="dropdown-link">
-                                        <a href="https://www.siresp.saude.sp.gov.br/">CROSS</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="https://webhopediagnostica.ar.srv.br/arWebLaudo/login">HOPE</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="https://cadastro.saude.gov.br/segcartao/?contextType=external&username=string&contextValue=%2Foam&password=sercure_string&challenge_url=https%3A%2F%2Fcadastro.saude.gov.br%2Fsegcartao&request_id=6256906401440934955&authn_try_count=0&locale=pt_BR&resource_url=http%253A%252F%252Fcadastro.saude.gov.br%252Fnovocartao%252Frestrito%252FusuarioConsulta.jsp">CADSUS</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">BUSCA CEP</a>
-                                    </li>
-                                      
+  <form>
+    <div class="topo-centralizado">
+      <div>
+        <label>Destino:</label>
+        <input type="text" value="HOSPITAL ALBANO FRANCO" />
+      </div>
+      <div>
+        <label>Data:</label>
+        <input type="date" />
+      </div>
+      <div>
+        <label>Hora de Chegada:</label><br />
+        <input type="time" />
+      </div>
+    </div>
 
-                                </ul>
-                            </div>
-                            
-                        <li class="nav-link" style="--i: 1.35s">
-                                        <a href="#">Pesquisa<i class="fas fa-caret-down"></i></a>
-                                        <div class="dropdown">
-                                            <ul>
-                                                <li class="dropdown-link">
-                                                    <a href="https://drive.google.com/file/d/1CaxRYZsb2R50XL8XWpN9OLM2sp9MTTq1/view?usp=drive_link">Baixar Video Aula</a>
-                                                </li>
-                                           
+    <div class="linha">
+      <div>
+        <label>Paciente:</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Idade:</label>
+        <input type="number" class="idade-input" min="0" max="120" placeholder="0-120" />
+      </div>
+    </div>
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                            
-                            
-                             <li class="nav-link" style="--i: 1.35s">
-                                        <a href="#">Recepção<i class="fas fa-caret-down"></i></a>
-                                        <div class="dropdown">
-                                            <ul>
-                                                <li class="dropdown-link">
-                                                    <a href="escalanov.jpeg">Escala novembro</a>
-                                                </li>
-                                            <li class="dropdown-link">
-                                                    <a href="contato.pdf">Cartao tell</a>
-                                                </li>
+    <div class="linha">
+      <div>
+        <label>Horário Triagem:</label>
+        <input type="time" />
+      </div>
+      <div>
+        <label>Especialidade de Atendimento:</label>
+        <select>
+          <option value="">-- Selecione --</option>
+          <option>Retorno Ambulatorial</option>
+          <option>Clínico</option>
+          <option>Ortopedista</option>
+          <option>Retorno</option>
+          <option>Emergência</option>
+          <option>Ginecologista</option>
+        </select>
+      </div>
+    </div>
 
-                                                  <li class="dropdown-link">
-                                                    <a href="form.html">Form Albano</a>
-                                                </li>
-                                        
-                                            <li class="dropdown-link">
-                                                    <a href="cart2.png">Cartao Webmail</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                            
-                        
-                         <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Agendas<i class="fas fa-caret-down"></i></a>
-                                   <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link">
-                                        <a href="ambu.html">Motoristas</a>
-                                    </li>
-                                             <li class="dropdown-link">
-                                        <a href="agenda.html">Lista de Contatos</a>
-                                    </li>
-                                             <li class="dropdown-link">
-                                        <a href="ramal.html">Ramais</a>
-                                    </li>
-                                    
-                                       </ul>
+    <div class="linha">
+      <div>
+        <label>Enfermeiro da Triagem:</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Médico Receptor:</label>
+        <select id="medicoReceptor">
+          <option value="">-- Selecione --</option>
+        </select>
+      </div>
+    </div>
 
-                             </div>
-<li class="nav-link" style="--i: 1.35s">
-                                        <a href="#">Webmail<i class="fas fa-caret-down"></i></a>
-                                        <div class="dropdown">
-                                            <ul>
-                                                <li class="dropdown-link">
-                                                    <a href="https://webmail.alphainstituto.com.br/">WEBMAIL</a>
-                                                </li>
-                                                <li class="dropdown-link">
-                                                    <a href="web.html">LISTA DE EMAIL</a>
-                                                </li>
+    <div class="linha">
+      <div>
+        <label>Horário de Aviso:</label><br />
+        <input type="time" />
+      </div>
+      <div>
+        <label>Horário de Saída:</label><br />
+        <input type="time" />
+      </div>
+      <div>
+        <label>Retorno:</label>
+        <select>
+          <option value="">-- Selecione --</option>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
+      </div>
+    </div>
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                            
-                        <li class="nav-link" style="--i: 1.1s">
-                            <a href="#">Declarações<i class="fas fa-caret-down"></i></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link">
-                                        <a href="unimed.pdf">Unimed</a>
-                                    </li>
-                                    <li class="dropdown-link">
-                                        <a href="deconteudo.pdf">Declarção Acm</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="APAC.pdf">Laudo Amb</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="faa.pdf">FAA-MAnual</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-<li class="nav-link" style="--i: 1.1s">
-                            <a href="#">Sinan<i class="fas fa-caret-down"></i></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link">
-                                        <a href="#">Violencia<i class="fas fa-caret-down"></i></a>
-                                        <div class="dropdown second">
-                                            <ul>
-                                                <li class="dropdown-link">
-                                                    <a href="viointer.pdf">Pessoal</a>
-                                                </li>
-                                                <li class="dropdown-link">
-                                                    <a href="viodomestica.pdf">Domestica</a>
-                                                </li>
+    <div class="assinatura">
+      <p><strong>Carimbo de Liberação</strong></p>
+      <p>_____________________________________________</p>
+    </div>
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                
-                                     <li class="dropdown-link">
-                                        <a href="peconha.pdf">Peçonha</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="DENGUE.pdf">Dengue</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="Tetano_Acidental_v5.pdf">Tetano</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="Aids_adulto_v5.pdf">Aids</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="Meningite_v5.pdf">Miningite</a>
-                                    </li>
-                         
-                     
-                                    <li class="dropdown-link">
-                                        <a href="ANTIRABICO.pdf">Ant-Rabico</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="intoxicacao.pdf"> Intoxicaça Exógena</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="febream.pdf">Febre Amarela</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="sifilis_adquirida.pdf">Sifils Adquirida</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="Ficha_Hepatites_Virais.pdf">Hepatites Virais</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="Tuberculose_v5.pdf">Tuberculose</a>
-                                    </li>
-                                    
-                                    <li class="dropdown-link">
-                                        <a href="Acidente_rabalhoBiologico.pdf">Biologico</a>
-                                    </li>
+    <label>Observações:</label>
+    <textarea rows="5"></textarea>
 
-                                </ul>
-                            </div>
-                            
-                        </li>
-                        
-                         <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Cadernos<i class="fas fa-caret-down"></i></a>
-                        <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link">
-                                        <a href="acom.pdf">Acompanhante</a>
-                                    </li>
-                                    
-                                   <li class="dropdown-link">     
- <a href="#">Ambulancia<i class="fas fa-caret-down"></i></a>
- <div class="dropdown second">
- <ul> 
- <li class="dropdown-link">
- <a href="amb.pdf">H.M.M</a>
-</li>
-<li class="dropdown-link">
-<a href="ambterra.pdf">Terra Preta</a>
-</li>
-</ul>
-</div>
-</li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="cross.pdf">Caderno Cross</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="atm.pdf">Avaliação</a>
-                                    </li>
-                                    
-                                     <li class="dropdown-link">
-                                        <a href="papeltimbrado1.docx">Papel timbrado</a>
-                                    </li>
-                                    
-                                       
-                                   <li class="dropdown-link">     
- <a href="#">Capas Livros <i class="fas fa-caret-down"></i></a>
- <div class="dropdown second">
- <ul> 
- <li class="dropdown-link">
- <a href="#">H.M.M</a>
-</li>
-<li class="dropdown-link">
-<a href="capa1.pdf">Terra Preta</a>
-</li>
-</ul>
-</div>
-</li>
-                                    
-                                    
-                            </ul></div>
+    <footer class="footer-form">
+      <p><strong>Razão Social:</strong> Instituto Alpha de Medicina para Saúde &nbsp;|&nbsp; <strong>CNPJ:</strong> 14.512.229/0007-10</p>
+      <p><strong>Endereço:</strong> Rua Amador Bueno, nº 333, Ci. 1816, Centro - Santos/SP &nbsp;|&nbsp; CEP: 11013-153</p>
+      <p><strong>Telefone:</strong> (13) 3394-5103 &nbsp;|&nbsp; <strong>E-mail:</strong> <a href="mailto:contato@alphainstituto.com.br">contato@alphainstituto.com.br</a></p>
+      <p><strong>Site:</strong> <a href="https://alphainstituto.com.br" target="_blank" rel="noopener">alphainstituto.com.br</a></p>
+    </footer>
 
-                    </ul>
-                    </div>
+    <div class="botoes">
+      <button type="button" onclick="window.print()">Imprimir</button>
+    </div>
+  </form>
 
-        
-            </div>
+  <script>
+    async function carregarMedicos() {
+      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRjKqOrjsMnF1Ks5epmKqkwCb2yJrCQM-9PBT8FHWIIzFfwzFc37T8LRuqkC5JA4A/pub?gid=306874211&single=true&output=csv';
 
-            <div class="hamburger-menu-container">
-                <div class="hamburger-menu">
-                    <div></div>
-                </div>
-            </div>
-        
-        </div>
-        
-    </header>
-    <main>
-  
-        <section>
-         
-            <div class="overlay">  
+      try {
+        const resposta = await fetch(url);
+        const texto = await resposta.text();
+        const linhas = texto.trim().split('\n');
+        const nomes = linhas.slice(1).map(l => l.split(',')[0]);
 
-    <input type="date" id="calendario">
+        const select = document.getElementById('medicoReceptor');
+        nomes.forEach(nome => {
+          const option = document.createElement('option');
+          option.value = nome;
+          option.textContent = nome;
+          select.appendChild(option);
+        });
+      } catch (erro) {
+        console.error('Erro ao carregar médicos:', erro);
+      }
+    }
 
-    <script>
-        // Obter a data atual
-        const hoje = new Date().toISOString().split('T')[0];
-        // Definir a data atual como valor do campo de entrada
-        document.getElementById('calendario').value = hoje;
-    </script>   
-            </div>
-          
-        </section>
-    </main>
-
-
-
-    
-    
+    window.onload = carregarMedicos;
+  </script>
 
 </body>
-
 </html>
-
-
