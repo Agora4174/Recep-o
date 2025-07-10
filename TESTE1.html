@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulários - Hospital Anjo Gabriel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid #000;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 0 auto 80px auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="date"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .linha {
+      display: flex;
+      gap: 10px;
+    }
+
+    .linha > div {
+      flex: 1;
+    }
+
+    .assinatura {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .assinatura p {
+      margin-bottom: 60px;
+    }
+
+    .botoes {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #246d45;
+    }
+
+    @media print {
+      button {
+        display: none;
+      }
+      form {
+        border: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HOSPITAL DE CLÍNICA ANJO GABRIEL</h1>
+    <p>Rua Amador Bueno, nº 333, Cj. 1816, Centro – Santos/SP</p>
+    <p>CEP: 11013-153 | Telefone: (13) 3394-5103 | E-mail: contato@alphainstituto.com.br</p>
+  </header>
+
+  <form>
+    <div class="linha">
+      <div>
+        <label>Destino:</label>
+        <input type="text" value="HOSPITAL ALBANO FRANCO">
+      </div>
+      <div>
+        <label>Data:</label>
+        <input type="date">
+      </div>
+      <div>
+        <label>Hora de Chegada:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="linha">
+      <div>
+        <label>Paciente:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Idade:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <label>Especialidade de Atendimento:</label>
+    <input type="text">
+
+    <label>Horário Triagem:</label>
+    <input type="text">
+
+    <div class="linha">
+      <div>
+        <label>Enfermeiro da Triagem:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Médico Receptor:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="linha">
+      <div>
+        <label>Horário de Aviso:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Horário de Saída:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <label>Retorno:</label>
+    <input type="text">
+
+    <div class="assinatura">
+      <p><strong>Carimbo de Liberação</strong></p>
+      <p>_____________________________________________</p>
+    </div>
+
+    <label>Observações:</label>
+    <textarea rows="5"></textarea>
+
+    <div class="botoes">
+      <button type="button" onclick="window.print()">Imprimir</button>
+    </div>
+  </form>
+
+</body>
+</html>
