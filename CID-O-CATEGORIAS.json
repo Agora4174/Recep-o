@@ -1,0 +1,3784 @@
+[
+ {
+  "CAT": "M8000\/0",
+  "DESCRICAO": "Neoplasia benigna"
+ },
+ {
+  "CAT": "M8000\/1",
+  "DESCRICAO": "Neoplasia de comportamento incerto se benigno ou maligno"
+ },
+ {
+  "CAT": "M8000\/3",
+  "DESCRICAO": "Neoplasia maligna"
+ },
+ {
+  "CAT": "M8000\/6",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8001\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8001\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8001\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8002\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8003\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8004\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8010\/0",
+  "DESCRICAO": "Tumor epitelial benigno"
+ },
+ {
+  "CAT": "M8010\/2",
+  "DESCRICAO": "Carcinoma in situ SOE"
+ },
+ {
+  "CAT": "M8010\/3",
+  "DESCRICAO": "Carcinoma SOE"
+ },
+ {
+  "CAT": "M8010\/6",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8011\/0",
+  "DESCRICAO": "Epitelioma benigno"
+ },
+ {
+  "CAT": "M8011\/3",
+  "DESCRICAO": "Epitelioma maligno"
+ },
+ {
+  "CAT": "M8012\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8020\/3",
+  "DESCRICAO": "Carcinoma indiferenciado SOE"
+ },
+ {
+  "CAT": "M8021\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8022\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8030\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8031\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8032\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8033\/3",
+  "DESCRICAO": "Carcinoma pseudossarcomatoso"
+ },
+ {
+  "CAT": "M8034\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8040\/1",
+  "DESCRICAO": "Tumorlet"
+ },
+ {
+  "CAT": "M8041\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8042\/3",
+  "DESCRICAO": "Carcinoma \"oat cell\"",
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8043\/3",
+  "DESCRICAO": false,
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8044\/3",
+  "DESCRICAO": false,
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8045\/3",
+  "DESCRICAO": false,
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8050\/0",
+  "DESCRICAO": "Papiloma SOE (exceto Papiloma de bexiga M8120\/1)"
+ },
+ {
+  "CAT": "M8050\/2",
+  "DESCRICAO": "Carcinoma papilar in situ"
+ },
+ {
+  "CAT": "M8050\/3",
+  "DESCRICAO": "Carcinoma papilar SOE"
+ },
+ {
+  "CAT": "M8051\/0",
+  "DESCRICAO": "Papiloma verrucoso"
+ },
+ {
+  "CAT": "M8051\/3",
+  "DESCRICAO": "Carcinoma verrucoso SOE"
+ },
+ {
+  "CAT": "M8052\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8052\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8053\/0",
+  "DESCRICAO": "Papiloma invertido"
+ },
+ {
+  "CAT": "M8060\/0",
+  "DESCRICAO": "Papilomatose SOE"
+ },
+ {
+  "CAT": "M8070\/2",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8070\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8070\/6",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8071\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8072\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8073\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8074\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8075\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8076\/2",
+  "DESCRICAO": false,
+  "REFER": "C53.-"
+ },
+ {
+  "CAT": "M8076\/3",
+  "DESCRICAO": false,
+  "REFER": "C53.-"
+ },
+ {
+  "CAT": "M8077\/2",
+  "DESCRICAO": "Neoplasia intra-epitelial, grau III, de colo uterino, vulva e vagina"
+ },
+ {
+  "CAT": "M8080\/2",
+  "DESCRICAO": "Eritroplasia de Queyrat"
+ },
+ {
+  "CAT": "M8081\/2",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8082\/3",
+  "DESCRICAO": "Carcinoma linfoepitelial"
+ },
+ {
+  "CAT": "M8090\/1",
+  "DESCRICAO": false,
+  "REFER": "D48.5"
+ },
+ {
+  "CAT": "M8090\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8091\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8092\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8093\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8094\/3",
+  "DESCRICAO": "Carcinoma basoescamoso",
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8095\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8096\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8100\/0",
+  "DESCRICAO": "Tricoepitelioma",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8101\/0",
+  "DESCRICAO": "Tricofoliculoma",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8102\/0",
+  "DESCRICAO": "Tricolemoma",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8110\/0",
+  "DESCRICAO": "Pilomatrixoma SOE",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8110\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8120\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8120\/1",
+  "DESCRICAO": "Papiloma urotelial"
+ },
+ {
+  "CAT": "M8120\/2",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8120\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8121\/0",
+  "DESCRICAO": "Papiloma schneideriano"
+ },
+ {
+  "CAT": "M8121\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8121\/3",
+  "DESCRICAO": "Carcinoma schneideriano"
+ },
+ {
+  "CAT": "M8122\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8123\/3",
+  "DESCRICAO": false,
+  "REFER": "C21.1"
+ },
+ {
+  "CAT": "M8124\/3",
+  "DESCRICAO": false,
+  "REFER": "C21.2"
+ },
+ {
+  "CAT": "M8130\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8140\/0",
+  "DESCRICAO": "Adenoma SOE"
+ },
+ {
+  "CAT": "M8140\/1",
+  "DESCRICAO": false,
+  "REFER": "D38.1"
+ },
+ {
+  "CAT": "M8140\/2",
+  "DESCRICAO": "Adenocarcinoma in situ SOE"
+ },
+ {
+  "CAT": "M8140\/3",
+  "DESCRICAO": "Adenocarcinoma SOE"
+ },
+ {
+  "CAT": "M8140\/6",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8141\/3",
+  "DESCRICAO": "Adenocarcinoma esquirroso"
+ },
+ {
+  "CAT": "M8142\/3",
+  "DESCRICAO": false,
+  "REFER": "C16.-"
+ },
+ {
+  "CAT": "M8143\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8144\/3",
+  "DESCRICAO": "Adenocarcionama, tipo intestinal",
+  "REFER": "C16.-"
+ },
+ {
+  "CAT": "M8145\/3",
+  "DESCRICAO": "Carcinoma, tipo difuso",
+  "REFER": "C16.-"
+ },
+ {
+  "CAT": "M8146\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8147\/0",
+  "DESCRICAO": false,
+  "REFER": "D11.-"
+ },
+ {
+  "CAT": "M8147\/3",
+  "DESCRICAO": false,
+  "REFER": "C07.-,C08.-"
+ },
+ {
+  "CAT": "M8150\/0",
+  "DESCRICAO": false,
+  "REFER": "D13.7"
+ },
+ {
+  "CAT": "M8150\/3",
+  "DESCRICAO": false,
+  "REFER": "C25.4"
+ },
+ {
+  "CAT": "M8151\/0",
+  "DESCRICAO": "Insulinoma SOE",
+  "REFER": "D13.7"
+ },
+ {
+  "CAT": "M8151\/3",
+  "DESCRICAO": "Insulinoma maligno",
+  "REFER": "C25.4"
+ },
+ {
+  "CAT": "M8152\/0",
+  "DESCRICAO": "Glucagonoma SOE",
+  "REFER": "D13.7"
+ },
+ {
+  "CAT": "M8152\/3",
+  "DESCRICAO": "Glucagonoma maligno",
+  "REFER": "C25.4"
+ },
+ {
+  "CAT": "M8153\/1",
+  "DESCRICAO": "Gastrinoma SOE"
+ },
+ {
+  "CAT": "M8153\/3",
+  "DESCRICAO": "Gastrinoma maligno"
+ },
+ {
+  "CAT": "M8154\/3",
+  "DESCRICAO": false,
+  "REFER": "C25.-"
+ },
+ {
+  "CAT": "M8155\/3",
+  "DESCRICAO": "Vipoma"
+ },
+ {
+  "CAT": "M8160\/0",
+  "DESCRICAO": "Adenoma de duto biliar",
+  "REFER": "D13.4,D13.5"
+ },
+ {
+  "CAT": "M8160\/3",
+  "DESCRICAO": "Colangiocarcinoma",
+  "REFER": "C22.1"
+ },
+ {
+  "CAT": "M8161\/0",
+  "DESCRICAO": "Cistadenoma de dutos biliares"
+ },
+ {
+  "CAT": "M8161\/3",
+  "DESCRICAO": "Cistadenocarcinoma de dutos biliares"
+ },
+ {
+  "CAT": "M8162\/3",
+  "DESCRICAO": "Tumor de Klatskin",
+  "REFER": "C22.1"
+ },
+ {
+  "CAT": "M8170\/0",
+  "DESCRICAO": false,
+  "REFER": "D13.4"
+ },
+ {
+  "CAT": "M8170\/3",
+  "DESCRICAO": "Carcinoma hepatocelular SOE",
+  "REFER": "C22.0"
+ },
+ {
+  "CAT": "M8171\/3",
+  "DESCRICAO": "Carcinoma hepatocelular fibrolamelar",
+  "REFER": "C22.0"
+ },
+ {
+  "CAT": "M8180\/3",
+  "DESCRICAO": "Carcinoma hepatocelular e colangiocarcinoma combinados",
+  "REFER": "C22.0"
+ },
+ {
+  "CAT": "M8190\/0",
+  "DESCRICAO": "Adenoma trabecular"
+ },
+ {
+  "CAT": "M8190\/3",
+  "DESCRICAO": "Adenocarcinoma trabecular"
+ },
+ {
+  "CAT": "M8191\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8200\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8200\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8201\/3",
+  "DESCRICAO": "Carcinoma cribriforme"
+ },
+ {
+  "CAT": "M8202\/0",
+  "DESCRICAO": false,
+  "REFER": "D13.7"
+ },
+ {
+  "CAT": "M8210\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8210\/2",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8210\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8211\/0",
+  "DESCRICAO": "Adenoma tubular SOE"
+ },
+ {
+  "CAT": "M8211\/3",
+  "DESCRICAO": "Adenocarcinoma tubular"
+ },
+ {
+  "CAT": "M8220\/0",
+  "DESCRICAO": false,
+  "REFER": "D12.-"
+ },
+ {
+  "CAT": "M8220\/3",
+  "DESCRICAO": false,
+  "REFER": "C18.-"
+ },
+ {
+  "CAT": "M8221\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8221\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8230\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8231\/3",
+  "DESCRICAO": "Carcinoma simples"
+ },
+ {
+  "CAT": "M8240\/1",
+  "DESCRICAO": false,
+  "REFER": "D37.7"
+ },
+ {
+  "CAT": "M8240\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8241\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8241\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8243\/3",
+  "DESCRICAO": false,
+  "REFER": "C18.1"
+ },
+ {
+  "CAT": "M8244\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8245\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8246\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8247\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8248\/1",
+  "DESCRICAO": "Apudoma"
+ },
+ {
+  "CAT": "M8250\/1",
+  "DESCRICAO": "Adenomatose pulmonar",
+  "REFER": "D38.1"
+ },
+ {
+  "CAT": "M8250\/3",
+  "DESCRICAO": false,
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8251\/0",
+  "DESCRICAO": "Adenoma alveolar",
+  "REFER": "D14.3"
+ },
+ {
+  "CAT": "M8251\/3",
+  "DESCRICAO": "Adenocarcinoma alveolar",
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8260\/0",
+  "DESCRICAO": "Adenoma papilar SOE"
+ },
+ {
+  "CAT": "M8260\/3",
+  "DESCRICAO": "Adenocarcinoma papilar SOE"
+ },
+ {
+  "CAT": "M8261\/1",
+  "DESCRICAO": "Adenoma viloso SOE"
+ },
+ {
+  "CAT": "M8261\/2",
+  "DESCRICAO": "Adenocarcinoma in situ em adenoma viloso"
+ },
+ {
+  "CAT": "M8261\/3",
+  "DESCRICAO": "Adenocarcinoma em adenoma viloso"
+ },
+ {
+  "CAT": "M8262\/3",
+  "DESCRICAO": "Adenocarcinoma viloso"
+ },
+ {
+  "CAT": "M8263\/0",
+  "DESCRICAO": "Adenoma tubuloviloso SOE"
+ },
+ {
+  "CAT": "M8263\/2",
+  "DESCRICAO": "Adenocarcinoma in situ em adenoma tubuloviloso"
+ },
+ {
+  "CAT": "M8263\/3",
+  "DESCRICAO": "Adenocarcinoma em adenoma tubuloviloso"
+ },
+ {
+  "CAT": "M8270\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.2"
+ },
+ {
+  "CAT": "M8270\/3",
+  "DESCRICAO": false,
+  "REFER": "C75.1"
+ },
+ {
+  "CAT": "M8271\/0",
+  "DESCRICAO": "Prolactinoma",
+  "REFER": "D35.2"
+ },
+ {
+  "CAT": "M8280\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.2"
+ },
+ {
+  "CAT": "M8280\/3",
+  "DESCRICAO": false,
+  "REFER": "C75.1"
+ },
+ {
+  "CAT": "M8281\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.2"
+ },
+ {
+  "CAT": "M8281\/3",
+  "DESCRICAO": false,
+  "REFER": "C75.1"
+ },
+ {
+  "CAT": "M8290\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8290\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8300\/0",
+  "DESCRICAO": false,
+  "REFER": "C75.1"
+ },
+ {
+  "CAT": "M8300\/3",
+  "DESCRICAO": false,
+  "REFER": "D35.2"
+ },
+ {
+  "CAT": "M8310\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8310\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8311\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8312\/3",
+  "DESCRICAO": false,
+  "REFER": "C64"
+ },
+ {
+  "CAT": "M8313\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8314\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8315\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8320\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8321\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.1"
+ },
+ {
+  "CAT": "M8322\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.1"
+ },
+ {
+  "CAT": "M8322\/3",
+  "DESCRICAO": false,
+  "REFER": "C75.0"
+ },
+ {
+  "CAT": "M8323\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8323\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8324\/0",
+  "DESCRICAO": "Lipoadenoma"
+ },
+ {
+  "CAT": "M8330\/0",
+  "DESCRICAO": "Adenoma folicular",
+  "REFER": "D34"
+ },
+ {
+  "CAT": "M8330\/3",
+  "DESCRICAO": "Adenocarcinoma folicular SOE",
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8331\/3",
+  "DESCRICAO": "Adenocarcinoma folicular bem diferenciado",
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8332\/3",
+  "DESCRICAO": "Adenocarcinoma folicular trabecular",
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8333\/0",
+  "DESCRICAO": "Adenoma microfolicular",
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8334\/0",
+  "DESCRICAO": "Adenoma macrofolicular",
+  "REFER": "D34"
+ },
+ {
+  "CAT": "M8340\/3",
+  "DESCRICAO": "Carcinoma papilar, variante folicular",
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8350\/3",
+  "DESCRICAO": false,
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8360\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8361\/1",
+  "DESCRICAO": "Tumor justaglomerular",
+  "REFER": "D41.0"
+ },
+ {
+  "CAT": "M8370\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8370\/3",
+  "DESCRICAO": false,
+  "REFER": "C74.0"
+ },
+ {
+  "CAT": "M8371\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8372\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8373\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8374\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8375\/0",
+  "DESCRICAO": false,
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8380\/0",
+  "DESCRICAO": false,
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8380\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8380\/3",
+  "DESCRICAO": false,
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8381\/0",
+  "DESCRICAO": false,
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8381\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8381\/3",
+  "DESCRICAO": false,
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8390\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8390\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8400\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8400\/1",
+  "DESCRICAO": false,
+  "REFER": "D48.5"
+ },
+ {
+  "CAT": "M8400\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8401\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8401\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8402\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8403\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8404\/0",
+  "DESCRICAO": "Hidrocistoma",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8405\/0",
+  "DESCRICAO": "Hidradenoma papilar",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8406\/0",
+  "DESCRICAO": "Siringadenoma papilar",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8407\/0",
+  "DESCRICAO": "Siringoma SOE",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8408\/0",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8410\/0",
+  "DESCRICAO": false,
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8410\/3",
+  "DESCRICAO": false,
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8420\/0",
+  "DESCRICAO": "Adenoma ceruminoso",
+  "REFER": "D23.2"
+ },
+ {
+  "CAT": "M8420\/3",
+  "DESCRICAO": "Adenocarcinoma ceruminoso",
+  "REFER": "C44.2"
+ },
+ {
+  "CAT": "M8430\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8430\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8440\/0",
+  "DESCRICAO": "Cistadenoma SOE"
+ },
+ {
+  "CAT": "M8440\/3",
+  "DESCRICAO": "Cistadenocarcinoma SOE"
+ },
+ {
+  "CAT": "M8441\/0",
+  "DESCRICAO": "Cistadenoma seroso SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8441\/3",
+  "DESCRICAO": "Cistadenocarcinoma seroso SOE",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8442\/3",
+  "DESCRICAO": "Cistadenoma seroso \"borderline\"",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8450\/0",
+  "DESCRICAO": "Cistadenoma papilar SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8450\/3",
+  "DESCRICAO": "Cistadenocarcinoma papilar SOE",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8451\/3",
+  "DESCRICAO": "Cistadenoma papilar \"borderline\"",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8452\/1",
+  "DESCRICAO": false,
+  "REFER": "D37.7"
+ },
+ {
+  "CAT": "M8460\/0",
+  "DESCRICAO": "Cistadenoma seroso papilar SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8460\/3",
+  "DESCRICAO": "Cistadenocarcinoma seroso papilar",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8461\/0",
+  "DESCRICAO": "Papiloma seroso superficial",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8461\/3",
+  "DESCRICAO": "Carcinoma papilar seroso superficial",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8462\/3",
+  "DESCRICAO": "Cistadenoma seroso papilar \"borderline\"",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8470\/0",
+  "DESCRICAO": "Cistadenoma mucinoso SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8470\/3",
+  "DESCRICAO": "Cistadenocarcinoma mucinoso",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8471\/0",
+  "DESCRICAO": "Cistadenoma mucinoso papilar SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8471\/3",
+  "DESCRICAO": "Cistadenocarcinoma mucinoso papilar",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8472\/3",
+  "DESCRICAO": "Cistadenoma mucinoso \"borderline\"",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8473\/3",
+  "DESCRICAO": "Cistadenoma mucinoso papilar \"borderline\"",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8480\/0",
+  "DESCRICAO": "Adenoma mucinoso"
+ },
+ {
+  "CAT": "M8480\/3",
+  "DESCRICAO": "Adenocarcinoma mucinoso"
+ },
+ {
+  "CAT": "M8480\/6",
+  "DESCRICAO": false,
+  "REFER": "C78.6"
+ },
+ {
+  "CAT": "M8481\/3",
+  "DESCRICAO": "Adenocarcinoma produtor de mucina"
+ },
+ {
+  "CAT": "M8490\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8490\/6",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8500\/2",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8500\/3",
+  "DESCRICAO": "Carcinoma de dutos infiltrante",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8501\/2",
+  "DESCRICAO": false,
+  "REFER": "D05.-"
+ },
+ {
+  "CAT": "M8501\/3",
+  "DESCRICAO": "Comedocarcinoma SOE",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8502\/3",
+  "DESCRICAO": "Carcinoma juvenil da mama",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8503\/0",
+  "DESCRICAO": "Papiloma intraductal"
+ },
+ {
+  "CAT": "M8503\/2",
+  "DESCRICAO": false,
+  "REFER": "D05.-"
+ },
+ {
+  "CAT": "M8503\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8504\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8504\/2",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8504\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8505\/0",
+  "DESCRICAO": "Papilomatose intraductal SOE"
+ },
+ {
+  "CAT": "M8506\/0",
+  "DESCRICAO": "Adenoma do mamilo",
+  "REFER": "D24"
+ },
+ {
+  "CAT": "M8510\/3",
+  "DESCRICAO": "Carcinoma medular SOE"
+ },
+ {
+  "CAT": "M8511\/3",
+  "DESCRICAO": false,
+  "REFER": "C73"
+ },
+ {
+  "CAT": "M8512\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8520\/2",
+  "DESCRICAO": "Carcinoma lobular in situ",
+  "REFER": "D05.0"
+ },
+ {
+  "CAT": "M8520\/3",
+  "DESCRICAO": "Carcinoma lobular SOE",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8521\/3",
+  "DESCRICAO": "Carcinoma ductular infiltrante",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8522\/2",
+  "DESCRICAO": "Carcinoma intraductel e carcinoma lobular in situ",
+  "REFER": "D05.7"
+ },
+ {
+  "CAT": "M8522\/3",
+  "DESCRICAO": "Carcinoma infiltrante de dutos e lobular",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8530\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8540\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8541\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8542\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8543\/3",
+  "DESCRICAO": false,
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M8550\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8550\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8551\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8560\/3",
+  "DESCRICAO": "Carcinoma adenoescamoso"
+ },
+ {
+  "CAT": "M8561\/0",
+  "DESCRICAO": "Adenolinfoma",
+  "REFER": "D11.-"
+ },
+ {
+  "CAT": "M8562\/3",
+  "DESCRICAO": "Carcinoma epitelial-mioepitelial"
+ },
+ {
+  "CAT": "M8570\/3",
+  "DESCRICAO": "Adenocarcinoma com metaplasia escamosa"
+ },
+ {
+  "CAT": "M8571\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8572\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8573\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8580\/0",
+  "DESCRICAO": "Timoma benigno",
+  "REFER": "D15.0"
+ },
+ {
+  "CAT": "M8580\/3",
+  "DESCRICAO": "Timoma maligno",
+  "REFER": "C37"
+ },
+ {
+  "CAT": "M8590\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8600\/0",
+  "DESCRICAO": "Tecoma SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8600\/3",
+  "DESCRICAO": "Tecoma maligno",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8601\/3",
+  "DESCRICAO": "Tecoma luteinizado",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8602\/0",
+  "DESCRICAO": "Tumor esclerosante do estroma",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8610\/0",
+  "DESCRICAO": "Luteoma SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8620\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8620\/3",
+  "DESCRICAO": false,
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M8621\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8622\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8623\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8630\/0",
+  "DESCRICAO": "Androblastoma benigno"
+ },
+ {
+  "CAT": "M8630\/1",
+  "DESCRICAO": "Androblastoma SOE"
+ },
+ {
+  "CAT": "M8630\/3",
+  "DESCRICAO": "Androblastoma maligno"
+ },
+ {
+  "CAT": "M8631\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8632\/1",
+  "DESCRICAO": "Ginandroblastoma",
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M8640\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8640\/3",
+  "DESCRICAO": false,
+  "REFER": "C62.-"
+ },
+ {
+  "CAT": "M8641\/0",
+  "DESCRICAO": false,
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8650\/0",
+  "DESCRICAO": false,
+  "REFER": "D29.2"
+ },
+ {
+  "CAT": "M8650\/1",
+  "DESCRICAO": false,
+  "REFER": "D40.1"
+ },
+ {
+  "CAT": "M8650\/3",
+  "DESCRICAO": false,
+  "REFER": "C62.-"
+ },
+ {
+  "CAT": "M8660\/0",
+  "DESCRICAO": false,
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8670\/0",
+  "DESCRICAO": false,
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M8671\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8680\/1",
+  "DESCRICAO": "Paraganglioma SOE"
+ },
+ {
+  "CAT": "M8680\/3",
+  "DESCRICAO": "Paraganglioma maligno"
+ },
+ {
+  "CAT": "M8681\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8682\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8683\/0",
+  "DESCRICAO": false,
+  "REFER": "D13.2"
+ },
+ {
+  "CAT": "M8690\/1",
+  "DESCRICAO": "Tumor do glomo jugular",
+  "REFER": "D44.7"
+ },
+ {
+  "CAT": "M8691\/1",
+  "DESCRICAO": false,
+  "REFER": "D44.7"
+ },
+ {
+  "CAT": "M8692\/1",
+  "DESCRICAO": false,
+  "REFER": "D44.6"
+ },
+ {
+  "CAT": "M8693\/1",
+  "DESCRICAO": "Paraganglioma extra-supra-renal SOE"
+ },
+ {
+  "CAT": "M8693\/3",
+  "DESCRICAO": "Paraganglioma extra-supra-renal maligno"
+ },
+ {
+  "CAT": "M8700\/0",
+  "DESCRICAO": "Feocromocitoma SOE",
+  "REFER": "D35.0"
+ },
+ {
+  "CAT": "M8700\/3",
+  "DESCRICAO": "Feocromocitoma maligno",
+  "REFER": "C74.1"
+ },
+ {
+  "CAT": "M8710\/3",
+  "DESCRICAO": "Glomangiossarcoma"
+ },
+ {
+  "CAT": "M8711\/0",
+  "DESCRICAO": "Tumor de glomo"
+ },
+ {
+  "CAT": "M8712\/3",
+  "DESCRICAO": "Glomangioma"
+ },
+ {
+  "CAT": "M8713\/0",
+  "DESCRICAO": "Glomangiomioma"
+ },
+ {
+  "CAT": "M8720\/0",
+  "DESCRICAO": "Nevo pigmentado SOE",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8720\/2",
+  "DESCRICAO": "Melanoma in situ",
+  "REFER": "D03.-"
+ },
+ {
+  "CAT": "M8720\/3",
+  "DESCRICAO": "Melanoma maligno SOE",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8721\/3",
+  "DESCRICAO": "Melanoma nodular",
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8722\/0",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8722\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8723\/0",
+  "DESCRICAO": "Halo nevo",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8723\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8724\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.3"
+ },
+ {
+  "CAT": "M8725\/0",
+  "DESCRICAO": "Neuronevo",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8726\/0",
+  "DESCRICAO": "Nevo magnocelular",
+  "REFER": "D31.4"
+ },
+ {
+  "CAT": "M8727\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8730\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8730\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8740\/0",
+  "DESCRICAO": "Nevo juncional SOE",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8740\/3",
+  "DESCRICAO": "Melanoma maligno em nevo juncional",
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8741\/2",
+  "DESCRICAO": false,
+  "REFER": "D03.-"
+ },
+ {
+  "CAT": "M8741\/3",
+  "DESCRICAO": false,
+  "REFER": "D03.-"
+ },
+ {
+  "CAT": "M8742\/2",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8742\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8743\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8744\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8745\/3",
+  "DESCRICAO": false,
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8750\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8760\/0",
+  "DESCRICAO": "Nevo composto",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8761\/1",
+  "DESCRICAO": "Nevo pigmentado gigante SOE",
+  "REFER": "D48.5"
+ },
+ {
+  "CAT": "M8761\/3",
+  "DESCRICAO": "Melanoma maligno em nevo pigmentado gigante",
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8770\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8770\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8771\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8771\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8772\/0",
+  "DESCRICAO": false,
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8772\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8773\/3",
+  "DESCRICAO": false,
+  "REFER": "C69.4"
+ },
+ {
+  "CAT": "M8774\/3",
+  "DESCRICAO": false,
+  "REFER": "C69.4"
+ },
+ {
+  "CAT": "M8780\/0",
+  "DESCRICAO": "Nevo azul SOE",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8780\/3",
+  "DESCRICAO": "Nevo azul maligno",
+  "REFER": "C43.-"
+ },
+ {
+  "CAT": "M8790\/0",
+  "DESCRICAO": "Nevo azul celular",
+  "REFER": "D22.-"
+ },
+ {
+  "CAT": "M8800\/0",
+  "DESCRICAO": "Tumor benigno de tecidos moles"
+ },
+ {
+  "CAT": "M8800\/3",
+  "DESCRICAO": "Sarcoma SOE"
+ },
+ {
+  "CAT": "M8800\/6",
+  "DESCRICAO": "Sarcomatose SOE"
+ },
+ {
+  "CAT": "M8801\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8802\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8803\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8804\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8810\/0",
+  "DESCRICAO": "Fibroma SOE"
+ },
+ {
+  "CAT": "M8810\/3",
+  "DESCRICAO": "Fibrossarcoma SOE"
+ },
+ {
+  "CAT": "M8811\/0",
+  "DESCRICAO": "Fibromixoma SOE"
+ },
+ {
+  "CAT": "M8811\/3",
+  "DESCRICAO": "Firbromixossarcoma"
+ },
+ {
+  "CAT": "M8812\/0",
+  "DESCRICAO": "Fibroma periostal",
+  "REFER": "D16"
+ },
+ {
+  "CAT": "M8812\/3",
+  "DESCRICAO": "Fibrossarcoma periostal",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M8813\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8813\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8814\/3",
+  "DESCRICAO": "Fibrossarcoma infantil"
+ },
+ {
+  "CAT": "M8820\/0",
+  "DESCRICAO": "Elastofibroma"
+ },
+ {
+  "CAT": "M8821\/1",
+  "DESCRICAO": "Fibromatose agressiva"
+ },
+ {
+  "CAT": "M8822\/1",
+  "DESCRICAO": "Fibromatose abdominal"
+ },
+ {
+  "CAT": "M8823\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8824\/1",
+  "DESCRICAO": "Miofibromatose"
+ },
+ {
+  "CAT": "M8830\/0",
+  "DESCRICAO": "Histiocitoma fibroso SOE"
+ },
+ {
+  "CAT": "M8830\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8830\/3",
+  "DESCRICAO": "Histiocitoma fibroso maligno"
+ },
+ {
+  "CAT": "M8832\/0",
+  "DESCRICAO": "Dermatofibroma SOE",
+  "REFER": "D23.-"
+ },
+ {
+  "CAT": "M8832\/3",
+  "DESCRICAO": "Dermatofibrossarcoma SOE",
+  "REFER": "C44.-"
+ },
+ {
+  "CAT": "M8833\/3",
+  "DESCRICAO": "Dermatofibrossarcoma protuberante pigmentado"
+ },
+ {
+  "CAT": "M8840\/0",
+  "DESCRICAO": "Mixoma SOE"
+ },
+ {
+  "CAT": "M8840\/3",
+  "DESCRICAO": "Mixossarcoma"
+ },
+ {
+  "CAT": "M8841\/1",
+  "DESCRICAO": "Angiomixoma"
+ },
+ {
+  "CAT": "M8850\/0",
+  "DESCRICAO": "Lipoma SOE",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8850\/3",
+  "DESCRICAO": "Lipossarcoma SOE"
+ },
+ {
+  "CAT": "M8851\/0",
+  "DESCRICAO": "Fibrolipoma",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8851\/3",
+  "DESCRICAO": "Lipossarcoma bem diferenciado"
+ },
+ {
+  "CAT": "M8852\/0",
+  "DESCRICAO": "Fibromixolipoma",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8852\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8853\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8854\/0",
+  "DESCRICAO": false,
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8854\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8855\/3",
+  "DESCRICAO": "Lipossarcoma misto"
+ },
+ {
+  "CAT": "M8856\/0",
+  "DESCRICAO": "Lipoma intramuscular",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8857\/0",
+  "DESCRICAO": false,
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8858\/3",
+  "DESCRICAO": "Lipossarcoma desdiferenciado"
+ },
+ {
+  "CAT": "M8860\/0",
+  "DESCRICAO": "Angiomiolipoma",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8861\/0",
+  "DESCRICAO": "Angiolipoma SOE",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8870\/0",
+  "DESCRICAO": "Mielolipoma",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8880\/0",
+  "DESCRICAO": "Hibernoma",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8881\/0",
+  "DESCRICAO": "Lipoblastomatose",
+  "REFER": "D17.-"
+ },
+ {
+  "CAT": "M8890\/0",
+  "DESCRICAO": "Leiomioma SOE"
+ },
+ {
+  "CAT": "M8890\/1",
+  "DESCRICAO": "Leiomiomatose SOE"
+ },
+ {
+  "CAT": "M8890\/3",
+  "DESCRICAO": "Leiomiossarcoma SOE"
+ },
+ {
+  "CAT": "M8891\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8892\/0",
+  "DESCRICAO": "Leiomioma celular"
+ },
+ {
+  "CAT": "M8893\/0",
+  "DESCRICAO": "Leiomioma bizarro"
+ },
+ {
+  "CAT": "M8894\/0",
+  "DESCRICAO": "Angiomioma"
+ },
+ {
+  "CAT": "M8894\/3",
+  "DESCRICAO": "Angiomiossarcoma"
+ },
+ {
+  "CAT": "M8895\/0",
+  "DESCRICAO": "Mioma"
+ },
+ {
+  "CAT": "M8895\/3",
+  "DESCRICAO": "Miossarcoma"
+ },
+ {
+  "CAT": "M8896\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8897\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8900\/0",
+  "DESCRICAO": "Rabdomioma SOE"
+ },
+ {
+  "CAT": "M8900\/3",
+  "DESCRICAO": "Rabdomiossarcoma SOE"
+ },
+ {
+  "CAT": "M8901\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8902\/3",
+  "DESCRICAO": "Rabdomiossarcoma tipo misto"
+ },
+ {
+  "CAT": "M8903\/0",
+  "DESCRICAO": "Rabdomioma fetal"
+ },
+ {
+  "CAT": "M8904\/0",
+  "DESCRICAO": "Rabdomioma adulto"
+ },
+ {
+  "CAT": "M8910\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8920\/3",
+  "DESCRICAO": "Rabdomiossarcoma alveolar"
+ },
+ {
+  "CAT": "M8930\/0",
+  "DESCRICAO": false,
+  "REFER": "D26.1"
+ },
+ {
+  "CAT": "M8930\/3",
+  "DESCRICAO": "Sarcoma do estroma endometrial",
+  "REFER": "C54.-"
+ },
+ {
+  "CAT": "M8931\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.0"
+ },
+ {
+  "CAT": "M8932\/0",
+  "DESCRICAO": "Adenomioma"
+ },
+ {
+  "CAT": "M8933\/3",
+  "DESCRICAO": "Adenossarcoma"
+ },
+ {
+  "CAT": "M8940\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8940\/3",
+  "DESCRICAO": "Tumor misto maligno SOE"
+ },
+ {
+  "CAT": "M8941\/3",
+  "DESCRICAO": false,
+  "REFER": "C07,C08.-"
+ },
+ {
+  "CAT": "M8950\/3",
+  "DESCRICAO": "Tumor mulleriano misto",
+  "REFER": "C54.-"
+ },
+ {
+  "CAT": "M8951\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8960\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8960\/3",
+  "DESCRICAO": "Nefroblastoma SOE",
+  "REFER": "C64"
+ },
+ {
+  "CAT": "M8963\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8964\/3",
+  "DESCRICAO": false,
+  "REFER": "C64"
+ },
+ {
+  "CAT": "M8970\/3",
+  "DESCRICAO": "Hepatoblastoma",
+  "REFER": "C22.0"
+ },
+ {
+  "CAT": "M8971\/3",
+  "DESCRICAO": "Pancreatoblastoma",
+  "REFER": "C25.-"
+ },
+ {
+  "CAT": "M8972\/3",
+  "DESCRICAO": "Blastoma pulmonar",
+  "REFER": "C34.-"
+ },
+ {
+  "CAT": "M8980\/3",
+  "DESCRICAO": "Carcinossarcoma SOE"
+ },
+ {
+  "CAT": "M8981\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M8982\/0",
+  "DESCRICAO": "Mioepitelioma"
+ },
+ {
+  "CAT": "M8990\/0",
+  "DESCRICAO": "Mesenquimoma benigno"
+ },
+ {
+  "CAT": "M8990\/1",
+  "DESCRICAO": "Mesenquimoma SOE"
+ },
+ {
+  "CAT": "M8990\/3",
+  "DESCRICAO": "Mesenquimoma maligno"
+ },
+ {
+  "CAT": "M8991\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9000\/0",
+  "DESCRICAO": "Tumor de Brenner SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M9000\/1",
+  "DESCRICAO": "Tumor de Brenner \"borderline\"",
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M9000\/3",
+  "DESCRICAO": "Tumor de Brenner maligno",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M9010\/0",
+  "DESCRICAO": "Fibroadenoma SOE",
+  "REFER": "D24"
+ },
+ {
+  "CAT": "M9011\/0",
+  "DESCRICAO": "Fibroadenoma intracanalicular",
+  "REFER": "D24"
+ },
+ {
+  "CAT": "M9012\/0",
+  "DESCRICAO": "Fibroadenoma pericanalicular",
+  "REFER": "D24"
+ },
+ {
+  "CAT": "M9013\/0",
+  "DESCRICAO": "Adenofibroma SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M9014\/0",
+  "DESCRICAO": "Adenofibroma seroso",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M9015\/0",
+  "DESCRICAO": "Adenofibroma mucinoso",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M9016\/0",
+  "DESCRICAO": "Fibroadenoma gigante",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M9020\/0",
+  "DESCRICAO": "Tumor filodes benigno",
+  "REFER": "D24"
+ },
+ {
+  "CAT": "M9020\/1",
+  "DESCRICAO": "Tumor filodes SOE",
+  "REFER": "D48.6"
+ },
+ {
+  "CAT": "M9020\/3",
+  "DESCRICAO": "Tumor filodes maligno",
+  "REFER": "C50.-"
+ },
+ {
+  "CAT": "M9030\/3",
+  "DESCRICAO": "Fibroadenoma juvenil",
+  "REFER": "D24"
+ },
+ {
+  "CAT": "M9040\/0",
+  "DESCRICAO": "Sinovioma benigno"
+ },
+ {
+  "CAT": "M9040\/3",
+  "DESCRICAO": "Sarcoma sinovial SOE"
+ },
+ {
+  "CAT": "M9041\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9042\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9043\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9044\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9050\/0",
+  "DESCRICAO": "Mesotelioma benigno",
+  "REFER": "D19.-"
+ },
+ {
+  "CAT": "M9050\/3",
+  "DESCRICAO": "Mesotelioma maligno",
+  "REFER": "C45.-"
+ },
+ {
+  "CAT": "M9051\/0",
+  "DESCRICAO": "Mesotelioma fibroso benigno",
+  "REFER": "D19.-"
+ },
+ {
+  "CAT": "M9051\/3",
+  "DESCRICAO": "Mesotelioma fibroso maligno",
+  "REFER": "C45.-"
+ },
+ {
+  "CAT": "M9052\/0",
+  "DESCRICAO": false,
+  "REFER": "D19.-"
+ },
+ {
+  "CAT": "M9052\/3",
+  "DESCRICAO": false,
+  "REFER": "C45.-"
+ },
+ {
+  "CAT": "M9053\/0",
+  "DESCRICAO": false,
+  "REFER": "D19.-"
+ },
+ {
+  "CAT": "M9053\/3",
+  "DESCRICAO": false,
+  "REFER": "C45.-"
+ },
+ {
+  "CAT": "M9054\/0",
+  "DESCRICAO": false,
+  "REFER": "D19.-"
+ },
+ {
+  "CAT": "M9055\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9060\/3",
+  "DESCRICAO": "Disgerminoma"
+ },
+ {
+  "CAT": "M9061\/3",
+  "DESCRICAO": "Seminoma SOE",
+  "REFER": "C62.-"
+ },
+ {
+  "CAT": "M9062\/3",
+  "DESCRICAO": false,
+  "REFER": "C62.-"
+ },
+ {
+  "CAT": "M9063\/3",
+  "DESCRICAO": false,
+  "REFER": "C62.-"
+ },
+ {
+  "CAT": "M9064\/3",
+  "DESCRICAO": "Germinoma"
+ },
+ {
+  "CAT": "M9070\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9071\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9072\/3",
+  "DESCRICAO": "Poliembrioma"
+ },
+ {
+  "CAT": "M9073\/1",
+  "DESCRICAO": "Gonadoblastoma"
+ },
+ {
+  "CAT": "M9080\/0",
+  "DESCRICAO": "Teratoma benigno"
+ },
+ {
+  "CAT": "M9080\/1",
+  "DESCRICAO": "Teratoma SOE"
+ },
+ {
+  "CAT": "M9080\/3",
+  "DESCRICAO": "Teratoma maligno SOE"
+ },
+ {
+  "CAT": "M9081\/3",
+  "DESCRICAO": "Teratocarcinoma"
+ },
+ {
+  "CAT": "M9082\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9083\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9084\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9084\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9085\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9090\/0",
+  "DESCRICAO": "Estruma ovariana SOE",
+  "REFER": "D27"
+ },
+ {
+  "CAT": "M9090\/3",
+  "DESCRICAO": "Estruma ovariana maligna",
+  "REFER": "C56"
+ },
+ {
+  "CAT": "M9091\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.1"
+ },
+ {
+  "CAT": "M9100\/0",
+  "DESCRICAO": "Mola hidatiforme SOE",
+  "REFER": "O01.9"
+ },
+ {
+  "CAT": "M9100\/1",
+  "DESCRICAO": "Mola hidatiforma invasiva",
+  "REFER": "D39.2"
+ },
+ {
+  "CAT": "M9100\/3",
+  "DESCRICAO": "Coriocarcinoma SOE"
+ },
+ {
+  "CAT": "M9101\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9102\/3",
+  "DESCRICAO": false,
+  "REFER": "C62.-"
+ },
+ {
+  "CAT": "M9103\/0",
+  "DESCRICAO": "Mola hidatiforme parcial",
+  "REFER": "O01.1"
+ },
+ {
+  "CAT": "M9104\/1",
+  "DESCRICAO": false,
+  "REFER": "D39.2"
+ },
+ {
+  "CAT": "M9110\/0",
+  "DESCRICAO": "Mesomefroma benigno"
+ },
+ {
+  "CAT": "M9110\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9110\/3",
+  "DESCRICAO": "Mesomefroma maligno"
+ },
+ {
+  "CAT": "M9120\/0",
+  "DESCRICAO": "Hemangioma SOE",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9120\/3",
+  "DESCRICAO": "Hemangiossarcoma"
+ },
+ {
+  "CAT": "M9121\/0",
+  "DESCRICAO": "Hemangioma cavernoso",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9122\/0",
+  "DESCRICAO": "Hemangioma venoso",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9123\/0",
+  "DESCRICAO": "Hemangioma racemoso",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9124\/3",
+  "DESCRICAO": false,
+  "REFER": "C22.3"
+ },
+ {
+  "CAT": "M9125\/0",
+  "DESCRICAO": false,
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9126\/0",
+  "DESCRICAO": false,
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9130\/0",
+  "DESCRICAO": "Hemangioendotelioma benigno",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9130\/1",
+  "DESCRICAO": "Hemangioendotelioma SOE"
+ },
+ {
+  "CAT": "M9130\/3",
+  "DESCRICAO": "Hemangioendotelioma maligno"
+ },
+ {
+  "CAT": "M9131\/0",
+  "DESCRICAO": "Hemangioma capilar",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9132\/0",
+  "DESCRICAO": "Hemangioma intramuscular",
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9133\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9133\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9134\/1",
+  "DESCRICAO": false,
+  "REFER": "D38.1"
+ },
+ {
+  "CAT": "M9140\/3",
+  "DESCRICAO": "Sarcoma de Kaposi",
+  "REFER": "C46.-"
+ },
+ {
+  "CAT": "M9141\/0",
+  "DESCRICAO": "Angioqueratoma"
+ },
+ {
+  "CAT": "M9142\/0",
+  "DESCRICAO": false,
+  "REFER": "D18.0"
+ },
+ {
+  "CAT": "M9150\/0",
+  "DESCRICAO": "Hemangiopericitoma benigno"
+ },
+ {
+  "CAT": "M9150\/1",
+  "DESCRICAO": "Hemangiopericitoma SOE"
+ },
+ {
+  "CAT": "M9150\/3",
+  "DESCRICAO": "Hemangiopericitoma maligno"
+ },
+ {
+  "CAT": "M9160\/0",
+  "DESCRICAO": "Angiofibroma SOE"
+ },
+ {
+  "CAT": "M9161\/1",
+  "DESCRICAO": "Hemangioblastoma"
+ },
+ {
+  "CAT": "M9170\/0",
+  "DESCRICAO": "Linfangioma SOE",
+  "REFER": "D18.1"
+ },
+ {
+  "CAT": "M9170\/3",
+  "DESCRICAO": "Linfangiossarcoma"
+ },
+ {
+  "CAT": "M9171\/0",
+  "DESCRICAO": "Linfangioma capilar",
+  "REFER": "D18.1"
+ },
+ {
+  "CAT": "M9172\/0",
+  "DESCRICAO": "Linfangioma cavernoso",
+  "REFER": "D18.1"
+ },
+ {
+  "CAT": "M9173\/0",
+  "DESCRICAO": false,
+  "REFER": "D18.1"
+ },
+ {
+  "CAT": "M9174\/0",
+  "DESCRICAO": "Linfangiomioma",
+  "REFER": "D18.1"
+ },
+ {
+  "CAT": "M9174\/1",
+  "DESCRICAO": "Linfangiomiomatose"
+ },
+ {
+  "CAT": "M9175\/0",
+  "DESCRICAO": "Hemolinfangioma",
+  "REFER": "D18.1"
+ },
+ {
+  "CAT": "M9180\/0",
+  "DESCRICAO": "Osteoma SOE",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9180\/3",
+  "DESCRICAO": "Osteossarcoma SOE",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9181\/3",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9182\/3",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9183\/3",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9184\/3",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9185\/3",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9190\/3",
+  "DESCRICAO": "Osteossarcoma justacortical",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9191\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9200\/0",
+  "DESCRICAO": "Osteoblastoma SOE",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9200\/1",
+  "DESCRICAO": "Osteoblastoma agressivo",
+  "REFER": "D48.0"
+ },
+ {
+  "CAT": "M9210\/0",
+  "DESCRICAO": "Osteocondroma",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9210\/1",
+  "DESCRICAO": "Osteocondromatose SOE",
+  "REFER": "D48.0"
+ },
+ {
+  "CAT": "M9220\/0",
+  "DESCRICAO": "Condroma SOE",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9220\/1",
+  "DESCRICAO": "Condromatose SOE"
+ },
+ {
+  "CAT": "M9220\/3",
+  "DESCRICAO": "Condrossarcoma SOE",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9221\/0",
+  "DESCRICAO": "Condroma justacortical",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9221\/3",
+  "DESCRICAO": "Condrossarcoma justacortical",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9230\/0",
+  "DESCRICAO": "Condroblastoma SOE",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9230\/3",
+  "DESCRICAO": "Condroblastoma maligno",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9231\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9240\/3",
+  "DESCRICAO": "Condrossarcoma mesenquimal"
+ },
+ {
+  "CAT": "M9241\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9250\/1",
+  "DESCRICAO": false,
+  "REFER": "D48.0"
+ },
+ {
+  "CAT": "M9250\/3",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9251\/1",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9251\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9260\/3",
+  "DESCRICAO": "Sarcoma de Ewing",
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CAT": "M9261\/3",
+  "DESCRICAO": "Adamantinoma de ossos longos",
+  "REFER": "C40.-"
+ },
+ {
+  "CAT": "M9262\/0",
+  "DESCRICAO": "Fibroma ossificante",
+  "REFER": "D16.-"
+ },
+ {
+  "CAT": "M9270\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9270\/1",
+  "DESCRICAO": false,
+  "REFER": "D48.0"
+ },
+ {
+  "CAT": "M9270\/3",
+  "DESCRICAO": false,
+  "REFER": "C41.0,C41.1"
+ },
+ {
+  "CAT": "M9271\/0",
+  "DESCRICAO": "Dentinoma",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9272\/0",
+  "DESCRICAO": "Cementoma SOE",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9273\/0",
+  "DESCRICAO": "Cementoblastoma benigno",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9274\/0",
+  "DESCRICAO": "Fibroma cementificante",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9275\/0",
+  "DESCRICAO": "Cementoma gigantiforme",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9280\/0",
+  "DESCRICAO": "Odontoma SOE",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9281\/0",
+  "DESCRICAO": "Odontoma composto",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9282\/0",
+  "DESCRICAO": "Odontoma complexo",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9290\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9290\/3",
+  "DESCRICAO": false,
+  "REFER": "C41.0,C41.1"
+ },
+ {
+  "CAT": "M9300\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9301\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9302\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9310\/0",
+  "DESCRICAO": "Ameloblastoma SOE",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9310\/3",
+  "DESCRICAO": "Ameloblastoma maligno",
+  "REFER": "C41.0,C41.1"
+ },
+ {
+  "CAT": "M9311\/0",
+  "DESCRICAO": "Odontoameloblastoma",
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9312\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9320\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9321\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9322\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9330\/0",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9330\/3",
+  "DESCRICAO": false,
+  "REFER": "C41.0,C41.1"
+ },
+ {
+  "CAT": "M9340\/3",
+  "DESCRICAO": false,
+  "REFER": "D16.4,D16.5"
+ },
+ {
+  "CAT": "M9350\/1",
+  "DESCRICAO": "Craniofaringioma",
+  "REFER": "D44.3,D44.4"
+ },
+ {
+  "CAT": "M9360\/1",
+  "DESCRICAO": "Pinealoma",
+  "REFER": "D44.5"
+ },
+ {
+  "CAT": "M9361\/1",
+  "DESCRICAO": "Pineocitoma",
+  "REFER": "D44.5"
+ },
+ {
+  "CAT": "M9362\/3",
+  "DESCRICAO": "Pineoblastoma",
+  "REFER": "C75.3"
+ },
+ {
+  "CAT": "M9363\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9364\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9370\/0",
+  "DESCRICAO": "Cordoma"
+ },
+ {
+  "CAT": "M9380\/3",
+  "DESCRICAO": "Glioma maligno",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9381\/3",
+  "DESCRICAO": "Gliomatose cerebral",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9382\/3",
+  "DESCRICAO": "Glioma misto",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9383\/1",
+  "DESCRICAO": "Glioma subependimal",
+  "REFER": "D43.-"
+ },
+ {
+  "CAT": "M9384\/1",
+  "DESCRICAO": false,
+  "REFER": "D43.-"
+ },
+ {
+  "CAT": "M9390\/0",
+  "DESCRICAO": false,
+  "REFER": "D33.0"
+ },
+ {
+  "CAT": "M9390\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.5"
+ },
+ {
+  "CAT": "M9391\/3",
+  "DESCRICAO": "Ependimoma SOE",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9392\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9393\/1",
+  "DESCRICAO": "Ependimoma papilar",
+  "REFER": "D43.-"
+ },
+ {
+  "CAT": "M9394\/1",
+  "DESCRICAO": "Ependimoma mixopapilar",
+  "REFER": "D43.-"
+ },
+ {
+  "CAT": "M9400\/3",
+  "DESCRICAO": "Astrocitoma SOE",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9401\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9410\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9411\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9420\/3",
+  "DESCRICAO": "Astrocitoma fibrilar",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9421\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9422\/3",
+  "DESCRICAO": "Espongioblastoma SOE",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9423\/3",
+  "DESCRICAO": "Espongioblastoma polar",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9424\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9430\/0",
+  "DESCRICAO": "Astroblastoma",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9440\/3",
+  "DESCRICAO": "Glioblastoma SOE",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9441\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9442\/3",
+  "DESCRICAO": "Gliossarcoma",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9443\/3",
+  "DESCRICAO": "Espongioblastoma polar primitivo",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9450\/3",
+  "DESCRICAO": "Oligodendroglioma SOE",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9451\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9460\/3",
+  "DESCRICAO": "Oligodendroblastoma",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9470\/3",
+  "DESCRICAO": "Meduloblastoma SOE",
+  "REFER": "C71.6"
+ },
+ {
+  "CAT": "M9471\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.6"
+ },
+ {
+  "CAT": "M9472\/3",
+  "DESCRICAO": "Medulomioblastoma",
+  "REFER": "C71.6"
+ },
+ {
+  "CAT": "M9473\/3",
+  "DESCRICAO": false,
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9480\/3",
+  "DESCRICAO": "Sarcoma cerebelar SOE",
+  "REFER": "C71.6"
+ },
+ {
+  "CAT": "M9481\/3",
+  "DESCRICAO": "Sarcoma monstrocelular",
+  "REFER": "C71.-"
+ },
+ {
+  "CAT": "M9490\/0",
+  "DESCRICAO": "Ganglioneuroma"
+ },
+ {
+  "CAT": "M9490\/3",
+  "DESCRICAO": "Ganglioneuroblastoma"
+ },
+ {
+  "CAT": "M9491\/3",
+  "DESCRICAO": "Ganglioneuromatose"
+ },
+ {
+  "CAT": "M9500\/3",
+  "DESCRICAO": "Neuroblastoma SOE"
+ },
+ {
+  "CAT": "M9501\/3",
+  "DESCRICAO": "Meduloepitelioma SOE"
+ },
+ {
+  "CAT": "M9502\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9503\/3",
+  "DESCRICAO": "Neuroepitelioma SOE"
+ },
+ {
+  "CAT": "M9504\/3",
+  "DESCRICAO": "Espongioneuroblastoma"
+ },
+ {
+  "CAT": "M9505\/1",
+  "DESCRICAO": "Ganglioglioma"
+ },
+ {
+  "CAT": "M9506\/0",
+  "DESCRICAO": "Neurocitoma"
+ },
+ {
+  "CAT": "M9507\/0",
+  "DESCRICAO": "Tumor paciniano"
+ },
+ {
+  "CAT": "M9510\/3",
+  "DESCRICAO": "Retinoblastoma SOE",
+  "REFER": "C69.2"
+ },
+ {
+  "CAT": "M9511\/3",
+  "DESCRICAO": "Retinoblastoma diferenciado",
+  "REFER": "C69.2"
+ },
+ {
+  "CAT": "M9512\/3",
+  "DESCRICAO": false,
+  "REFER": "C69.2"
+ },
+ {
+  "CAT": "M9520\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9521\/3",
+  "DESCRICAO": "Estesioneurocitoma",
+  "REFER": "C30.0"
+ },
+ {
+  "CAT": "M9522\/3",
+  "DESCRICAO": "Estesioneuroblastoma",
+  "REFER": "C30.0"
+ },
+ {
+  "CAT": "M9523\/3",
+  "DESCRICAO": "Estesioneuroepitelioma",
+  "REFER": "C30.0"
+ },
+ {
+  "CAT": "M9530\/0",
+  "DESCRICAO": "Meningioma SOE",
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9530\/1",
+  "DESCRICAO": "Meningiomatose SOE",
+  "REFER": "D42.-"
+ },
+ {
+  "CAT": "M9530\/3",
+  "DESCRICAO": "Meningioma maligno",
+  "REFER": "C70.-"
+ },
+ {
+  "CAT": "M9531\/0",
+  "DESCRICAO": "Meningioma meningoteliomatoso",
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9532\/0",
+  "DESCRICAO": "Meningioma fibroso",
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9533\/0",
+  "DESCRICAO": "Meningioma psamomatoso",
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9534\/0",
+  "DESCRICAO": "Meningioma angiomatoso",
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9535\/0",
+  "DESCRICAO": false,
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9536\/0",
+  "DESCRICAO": false,
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9537\/0",
+  "DESCRICAO": "Meningioma transicional",
+  "REFER": "D32.-"
+ },
+ {
+  "CAT": "M9538\/1",
+  "DESCRICAO": "Meningioma papilar",
+  "REFER": "D42.-"
+ },
+ {
+  "CAT": "M9539\/3",
+  "DESCRICAO": false,
+  "REFER": "C70.-"
+ },
+ {
+  "CAT": "M9540\/0",
+  "DESCRICAO": "Neurofibroma SOE",
+  "REFER": "Q85.0"
+ },
+ {
+  "CAT": "M9540\/1",
+  "DESCRICAO": "Neurofibromatose SOE"
+ },
+ {
+  "CAT": "M9540\/3",
+  "DESCRICAO": "Neurofibrossarcoma"
+ },
+ {
+  "CAT": "M9541\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9550\/0",
+  "DESCRICAO": "Neurofibroma plexiforme"
+ },
+ {
+  "CAT": "M9560\/0",
+  "DESCRICAO": "Neurilemoma SOE"
+ },
+ {
+  "CAT": "M9560\/1",
+  "DESCRICAO": "Neurinomatose"
+ },
+ {
+  "CAT": "M9560\/3",
+  "DESCRICAO": "Neurilemoma maligno"
+ },
+ {
+  "CAT": "M9561\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9562\/0",
+  "DESCRICAO": "Neurotequeoma"
+ },
+ {
+  "CAT": "M9570\/0",
+  "DESCRICAO": "Neuroma SOE"
+ },
+ {
+  "CAT": "M9580\/0",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9580\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9581\/3",
+  "DESCRICAO": "Sarcoma alveolar de partes moles"
+ },
+ {
+  "CAT": "M9590\/3",
+  "DESCRICAO": "Linfoma maligno SOE",
+  "REFER": "C84.5,C85.9"
+ },
+ {
+  "CAT": "M9591\/3",
+  "DESCRICAO": false,
+  "REFER": "C85.9"
+ },
+ {
+  "CAT": "M9592\/3",
+  "DESCRICAO": "Linfossarcoma SOE",
+  "REFER": "C85.0"
+ },
+ {
+  "CAT": "M9593\/3",
+  "DESCRICAO": "Reticulossarcoma SOE",
+  "REFER": "C83.3,C83.9"
+ },
+ {
+  "CAT": "M9594\/3",
+  "DESCRICAO": "Microglioma",
+  "REFER": "C85.7"
+ },
+ {
+  "CAT": "M9595\/3",
+  "DESCRICAO": "Linfoma maligno difuso SOE",
+  "REFER": "C83.9"
+ },
+ {
+  "CAT": "M9650\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.9"
+ },
+ {
+  "CAT": "M9652\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.2"
+ },
+ {
+  "CAT": "M9653\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.3"
+ },
+ {
+  "CAT": "M9654\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.3"
+ },
+ {
+  "CAT": "M9655\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.3"
+ },
+ {
+  "CAT": "M9657\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.0"
+ },
+ {
+  "CAT": "M9658\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.0"
+ },
+ {
+  "CAT": "M9659\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.0"
+ },
+ {
+  "CAT": "M9660\/3",
+  "DESCRICAO": "Paragranuloma de Hodgkin SOE",
+  "REFER": "C81.7"
+ },
+ {
+  "CAT": "M9661\/3",
+  "DESCRICAO": "Granuloma de Hodgkin",
+  "REFER": "C81.7"
+ },
+ {
+  "CAT": "M9662\/3",
+  "DESCRICAO": "Sarcoma de Hodgkin",
+  "REFER": "C81.7"
+ },
+ {
+  "CAT": "M9663\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.1"
+ },
+ {
+  "CAT": "M9664\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.1"
+ },
+ {
+  "CAT": "M9665\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.1"
+ },
+ {
+  "CAT": "M9666\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.1"
+ },
+ {
+  "CAT": "M9667\/3",
+  "DESCRICAO": false,
+  "REFER": "C81.1"
+ },
+ {
+  "CAT": "M9670\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.0"
+ },
+ {
+  "CAT": "M9671\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.8"
+ },
+ {
+  "CAT": "M9672\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.1"
+ },
+ {
+  "CAT": "M9673\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.8"
+ },
+ {
+  "CAT": "M9674\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.8"
+ },
+ {
+  "CAT": "M9675\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.2"
+ },
+ {
+  "CAT": "M9676\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.8"
+ },
+ {
+  "CAT": "M9677\/3",
+  "DESCRICAO": "Polipose linfomatosa maligna",
+  "REFER": "C83.8"
+ },
+ {
+  "CAT": "M9680\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.3"
+ },
+ {
+  "CAT": "M9681\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.3"
+ },
+ {
+  "CAT": "M9682\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.3"
+ },
+ {
+  "CAT": "M9683\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.8"
+ },
+ {
+  "CAT": "M9684\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.4"
+ },
+ {
+  "CAT": "M9685\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.5"
+ },
+ {
+  "CAT": "M9686\/3",
+  "DESCRICAO": false,
+  "REFER": "C83.0,C83.6"
+ },
+ {
+  "CAT": "M9687\/3",
+  "DESCRICAO": "Linfoma de Burkitt SOE",
+  "REFER": "C83.7"
+ },
+ {
+  "CAT": "M9690\/3",
+  "DESCRICAO": "Linfoma maligno folicular SOE",
+  "REFER": "C82.9"
+ },
+ {
+  "CAT": "M9691\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.1"
+ },
+ {
+  "CAT": "M9692\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.7"
+ },
+ {
+  "CAT": "M9693\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.7"
+ },
+ {
+  "CAT": "M9694\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.7"
+ },
+ {
+  "CAT": "M9695\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.0"
+ },
+ {
+  "CAT": "M9696\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.7"
+ },
+ {
+  "CAT": "M9697\/3",
+  "DESCRICAO": false,
+  "REFER": "C82.7"
+ },
+ {
+  "CAT": "M9698\/3",
+  "DESCRICAO": false
+ },
+ {
+  "CAT": "M9700\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.0"
+ },
+ {
+  "CAT": "M9701\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.1"
+ },
+ {
+  "CAT": "M9702\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.4"
+ },
+ {
+  "CAT": "M9703\/3",
+  "DESCRICAO": "Linfoma de zona T",
+  "REFER": "C84.2"
+ },
+ {
+  "CAT": "M9704\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.3"
+ },
+ {
+  "CAT": "M9705\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.4"
+ },
+ {
+  "CAT": "M9706\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.4"
+ },
+ {
+  "CAT": "M9707\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.4"
+ },
+ {
+  "CAT": "M9709\/3",
+  "DESCRICAO": false,
+  "REFER": "C84.5"
+ },
+ {
+  "CAT": "M9711\/3",
+  "DESCRICAO": false,
+  "REFER": "C85.7"
+ },
+ {
+  "CAT": "M9712\/3",
+  "DESCRICAO": "Angioendoteliomatose",
+  "REFER": "C85.7"
+ },
+ {
+  "CAT": "M9713\/3",
+  "DESCRICAO": false,
+  "REFER": "C85.7"
+ },
+ {
+  "CAT": "M9714\/3",
+  "DESCRICAO": false,
+  "REFER": "C85.7"
+ },
+ {
+  "CAT": "M9720\/3",
+  "DESCRICAO": "Histiocitose maligna",
+  "REFER": "C96.1"
+ },
+ {
+  "CAT": "M9722\/3",
+  "DESCRICAO": false,
+  "REFER": "C96.0"
+ },
+ {
+  "CAT": "M9723\/3",
+  "DESCRICAO": false,
+  "REFER": "C96.3"
+ },
+ {
+  "CAT": "M9731\/3",
+  "DESCRICAO": "Plasmocitoma SOE",
+  "REFER": "C90.2"
+ },
+ {
+  "CAT": "M9732\/3",
+  "DESCRICAO": false,
+  "REFER": "C90.0"
+ },
+ {
+  "CAT": "M9740\/1",
+  "DESCRICAO": "Mastocitoma SOE",
+  "REFER": "D47.0"
+ },
+ {
+  "CAT": "M9740\/3",
+  "DESCRICAO": false,
+  "REFER": "C96.2"
+ },
+ {
+  "CAT": "M9741\/3",
+  "DESCRICAO": "Mastocitose maligna",
+  "REFER": "C96.2"
+ },
+ {
+  "CAT": "M9760\/3",
+  "DESCRICAO": false,
+  "REFER": "C88.9"
+ },
+ {
+  "CAT": "M9761\/3",
+  "DESCRICAO": false,
+  "REFER": "C88.0"
+ },
+ {
+  "CAT": "M9762\/3",
+  "DESCRICAO": false,
+  "REFER": "C88.1"
+ },
+ {
+  "CAT": "M9763\/3",
+  "DESCRICAO": false,
+  "REFER": "C88.2"
+ },
+ {
+  "CAT": "M9764\/3",
+  "DESCRICAO": false,
+  "REFER": "C88.3"
+ },
+ {
+  "CAT": "M9765\/1",
+  "DESCRICAO": "Gamopatia monoclonal",
+  "REFER": "D47.2"
+ },
+ {
+  "CAT": "M9766\/1",
+  "DESCRICAO": false,
+  "REFER": "D47.7"
+ },
+ {
+  "CAT": "M9767\/1",
+  "DESCRICAO": false,
+  "REFER": "D47.7"
+ },
+ {
+  "CAT": "M9768\/1",
+  "DESCRICAO": false,
+  "REFER": "D47.7"
+ },
+ {
+  "CAT": "M9800\/3",
+  "DESCRICAO": "Leucemia SOE",
+  "REFER": "C95.9"
+ },
+ {
+  "CAT": "M9801\/3",
+  "DESCRICAO": "Leucemia aguda SOE",
+  "REFER": "C95.0"
+ },
+ {
+  "CAT": "M9802\/3",
+  "DESCRICAO": "Leucemia subaguda SOE",
+  "REFER": "C95.2"
+ },
+ {
+  "CAT": "M9803\/3",
+  "DESCRICAO": false,
+  "REFER": "C95.1"
+ },
+ {
+  "CAT": "M9804\/3",
+  "DESCRICAO": false,
+  "REFER": "C95.7"
+ },
+ {
+  "CAT": "M9820\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.9"
+ },
+ {
+  "CAT": "M9821\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.0"
+ },
+ {
+  "CAT": "M9822\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.2"
+ },
+ {
+  "CAT": "M9823\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.1"
+ },
+ {
+  "CAT": "M9824\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.7"
+ },
+ {
+  "CAT": "M9825\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.3"
+ },
+ {
+  "CAT": "M9826\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.7"
+ },
+ {
+  "CAT": "M9827\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.5"
+ },
+ {
+  "CAT": "M9830\/3",
+  "DESCRICAO": false,
+  "REFER": "C90.1"
+ },
+ {
+  "CAT": "M9840\/3",
+  "DESCRICAO": "Eritroleucemia",
+  "REFER": "C94.0"
+ },
+ {
+  "CAT": "M9841\/3",
+  "DESCRICAO": "Eritremia aguda",
+  "REFER": "C94.0"
+ },
+ {
+  "CAT": "M9842\/3",
+  "DESCRICAO": false,
+  "REFER": "C94.1"
+ },
+ {
+  "CAT": "M9850\/3",
+  "DESCRICAO": false,
+  "REFER": "C94.0"
+ },
+ {
+  "CAT": "M9860\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.9"
+ },
+ {
+  "CAT": "M9861\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.0"
+ },
+ {
+  "CAT": "M9862\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.2"
+ },
+ {
+  "CAT": "M9863\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.1"
+ },
+ {
+  "CAT": "M9864\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.7"
+ },
+ {
+  "CAT": "M9866\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.4"
+ },
+ {
+  "CAT": "M9867\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.5"
+ },
+ {
+  "CAT": "M9868\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.7"
+ },
+ {
+  "CAT": "M9870\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.-"
+ },
+ {
+  "CAT": "M9880\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.-"
+ },
+ {
+  "CAT": "M9890\/3",
+  "DESCRICAO": false,
+  "REFER": "C93.9"
+ },
+ {
+  "CAT": "M9891\/3",
+  "DESCRICAO": false,
+  "REFER": "C93.0"
+ },
+ {
+  "CAT": "M9892\/3",
+  "DESCRICAO": false,
+  "REFER": "C93.2"
+ },
+ {
+  "CAT": "M9893\/3",
+  "DESCRICAO": false,
+  "REFER": "C93.1"
+ },
+ {
+  "CAT": "M9894\/3",
+  "DESCRICAO": false,
+  "REFER": "C93.7"
+ },
+ {
+  "CAT": "M9900\/3",
+  "DESCRICAO": false,
+  "REFER": "C94.3"
+ },
+ {
+  "CAT": "M9910\/3",
+  "DESCRICAO": false,
+  "REFER": "C94.2"
+ },
+ {
+  "CAT": "M9930\/3",
+  "DESCRICAO": false,
+  "REFER": "C92.3"
+ },
+ {
+  "CAT": "M9931\/3",
+  "DESCRICAO": "Panmielose aguda",
+  "REFER": "C94.4"
+ },
+ {
+  "CAT": "M9932\/3",
+  "DESCRICAO": "Mielofibrose aguda",
+  "REFER": "C94.5"
+ },
+ {
+  "CAT": "M9940\/3",
+  "DESCRICAO": "Leucemia \"hairy cell\"",
+  "REFER": "C91.4"
+ },
+ {
+  "CAT": "M9941\/3",
+  "DESCRICAO": false,
+  "REFER": "C91.4"
+ },
+ {
+  "CAT": "M9950\/1",
+  "DESCRICAO": "Policitemia vera",
+  "REFER": "D45"
+ },
+ {
+  "CAT": "M9960\/1",
+  "DESCRICAO": false,
+  "REFER": "D47.1"
+ },
+ {
+  "CAT": "M9961\/3",
+  "DESCRICAO": false,
+  "REFER": "D47.1"
+ },
+ {
+  "CAT": "M9962\/1",
+  "DESCRICAO": false,
+  "REFER": "D47.3"
+ },
+ {
+  "CAT": "M9970\/1",
+  "DESCRICAO": false,
+  "REFER": "D47.9"
+ },
+ {
+  "CAT": "M9980\/1",
+  "DESCRICAO": false,
+  "REFER": "D46.4"
+ },
+ {
+  "CAT": "M9981\/1",
+  "DESCRICAO": false,
+  "REFER": "D46.0"
+ },
+ {
+  "CAT": "M9982\/1",
+  "DESCRICAO": false,
+  "REFER": "D46.1"
+ },
+ {
+  "CAT": "M9983\/1",
+  "DESCRICAO": false,
+  "REFER": "D46.2"
+ },
+ {
+  "CAT": "M9984\/1",
+  "DESCRICAO": false,
+  "REFER": "D46.3"
+ },
+ {
+  "CAT": "M9989\/1",
+  "DESCRICAO": false,
+  "REFER": "D46.9"
+ }
+]

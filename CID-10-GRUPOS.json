@@ -1,0 +1,1652 @@
+[
+ {
+  "CATINIC": "A00",
+  "CATFIM": "A09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A15",
+  "CATFIM": "A19",
+  "DESCRICAO": "Tuberculose",
+  "DESCRABREV": "Tuberculose"
+ },
+ {
+  "CATINIC": "A20",
+  "CATFIM": "A28",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A30",
+  "CATFIM": "A49",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A50",
+  "CATFIM": "A64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A65",
+  "CATFIM": "A69",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A70",
+  "CATFIM": "A74",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A75",
+  "CATFIM": "A79",
+  "DESCRICAO": "Rickettsioses",
+  "DESCRABREV": "Rickettsioses"
+ },
+ {
+  "CATINIC": "A80",
+  "CATFIM": "A89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "A90",
+  "CATFIM": "A99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B00",
+  "CATFIM": "B09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B15",
+  "CATFIM": "B19",
+  "DESCRICAO": "Hepatite viral",
+  "DESCRABREV": "Hepatite viral"
+ },
+ {
+  "CATINIC": "B20",
+  "CATFIM": "B24",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B25",
+  "CATFIM": "B34",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B35",
+  "CATFIM": "B49",
+  "DESCRICAO": "Micoses",
+  "DESCRABREV": "Micoses"
+ },
+ {
+  "CATINIC": "B50",
+  "CATFIM": "B64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B65",
+  "CATFIM": "B83",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B85",
+  "CATFIM": "B89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B90",
+  "CATFIM": "B94",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "B95",
+  "CATFIM": "B97",
+  "DESCRICAO": false,
+  "DESCRABREV": "Agentes infec bacter, virais e outr agentes infecc"
+ },
+ {
+  "CATINIC": "B99",
+  "CATFIM": "B99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C00",
+  "CATFIM": "C97",
+  "DESCRICAO": "Neoplasias [tumores] malignas(os)",
+  "DESCRABREV": "Neoplasias malignas"
+ },
+ {
+  "CATINIC": "C00",
+  "CATFIM": "C75",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C00",
+  "CATFIM": "C14",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C15",
+  "CATFIM": "C26",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C30",
+  "CATFIM": "C39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C40",
+  "CATFIM": "C41",
+  "DESCRICAO": "Neoplasias malignas dos ossos e das cartilagens articulares",
+  "DESCRABREV": "Neopl malig dos ossos e cartilagens articulares"
+ },
+ {
+  "CATINIC": "C43",
+  "CATFIM": "C44",
+  "DESCRICAO": "Melanoma e outras(os) neoplasias malignas da pele",
+  "DESCRABREV": "Melanoma e outras(os) neoplasias malignas da pele"
+ },
+ {
+  "CATINIC": "C45",
+  "CATFIM": "C49",
+  "DESCRICAO": "Neoplasias malignas do tecido mesotelial e tecidos moles",
+  "DESCRABREV": "Neopl malig do tecido mesotelial e tecidos moles"
+ },
+ {
+  "CATINIC": "C50",
+  "CATFIM": "C50",
+  "DESCRICAO": "Neoplasias malignas da mama",
+  "DESCRABREV": "Neoplasias malignas da mama"
+ },
+ {
+  "CATINIC": "C51",
+  "CATFIM": "C58",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C60",
+  "CATFIM": "C63",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C64",
+  "CATFIM": "C68",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C69",
+  "CATFIM": "C72",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C73",
+  "CATFIM": "C75",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C76",
+  "CATFIM": "C80",
+  "DESCRICAO": false,
+  "DESCRABREV": "Neopl malig local mal def, secund e local n espec"
+ },
+ {
+  "CATINIC": "C81",
+  "CATFIM": "C96",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "C97",
+  "CATFIM": "C97",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "D00",
+  "CATFIM": "D09",
+  "DESCRICAO": "Neoplasias [tumores] in situ",
+  "DESCRABREV": "Neoplasias [tumores] in situ"
+ },
+ {
+  "CATINIC": "D10",
+  "CATFIM": "D36",
+  "DESCRICAO": "Neoplasias [tumores] benignas(os)",
+  "DESCRABREV": "Neoplasias [tumores] benignas(os)"
+ },
+ {
+  "CATINIC": "D37",
+  "CATFIM": "D48",
+  "DESCRICAO": "Neoplasias [tumores] de comportamento incerto ou desconhecido",
+  "DESCRABREV": "Neopl de comportamento incerto ou desconhecido"
+ },
+ {
+  "CATINIC": "D50",
+  "CATFIM": "D53",
+  "DESCRICAO": "Anemias nutricionais",
+  "DESCRABREV": "Anemias nutricionais"
+ },
+ {
+  "CATINIC": "D55",
+  "CATFIM": "D59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "D60",
+  "CATFIM": "D64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "D65",
+  "CATFIM": "D69",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "D70",
+  "CATFIM": "D77",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "D80",
+  "CATFIM": "D89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E00",
+  "CATFIM": "E07",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E10",
+  "CATFIM": "E14",
+  "DESCRICAO": "Diabetes mellitus",
+  "DESCRABREV": "Diabetes mellitus"
+ },
+ {
+  "CATINIC": "E15",
+  "CATFIM": "E16",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E20",
+  "CATFIM": "E35",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E40",
+  "CATFIM": "E46",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E50",
+  "CATFIM": "E64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E65",
+  "CATFIM": "E68",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "E70",
+  "CATFIM": "E90",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F00",
+  "CATFIM": "F09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F10",
+  "CATFIM": "F19",
+  "DESCRICAO": false,
+  "DESCRABREV": "Transt ment e comport dev ao uso subst psicoativa"
+ },
+ {
+  "CATINIC": "F20",
+  "CATFIM": "F29",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F30",
+  "CATFIM": "F39",
+  "DESCRICAO": "Transtornos do humor [afetivos]",
+  "DESCRABREV": "Transtornos do humor [afetivos]"
+ },
+ {
+  "CATINIC": "F40",
+  "CATFIM": "F48",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F50",
+  "CATFIM": "F59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F60",
+  "CATFIM": "F69",
+  "DESCRICAO": "Transtornos da personalidade e do comportamento do adulto",
+  "DESCRABREV": "Transtornos da personalidade e do comport adulto"
+ },
+ {
+  "CATINIC": "F70",
+  "CATFIM": "F79",
+  "DESCRICAO": "Retardo mental",
+  "DESCRABREV": "Retardo mental"
+ },
+ {
+  "CATINIC": "F80",
+  "CATFIM": "F89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F90",
+  "CATFIM": "F98",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "F99",
+  "CATFIM": "F99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G00",
+  "CATFIM": "G09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G10",
+  "CATFIM": "G13",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G20",
+  "CATFIM": "G26",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G30",
+  "CATFIM": "G32",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G35",
+  "CATFIM": "G37",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G40",
+  "CATFIM": "G47",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G50",
+  "CATFIM": "G59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G60",
+  "CATFIM": "G64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G70",
+  "CATFIM": "G73",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G80",
+  "CATFIM": "G83",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "G90",
+  "CATFIM": "G99",
+  "DESCRICAO": "Outros transtornos do sistema nervoso",
+  "DESCRABREV": "Outros transtornos do sistema nervoso"
+ },
+ {
+  "CATINIC": "H00",
+  "CATFIM": "H06",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H10",
+  "CATFIM": "H13",
+  "DESCRICAO": "Transtornos da conjuntiva",
+  "DESCRABREV": "Transtornos da conjuntiva"
+ },
+ {
+  "CATINIC": "H15",
+  "CATFIM": "H22",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H25",
+  "CATFIM": "H28",
+  "DESCRICAO": "Transtornos do cristalino",
+  "DESCRABREV": "Transtornos do cristalino"
+ },
+ {
+  "CATINIC": "H30",
+  "CATFIM": "H36",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H40",
+  "CATFIM": "H42",
+  "DESCRICAO": "Glaucoma",
+  "DESCRABREV": "Glaucoma"
+ },
+ {
+  "CATINIC": "H43",
+  "CATFIM": "H45",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H46",
+  "CATFIM": "H48",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H49",
+  "CATFIM": "H52",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H53",
+  "CATFIM": "H54",
+  "DESCRICAO": "Transtornos visuais e cegueira",
+  "DESCRABREV": "Transtornos visuais e cegueira"
+ },
+ {
+  "CATINIC": "H55",
+  "CATFIM": "H59",
+  "DESCRICAO": "Outros transtornos do olho e anexos",
+  "DESCRABREV": "Outros transtornos do olho e anexos"
+ },
+ {
+  "CATINIC": "H60",
+  "CATFIM": "H62",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H65",
+  "CATFIM": "H75",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H80",
+  "CATFIM": "H83",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "H90",
+  "CATFIM": "H95",
+  "DESCRICAO": "Outros transtornos do ouvido",
+  "DESCRABREV": "Outros transtornos do ouvido"
+ },
+ {
+  "CATINIC": "I00",
+  "CATFIM": "I02",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I05",
+  "CATFIM": "I09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I10",
+  "CATFIM": "I15",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I20",
+  "CATFIM": "I25",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I26",
+  "CATFIM": "I28",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I30",
+  "CATFIM": "I52",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I60",
+  "CATFIM": "I69",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I70",
+  "CATFIM": "I79",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I80",
+  "CATFIM": "I89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "I95",
+  "CATFIM": "I99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J00",
+  "CATFIM": "J06",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J09",
+  "CATFIM": "J18",
+  "DESCRICAO": "Influenza [gripe] e pneumonia",
+  "DESCRABREV": "Influenza [gripe] e pneumonia"
+ },
+ {
+  "CATINIC": "J20",
+  "CATFIM": "J22",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J30",
+  "CATFIM": "J39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J40",
+  "CATFIM": "J47",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J60",
+  "CATFIM": "J70",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J80",
+  "CATFIM": "J84",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J85",
+  "CATFIM": "J86",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J90",
+  "CATFIM": "J94",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "J95",
+  "CATFIM": "J99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K00",
+  "CATFIM": "K14",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K20",
+  "CATFIM": "K31",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K35",
+  "CATFIM": "K38",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K40",
+  "CATFIM": "K46",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K50",
+  "CATFIM": "K52",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K55",
+  "CATFIM": "K63",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K65",
+  "CATFIM": "K67",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K70",
+  "CATFIM": "K77",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K80",
+  "CATFIM": "K87",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "K90",
+  "CATFIM": "K93",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L00",
+  "CATFIM": "L08",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L10",
+  "CATFIM": "L14",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L20",
+  "CATFIM": "L30",
+  "DESCRICAO": "Dermatite e eczema",
+  "DESCRABREV": "Dermatite e eczema"
+ },
+ {
+  "CATINIC": "L40",
+  "CATFIM": "L45",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L50",
+  "CATFIM": "L54",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L55",
+  "CATFIM": "L59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L60",
+  "CATFIM": "L75",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "L80",
+  "CATFIM": "L99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "M00",
+  "CATFIM": "M25",
+  "DESCRICAO": "Artropatias",
+  "DESCRABREV": "Artropatias"
+ },
+ {
+  "CATINIC": "M00",
+  "CATFIM": "M03",
+  "DESCRICAO": "Artropatias infecciosas",
+  "DESCRABREV": "Artropatias infecciosas"
+ },
+ {
+  "CATINIC": "M05",
+  "CATFIM": "M14",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "M15",
+  "CATFIM": "M19",
+  "DESCRICAO": "Artroses",
+  "DESCRABREV": "Artroses"
+ },
+ {
+  "CATINIC": "M20",
+  "CATFIM": "M25",
+  "DESCRICAO": "Outros transtornos articulares",
+  "DESCRABREV": "Outros transtornos articulares"
+ },
+ {
+  "CATINIC": "M30",
+  "CATFIM": "M36",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "M40",
+  "CATFIM": "M54",
+  "DESCRICAO": "Dorsopatias",
+  "DESCRABREV": "Dorsopatias"
+ },
+ {
+  "CATINIC": "M40",
+  "CATFIM": "M43",
+  "DESCRICAO": "Dorsopatias deformantes",
+  "DESCRABREV": "Dorsopatias deformantes"
+ },
+ {
+  "CATINIC": "M45",
+  "CATFIM": "M49",
+  "DESCRICAO": "Espondilopatias",
+  "DESCRABREV": "Espondilopatias"
+ },
+ {
+  "CATINIC": "M50",
+  "CATFIM": "M54",
+  "DESCRICAO": "Outras dorsopatias",
+  "DESCRABREV": "Outras dorsopatias"
+ },
+ {
+  "CATINIC": "M60",
+  "CATFIM": "M79",
+  "DESCRICAO": "Transtornos dos tecidos moles",
+  "DESCRABREV": "Transtornos dos tecidos moles"
+ },
+ {
+  "CATINIC": "M60",
+  "CATFIM": "M63",
+  "DESCRICAO": "Transtornos musculares",
+  "DESCRABREV": "Transtornos musculares"
+ },
+ {
+  "CATINIC": "M65",
+  "CATFIM": "M68",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "M70",
+  "CATFIM": "M79",
+  "DESCRICAO": "Outros transtornos dos tecidos moles",
+  "DESCRABREV": "Outros transtornos dos tecidos moles"
+ },
+ {
+  "CATINIC": "M80",
+  "CATFIM": "M94",
+  "DESCRICAO": "Osteopatias e condropatias",
+  "DESCRABREV": "Osteopatias e condropatias"
+ },
+ {
+  "CATINIC": "M80",
+  "CATFIM": "M85",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "M86",
+  "CATFIM": "M90",
+  "DESCRICAO": "Outras osteopatias",
+  "DESCRABREV": "Outras osteopatias"
+ },
+ {
+  "CATINIC": "M91",
+  "CATFIM": "M94",
+  "DESCRICAO": "Condropatias",
+  "DESCRABREV": "Condropatias"
+ },
+ {
+  "CATINIC": "M95",
+  "CATFIM": "M99",
+  "DESCRICAO": "Outros transtornos do sistema osteomuscular e do tecido conjuntivo",
+  "DESCRABREV": "Outr transt sist osteomuscular e tecido conjuntivo"
+ },
+ {
+  "CATINIC": "N00",
+  "CATFIM": "N08",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N10",
+  "CATFIM": "N16",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N17",
+  "CATFIM": "N19",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N20",
+  "CATFIM": "N23",
+  "DESCRICAO": "Calculose renal",
+  "DESCRABREV": "Calculose renal"
+ },
+ {
+  "CATINIC": "N25",
+  "CATFIM": "N29",
+  "DESCRICAO": "Outros transtornos do rim e do ureter",
+  "DESCRABREV": "Outros transtornos do rim e do ureter"
+ },
+ {
+  "CATINIC": "N30",
+  "CATFIM": "N39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N40",
+  "CATFIM": "N51",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N60",
+  "CATFIM": "N64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N70",
+  "CATFIM": "N77",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N80",
+  "CATFIM": "N98",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "N99",
+  "CATFIM": "N99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "O00",
+  "CATFIM": "O08",
+  "DESCRICAO": "Gravidez que termina em aborto",
+  "DESCRABREV": "Gravidez que termina em aborto"
+ },
+ {
+  "CATINIC": "O10",
+  "CATFIM": "O16",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "O20",
+  "CATFIM": "O29",
+  "DESCRICAO": "Outros transtornos maternos relacionados predominantemente com a gravidez",
+  "DESCRABREV": "Outros transtornos maternos relac predom gravidez"
+ },
+ {
+  "CATINIC": "O30",
+  "CATFIM": "O48",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "O60",
+  "CATFIM": "O75",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "O80",
+  "CATFIM": "O84",
+  "DESCRICAO": "Parto",
+  "DESCRABREV": "Parto"
+ },
+ {
+  "CATINIC": "O85",
+  "CATFIM": "O92",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "O94",
+  "CATFIM": "O99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P00",
+  "CATFIM": "P04",
+  "DESCRICAO": false,
+  "DESCRABREV": "Fet rec-nasc afet fat mat e compl grav, trab parto"
+ },
+ {
+  "CATINIC": "P05",
+  "CATFIM": "P08",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P10",
+  "CATFIM": "P15",
+  "DESCRICAO": "Traumatismo de parto",
+  "DESCRABREV": "Traumatismo de parto"
+ },
+ {
+  "CATINIC": "P20",
+  "CATFIM": "P29",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P35",
+  "CATFIM": "P39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P50",
+  "CATFIM": "P61",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P70",
+  "CATFIM": "P74",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P75",
+  "CATFIM": "P78",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P80",
+  "CATFIM": "P83",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "P90",
+  "CATFIM": "P96",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q00",
+  "CATFIM": "Q07",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q10",
+  "CATFIM": "Q18",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q20",
+  "CATFIM": "Q28",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q30",
+  "CATFIM": "Q34",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q35",
+  "CATFIM": "Q37",
+  "DESCRICAO": "Fenda labial e fenda palatina",
+  "DESCRABREV": "Fenda labial e fenda palatina"
+ },
+ {
+  "CATINIC": "Q38",
+  "CATFIM": "Q45",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q50",
+  "CATFIM": "Q56",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q60",
+  "CATFIM": "Q64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q65",
+  "CATFIM": "Q79",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q80",
+  "CATFIM": "Q89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Q90",
+  "CATFIM": "Q99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R00",
+  "CATFIM": "R09",
+  "DESCRICAO": false,
+  "DESCRABREV": "Sint e sinais relat aparelho circulat e respirat"
+ },
+ {
+  "CATINIC": "R10",
+  "CATFIM": "R19",
+  "DESCRICAO": "Sintomas e sinais relativos ao aparelho digestivo e ao abdome",
+  "DESCRABREV": "Sintom e sinais relat ao aparelho digest e abdome"
+ },
+ {
+  "CATINIC": "R20",
+  "CATFIM": "R23",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R25",
+  "CATFIM": "R29",
+  "DESCRICAO": "Sintomas e sinais relativos aos sistemas nervoso e osteomuscular",
+  "DESCRABREV": "Sint e sinais relat sist nervoso e osteomuscular"
+ },
+ {
+  "CATINIC": "R30",
+  "CATFIM": "R39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R40",
+  "CATFIM": "R46",
+  "DESCRICAO": false,
+  "DESCRABREV": "Sint e sinais rel cogn percep estado emoc e compor"
+ },
+ {
+  "CATINIC": "R47",
+  "CATFIM": "R49",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R50",
+  "CATFIM": "R69",
+  "DESCRICAO": "Sintomas e sinais gerais",
+  "DESCRABREV": "Sintomas e sinais gerais"
+ },
+ {
+  "CATINIC": "R70",
+  "CATFIM": "R79",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R80",
+  "CATFIM": "R82",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R83",
+  "CATFIM": "R89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R90",
+  "CATFIM": "R94",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "R95",
+  "CATFIM": "R99",
+  "DESCRICAO": "Causas mal definidas e desconhecidas de mortalidade",
+  "DESCRABREV": "Causas mal definidas e desconhecidas mortalidade"
+ },
+ {
+  "CATINIC": "S00",
+  "CATFIM": "S09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "S10",
+  "CATFIM": "S19",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "S20",
+  "CATFIM": "S29",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "S30",
+  "CATFIM": "S39",
+  "DESCRICAO": "Traumatismos do abdome, do dorso, da coluna lombar e da pelve",
+  "DESCRABREV": "Traumatismos abdome, dorso, coluna lombar e pelve"
+ },
+ {
+  "CATINIC": "S40",
+  "CATFIM": "S49",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "S50",
+  "CATFIM": "S59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "S60",
+  "CATFIM": "S69",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "S70",
+  "CATFIM": "S79",
+  "DESCRICAO": "Traumatismos do quadril e da coxa",
+  "DESCRABREV": "Traumatismos do quadril e da coxa"
+ },
+ {
+  "CATINIC": "S80",
+  "CATFIM": "S89",
+  "DESCRICAO": "Traumatismos do joelho e da perna",
+  "DESCRABREV": "Traumatismos do joelho e da perna"
+ },
+ {
+  "CATINIC": "S90",
+  "CATFIM": "S99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T00",
+  "CATFIM": "T07",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T08",
+  "CATFIM": "T14",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T15",
+  "CATFIM": "T19",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T20",
+  "CATFIM": "T32",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T20",
+  "CATFIM": "T25",
+  "DESCRICAO": false,
+  "DESCRABREV": "Queimad e corros superf ext corpo, espec p\/local"
+ },
+ {
+  "CATINIC": "T26",
+  "CATFIM": "T28",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T29",
+  "CATFIM": "T32",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T33",
+  "CATFIM": "T35",
+  "DESCRICAO": "Geladuras [frostbite]",
+  "DESCRABREV": "Geladuras [frostbite]"
+ },
+ {
+  "CATINIC": "T36",
+  "CATFIM": "T50",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T51",
+  "CATFIM": "T65",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T66",
+  "CATFIM": "T78",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T79",
+  "CATFIM": "T79",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T80",
+  "CATFIM": "T88",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "T90",
+  "CATFIM": "T98",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "V01",
+  "CATFIM": "X59",
+  "DESCRICAO": "Acidentes",
+  "DESCRABREV": "Acidentes"
+ },
+ {
+  "CATINIC": "V01",
+  "CATFIM": "V99",
+  "DESCRICAO": "Acidentes de transporte",
+  "DESCRABREV": "Acidentes de transporte"
+ },
+ {
+  "CATINIC": "V01",
+  "CATFIM": "V09",
+  "DESCRICAO": "Pedestre traumatizado em um acidente de transporte",
+  "DESCRABREV": "Pedestre traumatizado em um acidente de transporte"
+ },
+ {
+  "CATINIC": "V10",
+  "CATFIM": "V19",
+  "DESCRICAO": "Ciclista traumatizado em um acidente de transporte",
+  "DESCRABREV": "Ciclista traumatizado em um acidente de transporte"
+ },
+ {
+  "CATINIC": "V20",
+  "CATFIM": "V29",
+  "DESCRICAO": "Motociclista traumatizado em um acidente de transporte",
+  "DESCRABREV": "Motociclista traumat em um acidente de transporte"
+ },
+ {
+  "CATINIC": "V30",
+  "CATFIM": "V39",
+  "DESCRICAO": "Ocupante de triciclo motorizado traumatizado em um acidente de transporte",
+  "DESCRABREV": "Ocupante triciclo motorizado traumat acid transp"
+ },
+ {
+  "CATINIC": "V40",
+  "CATFIM": "V49",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "V50",
+  "CATFIM": "V59",
+  "DESCRICAO": "Ocupante de uma caminhonete traumatizado em um acidente de transporte",
+  "DESCRABREV": "Ocupante caminhonete traumat acidente transporte"
+ },
+ {
+  "CATINIC": "V60",
+  "CATFIM": "V69",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "V70",
+  "CATFIM": "V79",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "V80",
+  "CATFIM": "V89",
+  "DESCRICAO": "Outros acidentes de transporte terrestre",
+  "DESCRABREV": "Outros acidentes de transporte terrestre"
+ },
+ {
+  "CATINIC": "V90",
+  "CATFIM": "V94",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "V95",
+  "CATFIM": "V97",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "V98",
+  "CATFIM": "V99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "W00",
+  "CATFIM": "X59",
+  "DESCRICAO": "Outras causas externas de traumatismos acidentais",
+  "DESCRABREV": "Outras causas externas de traumatismos acidentais"
+ },
+ {
+  "CATINIC": "W00",
+  "CATFIM": "W19",
+  "DESCRICAO": "Quedas",
+  "DESCRABREV": "Quedas"
+ },
+ {
+  "CATINIC": "W20",
+  "CATFIM": "W49",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "W50",
+  "CATFIM": "W64",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "W65",
+  "CATFIM": "W74",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "W75",
+  "CATFIM": "W84",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "W85",
+  "CATFIM": "W99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X00",
+  "CATFIM": "X09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X10",
+  "CATFIM": "X19",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X20",
+  "CATFIM": "X29",
+  "DESCRICAO": "Contato com animais e plantas venenosos",
+  "DESCRABREV": "Contato com animais e plantas venenosos"
+ },
+ {
+  "CATINIC": "X30",
+  "CATFIM": "X39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X40",
+  "CATFIM": "X49",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X50",
+  "CATFIM": "X57",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X58",
+  "CATFIM": "X59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X60",
+  "CATFIM": "X84",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "X85",
+  "CATFIM": "Y09",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y10",
+  "CATFIM": "Y34",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y35",
+  "CATFIM": "Y36",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y40",
+  "CATFIM": "Y84",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y40",
+  "CATFIM": "Y59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y60",
+  "CATFIM": "Y69",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y70",
+  "CATFIM": "Y82",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y83",
+  "CATFIM": "Y84",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y85",
+  "CATFIM": "Y89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Y90",
+  "CATFIM": "Y98",
+  "DESCRICAO": "Fatores suplementares relacionados com as causas de morbidade e de mortalidade classificados em outra parte",
+  "DESCRABREV": "Fatores supl relac causas de morbid e mortalid COP"
+ },
+ {
+  "CATINIC": "Z00",
+  "CATFIM": "Z13",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Z20",
+  "CATFIM": "Z29",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Z30",
+  "CATFIM": "Z39",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Z40",
+  "CATFIM": "Z54",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Z55",
+  "CATFIM": "Z65",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Z70",
+  "CATFIM": "Z76",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "Z80",
+  "CATFIM": "Z99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "U04",
+  "CATFIM": "U04",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "U80",
+  "CATFIM": "U89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "CATINIC": "U99",
+  "CATFIM": "U99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ }
+]

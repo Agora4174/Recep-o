@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia Médico da Unidade - CIDs JSON</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: #004d40; color: #fff; padding: 20px; text-align: center; }
+    nav a { margin: 0 10px; color: #fff; text-decoration: none; }
+    main { padding: 20px; max-width: 800px; margin: auto; }
+    section { margin-bottom: 40px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    input[type="text"] { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    ul#listaCIDs { max-height: 300px; overflow-y: auto; padding-left: 20px; border: 1px solid #ccc; border-radius: 5px; background: #fafafa; }
+    ul#listaCIDs li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guia Médico da Unidade</h1>
+    <nav>
+      <a href="#cids">Dicas de CIDs</a>
+    </nav>
+  </header>
+  <main>
+    <section id="cids">
+      <h2>Dicas de CIDs</h2>
+      <input type="text" id="buscaCID" placeholder="Buscar CID ou termo..." disabled />
+      <ul id="listaCIDs"><li>Carregando dados...</li></ul>
+    </section>
+  </main>
+
+  <script>
+    const jsonUrls = [
+      'CID-10-SUBCATEGORIAS.json',
+      'CID-10-CATEGORIAS.json',
+      'CID-10-GRUPOS.json',
+      'CID-10-CAPITULOS.json'
+    ];
+
+    const lista = document.getElementById('listaCIDs');
+    const buscaCID = document.getElementById('buscaCID');
+
+    let subcategorias = [];
+    let categorias = {};
+    let grupos = [];
+    let capitulos = [];
+
+    async function carregarJSON(url) {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('Erro ao carregar: ' + url);
+      return res.json();
+    }
+
+    async function carregarDados() {
+      const [subcatData, catData, grupoData, capituloData] = await Promise.all(jsonUrls.map(carregarJSON));
+
+      subcategorias = subcatData;
+      grupos = grupoData;
+      capitulos = capituloData;
+
+      catData.forEach(cat => {
+        categorias[cat.CAT] = cat.DESCRICAO || cat.DESCRABREV || '';
+      });
+    }
+
+    function mostrarCIDs(filtro = '') {
+      const f = filtro.toLowerCase();
+      lista.innerHTML = '';
+
+      const filtrados = subcategorias.filter(cid =>
+        cid.SUBCAT.toLowerCase().includes(f) ||
+        (cid.DESCRICAO || cid.DESCRABREV || '').toLowerCase().includes(f)
+      );
+
+      if (filtrados.length === 0) {
+        lista.innerHTML = '<li>Nenhum CID encontrado.</li>';
+        return;
+      }
+
+      filtrados.forEach(cid => {
+        const descricao = cid.DESCRICAO || cid.DESCRABREV || '(sem descrição)';
+        const categoriaCodigo = cid.SUBCAT.slice(0, 3);
+        const categoriaNome = categorias[categoriaCodigo] ? ` (${categorias[categoriaCodigo]})` : '';
+        const li = document.createElement('li');
+        li.textContent = `${cid.SUBCAT} - ${descricao}${categoriaNome}`;
+        lista.appendChild(li);
+      });
+    }
+
+    async function init() {
+      buscaCID.disabled = true;
+      lista.innerHTML = '<li>Carregando dados...</li>';
+      try {
+        await carregarDados();
+        buscaCID.disabled = false;
+        mostrarCIDs();
+      } catch (e) {
+        console.error(e);
+        lista.innerHTML = '<li>Erro ao carregar dados dos CIDs.</li>';
+      }
+    }
+
+    buscaCID.addEventListener('input', () => mostrarCIDs(buscaCID.value));
+
+    init();
+  </script>
+</body>
+</html>
