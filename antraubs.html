@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Hospital Anjo Gabriel</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+  header img {
+    height: 80px;
+    width: auto;
+  }
+  header h1 {
+    flex-grow: 1;
+    margin: 0 20px;
+    font-size: 2rem;
+    color: #222;
+  }
+  .image-container {
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .image-title {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 1.3rem;
+    color: #444;
+  }
+  .buttons-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .btn-download, .btn-view {
+    background: linear-gradient(45deg, #007BFF, #0056b3);
+    color: white;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+  }
+  .btn-download:hover, .btn-view:hover {
+    background: linear-gradient(45deg, #0056b3, #003f7f);
+    box-shadow: 0 6px 20px rgba(0,86,179,0.6);
+    text-decoration: none;
+    color: white;
+  }
+  .btn-download svg, .btn-view svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    .buttons-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .btn-download, .btn-view {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  /* Modal Styles */
+  #modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #modalContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #modal img {
+    max-width: 100%;
+    max-height: 80vh;
+    user-select: none;
+  }
+  #modalClose {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+<img src="https://www.alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Alpha"/>
+<h1>Hospital Anjo Gabriel</h1>
+<img src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo Prefeitura Mairiporã"/>
+</header>
+
+<div class="image-container">
+<img src="cartaz-raiva.jpg" alt="Cartaz Raiva" id="mainImage"/>
+</div>
+<div class="image-title">Cartaz Raiva</div>
+
+<div class="buttons-container">
+  <a class="btn-download" href="cartaz-raiva.jpg" download>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zm7-18l-5 5h3v6h4v-6h3l-5-5z"></path></svg>
+    Baixar Cartaz
+  </a>
+
+  <button class="btn-view" id="viewBtn" type="button">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 12a5 5 0 110-10 5 5 0 010 10z"/>
+      <circle cx="12" cy="12" r="2.5"/>
+    </svg>
+    Visualizar Cartaz
+  </button>
+
+  <a class="btn-download" href="encaantrabicoubs.docx" download>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zm7-18l-5 5h3v6h4v-6h3l-5-5z"></path></svg>
+    Baixar Encaminhamento UBS Antrabico
+  </a>
+</div>
+
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div id="modalContent">
+<span id="modalClose" aria-label="Fechar">&times;</span>
+<img src="cartaz-raiva.jpg" alt="Cartaz Raiva ampliado" id="modalImage"/>
+</div>
+</div>
+
+<script>
+const modal=document.getElementById('modal');
+const modalClose=document.getElementById('modalClose');
+const viewBtn=document.getElementById('viewBtn');
+
+function openModal(){
+  modal.style.display='flex';
+}
+
+function closeModal(){
+  modal.style.display='none';
+}
+
+viewBtn.addEventListener('click',openModal);
+modalClose.addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{
+  if(e.target===modal)closeModal();
+});
+</script>
+
+</body>
+</html>
