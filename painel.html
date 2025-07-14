@@ -7,101 +7,117 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
-      padding: 40px 20px;
+      padding: 40px;
       margin: 0;
       display: flex;
       justify-content: center;
-      min-height: 100vh;
       align-items: flex-start;
+      min-height: 100vh;
     }
 
     .container {
       background-color: #fff;
       max-width: 700px;
-      width: 100%;
-      padding: 30px 40px;
+      width: 90%;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-      box-sizing: border-box;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     .cabecalho {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 35px;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
     }
 
     .cabecalho img {
       height: 80px;
+      max-width: 150px;
       object-fit: contain;
-      max-width: 160px;
     }
 
     .cabecalho h1 {
-      font-size: 28px;
-      margin: 0 15px;
-      text-align: center;
       flex-grow: 1;
-      font-weight: 700;
-      color: #222;
+      font-size: 28px;
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
     }
 
     h2 {
       text-align: center;
       text-transform: uppercase;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-size: 26px;
-      color: #444;
-      letter-spacing: 1.5px;
-      font-weight: 600;
     }
 
-    .info {
-      margin: 18px 0;
-      font-size: 20px;
-      color: #333;
-      line-height: 1.4;
+    /* Linha com Data, Setor e Turno */
+    .linha-info {
       display: flex;
-      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .linha-info > div {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .linha-info strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .linha-info span {
+      font-size: 18px;
+      display: block;
+      background: #eee;
+      padding: 8px 12px;
+      border-radius: 5px;
+      min-height: 36px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Blocos individuais abaixo */
+    .info {
+      margin: 20px 0;
+      font-size: 20px;
     }
 
     .info strong {
-      display: inline-block;
-      width: 210px;
-      font-weight: 700;
-      color: #000;
+      display: block;
+      margin-bottom: 8px;
     }
 
     .bloco-texto {
-      background: #f7f7f7;
-      padding: 12px 15px;
-      border-radius: 6px;
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
       white-space: pre-line;
-      flex: 1;
-      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
-      border: 1px solid #ddd;
       font-size: 18px;
-      color: #555;
+      min-height: 40px;
     }
 
     .botoes {
-      margin-top: 40px;
+      margin-top: 30px;
       display: flex;
       justify-content: space-between;
-      gap: 15px;
+      gap: 10px;
     }
 
     button {
       flex: 1;
-      padding: 14px 0;
-      font-size: 17px;
+      padding: 12px;
+      font-size: 16px;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .btn-voltar {
@@ -109,34 +125,19 @@
       color: white;
     }
 
-    .btn-voltar:hover {
-      background-color: #565e64;
-    }
-
     .btn-print {
       background-color: #007bff;
       color: white;
     }
 
-    .btn-print:hover {
-      background-color: #0056b3;
-    }
-
     @media print {
       body {
         background: white !important;
-        padding: 0 !important;
       }
-
       .container {
         box-shadow: none !important;
-        max-width: 100% !important;
-        border-radius: 0 !important;
-        padding: 0 20px !important;
       }
-
-      .btn-print,
-      .btn-voltar {
+      .btn-print, .btn-voltar {
         display: none !important;
       }
     }
@@ -154,56 +155,74 @@
 
     <h2>Resumo da Escala</h2>
 
-    <div class="info">
-      <strong>Data:</strong> <span id="data"></span>
-    </div>
-    <div class="info">
-      <strong>Setor:</strong> <span id="setor"></span>
-    </div>
-    <div class="info">
-      <strong>Turno:</strong> <span id="turno"></span>
+    <div class="linha-info">
+      <div>
+        <strong>Data:</strong>
+        <span id="data"></span>
+      </div>
+      <div>
+        <strong>Setor:</strong>
+        <span id="setor"></span>
+      </div>
+      <div>
+        <strong>Turno:</strong>
+        <span id="turno"></span>
+      </div>
     </div>
 
-    <div class="info" style="align-items: center;">
+    <div class="info">
       <strong>Recepcionistas:</strong>
-      <div class="bloco-texto" id="recepcionistas" style="margin-left: 10px; min-height: 60px;"></div>
+      <div class="bloco-texto" id="recepcionistas"></div>
     </div>
 
     <div class="info">
-      <strong>Responsável pela Remoção:</strong> <span id="remocao"></span>
+      <strong>Responsável pela Remoção:</strong>
+      <div class="bloco-texto" id="remocao"></div>
     </div>
+
     <div class="info">
-      <strong>Supervisor Responsável:</strong> <span id="supervisor"></span>
+      <strong>Auxiliar de Atendimento:</strong>
+      <div class="bloco-texto" id="auxiliar"></div>
+    </div>
+
+    <div class="info">
+      <strong>Supervisor Responsável:</strong>
+      <span id="supervisor"></span>
     </div>
 
     <div class="botoes">
-      <button class="btn-voltar" onclick="window.location.href='formrecep.html'">Editar</button>
+      <button class="btn-voltar" onclick="window.location.href='formulario.html'">Editar</button>
       <button class="btn-print" onclick="window.print()">Imprimir</button>
     </div>
 
   </div>
 
   <script>
-    const dados = JSON.parse(localStorage.getItem("escalaDiaria"));
-    if (dados) {
-      document.getElementById("data").textContent = dados.data || "";
-      document.getElementById("setor").textContent = dados.setor || "";
-      document.getElementById("turno").textContent = dados.turno || "";
+    const dados = JSON.parse(localStorage.getItem("escalaDiaria")) || {};
 
-      // Recepcionistas: pode ser string com quebras de linha ou array
-      if (Array.isArray(dados.recepcionistas)) {
-        document.getElementById("recepcionistas").textContent = dados.recepcionistas.join('\n');
-      } else if (typeof dados.recepcionistas === 'string') {
-        // Colocar cada nome em uma linha para melhor visualização
-        const nomes = dados.recepcionistas.split('\n').map(nome => nome.trim()).filter(nome => nome.length);
-        document.getElementById("recepcionistas").innerHTML = nomes.map(nome => `<div>${nome}</div>`).join('');
-      } else {
-        document.getElementById("recepcionistas").textContent = "";
-      }
+    document.getElementById("data").textContent = dados.data || "";
+    document.getElementById("setor").textContent = dados.setor || "";
+    document.getElementById("turno").textContent = dados.turno || "";
 
-      document.getElementById("remocao").textContent = dados.responsavelRemocao || "";
-      document.getElementById("supervisor").textContent = dados.supervisor || "";
+    if (Array.isArray(dados.recepcionistas)) {
+      document.getElementById("recepcionistas").textContent = dados.recepcionistas.join('\n');
+    } else {
+      document.getElementById("recepcionistas").textContent = dados.recepcionistas || "";
     }
+
+    if (Array.isArray(dados.responsavelRemocao)) {
+      document.getElementById("remocao").textContent = dados.responsavelRemocao.join('\n');
+    } else {
+      document.getElementById("remocao").textContent = dados.responsavelRemocao || "";
+    }
+
+    if (Array.isArray(dados.auxiliares)) {
+      document.getElementById("auxiliar").textContent = dados.auxiliares.join('\n');
+    } else {
+      document.getElementById("auxiliar").textContent = dados.auxiliares || "";
+    }
+
+    document.getElementById("supervisor").textContent = dados.supervisores || "";
   </script>
 
 </body>
