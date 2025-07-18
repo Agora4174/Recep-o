@@ -1,217 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Gerador de Etiquetas Avançado</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  input[type="number"], input[type="file"], select {
-    margin-top: 5px;
-    padding: 5px;
-    width: 150px;
-  }
-  input[type="range"] {
-    width: 150px;
-  }
-  .preview-container {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 15px;
-    background: #fafafa;
-    max-width: 900px;
-  }
-  .page-a4 {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 10mm;
-    box-sizing: border-box;
-    background: white;
-    border: 1px solid #999;
-    display: grid;
-    grid-gap: 10px;
-  }
-  .label {
-    border: 1px solid #333;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    overflow: hidden;
-    background: #fff;
-  }
-  .label img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  .label-text {
-    margin-top: 5px;
-    text-align: center;
-    word-wrap: break-word;
-  }
-  button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  .controls-row {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .control-group {
-    margin-bottom: 15px;
-  }
-
-  /* Estilos para impressão */
-  @media print {
-    body * {
-      visibility: hidden;
+  <meta charset="UTF-8" />
+  <title>Gerador de Etiquetas - Papel A4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
     }
-    #page, #page * {
-      visibility: visible;
+    label {
+      display: block;
+      margin-top: 10px;
     }
-    #page {
-      position: absolute;
-      left: 0;
-      top: 0;
+    input[type="number"], input[type="file"], select, textarea {
+      margin-top: 5px;
+      padding: 5px;
+      width: 200px;
+    }
+    input[type="range"] {
+      width: 150px;
+    }
+    .preview-container {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      background: #fafafa;
+      max-width: 100%;
+      overflow: auto;
+    }
+    .page-a4 {
       width: 210mm;
-      height: 297mm;
+      min-height: 297mm;
       padding: 10mm;
       box-sizing: border-box;
-      border: none;
       background: white;
-      display: grid !important;
+      border: 1px solid #999;
+      display: grid;
       grid-gap: 10px;
-      grid-template-columns: inherit;
-      grid-auto-rows: inherit;
     }
-  }
-</style>
+    .label {
+      border: 1px solid #333;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+    }
+    .label img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+    }
+    .label-text {
+      margin-top: 5px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+    button {
+      margin-top: 15px;
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .controls-row {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .control-group {
+      margin-bottom: 15px;
+    }
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #page, #page * {
+        visibility: visible;
+      }
+      #page {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 210mm;
+        height: 297mm;
+        padding: 10mm;
+        box-sizing: border-box;
+        border: none;
+        background: white;
+        display: grid !important;
+        grid-gap: 10px;
+        grid-template-columns: inherit;
+        grid-auto-rows: inherit;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<h1>Gerador de Etiquetas Avançado</h1>
+  <h1>Gerador de Etiquetas em Papel A4</h1>
 
-<div class="controls-row">
+  <label for="modeloEtiqueta">Modelo de etiqueta (PIMACO / A4):</label>
+  <select id="modeloEtiqueta" onchange="aplicarModelo()">
+    <option value="">-- Selecione um modelo --</option>
+    <option value="70,42.3,3,7">PIMACO A4248 - 70 x 42,3 (21 por folha)</option>
+    <option value="105,42.3,2,6">PIMACO A4253 - 105 x 42,3 (12 por folha)</option>
+    <option value="105,74,2,4">PIMACO A4223 - 105 x 74 (8 por folha)</option>
+    <option value="99.1,38.1,2,7">PIMACO A4363 - 99,1 x 38,1 (14 por folha)</option>
+    <option value="66,33.9,3,8">PIMACO A4275 - 66 x 33,9 (24 por folha)</option>
+    <option value="38.1,21.2,5,13">PIMACO A4357 - 38,1 x 21,2 (65 por folha)</option>
+    <option value="70,25.4,3,10">PIMACO A4351 - 70 x 25,4 (30 por folha)</option>
+    <option value="105,21.2,2,13">PIMACO A4251 - 105 x 21,2 (26 por folha)</option>
+    <option value="70,74,3,4">PIMACO A4257 - 70 x 74 (12 por folha)</option>
+    <option value="38.1,74,5,4">PIMACO A4221 - 38,1 x 74 (20 por folha)</option>
+    <option value="70,35,3,8">PIMACO A4219 - 70 x 35 (24 por folha)</option>
+    <option value="35.7,21.2,6,13">PIMACO A4217 - 35,7 x 21,2 (78 por folha)</option>
+  </select>
 
-  <div class="control-group">
-    <label for="labelWidth">Largura da etiqueta (mm):</label>
-    <input type="number" id="labelWidth" min="10" max="150" value="60" />
+  <div class="controls-row">
+    <div class="control-group">
+      <label for="labelWidth">Largura da etiqueta (mm):</label>
+      <input type="number" id="labelWidth" min="10" max="150" value="60" />
+    </div>
+
+    <div class="control-group">
+      <label for="labelHeight">Altura da etiqueta (mm):</label>
+      <input type="number" id="labelHeight" min="10" max="150" value="30" />
+    </div>
+
+    <div class="control-group">
+      <label for="cols">Etiquetas por linha (colunas):</label>
+      <input type="number" id="cols" min="1" max="10" value="3" />
+    </div>
+
+    <div class="control-group">
+      <label for="rows">Etiquetas por coluna (linhas):</label>
+      <input type="number" id="rows" min="1" max="20" value="8" />
+    </div>
+
+    <div class="control-group">
+      <label for="fontSize">Tamanho da fonte (px):</label>
+      <input type="range" id="fontSize" min="8" max="30" value="14" />
+    </div>
+
+    <div class="control-group">
+      <label for="imgSize">Tamanho da imagem (% da largura da etiqueta):</label>
+      <input type="range" id="imgSize" min="10" max="100" value="60" />
+    </div>
+
+    <div class="control-group">
+      <label for="imgOffsetX">Deslocamento X da imagem (em %):</label>
+      <input type="range" id="imgOffsetX" min="-100" max="100" value="0" />
+    </div>
+
+    <div class="control-group">
+      <label for="imgOffsetY">Deslocamento Y da imagem (em %):</label>
+      <input type="range" id="imgOffsetY" min="-100" max="100" value="0" />
+    </div>
   </div>
 
-  <div class="control-group">
-    <label for="labelHeight">Altura da etiqueta (mm):</label>
-    <input type="number" id="labelHeight" min="10" max="150" value="30" />
+  <label for="textInput">Texto da etiqueta:</label>
+  <textarea id="textInput" rows="3">Sua etiqueta aqui</textarea>
+
+  <label for="imageInput">Escolha a imagem (PNG, JPG):</label>
+  <input type="file" id="imageInput" accept="image/png, image/jpeg" />
+  <button onclick="removerImagem()">Remover imagem</button>
+
+  <br />
+  <button onclick="renderLabels()">Gerar etiquetas</button>
+  <button onclick="printLabels()" style="background-color: #4CAF50; color: white;">Imprimir etiquetas</button>
+
+  <h2>Visualização para impressão (A4):</h2>
+  <div class="preview-container">
+    <div id="page" class="page-a4"></div>
   </div>
 
-  <div class="control-group">
-    <label for="cols">Etiquetas por linha (colunas):</label>
-    <input type="number" id="cols" min="1" max="10" value="3" />
-  </div>
+  <script>
+    let imgDataURL = "";
 
-  <div class="control-group">
-    <label for="rows">Etiquetas por coluna (linhas):</label>
-    <input type="number" id="rows" min="1" max="20" value="8" />
-  </div>
+    document.getElementById('imageInput').addEventListener('change', function(evt){
+      const file = evt.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        imgDataURL = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
 
-  <div class="control-group">
-    <label for="fontSize">Tamanho da fonte (px):</label>
-    <input type="range" id="fontSize" min="8" max="30" value="14" />
-  </div>
-
-  <div class="control-group" style="min-width: 200px;">
-    <label for="imgSize">Tamanho da imagem (% da largura da etiqueta):</label>
-    <input type="range" id="imgSize" min="10" max="100" value="60" />
-  </div>
-
-</div>
-
-<label for="textInput">Texto da etiqueta:</label>
-<textarea id="textInput" rows="3" style="width: 300px;">Sua etiqueta aqui</textarea>
-
-<label for="imageInput">Escolha a imagem (PNG, JPG):</label>
-<input type="file" id="imageInput" accept="image/png, image/jpeg" />
-
-<button onclick="renderLabels()">Gerar etiquetas</button>
-<button onclick="printLabels()" style="background-color: #4CAF50; color: white;">Imprimir etiquetas</button>
-
-<h2>Visualização para impressão (A4):</h2>
-<div class="preview-container">
-  <div id="page" class="page-a4"></div>
-</div>
-
-<script>
-  let imgDataURL = "";
-
-  // Ler imagem do upload
-  document.getElementById('imageInput').addEventListener('change', function(evt){
-    const file = evt.target.files[0];
-    if(!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      imgDataURL = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-
-  function renderLabels() {
-    const page = document.getElementById('page');
-    page.innerHTML = '';
-
-    const labelWidthMM = Number(document.getElementById('labelWidth').value);
-    const labelHeightMM = Number(document.getElementById('labelHeight').value);
-    const cols = Number(document.getElementById('cols').value);
-    const rows = Number(document.getElementById('rows').value);
-    const fontSize = Number(document.getElementById('fontSize').value);
-    const imgSizePercent = Number(document.getElementById('imgSize').value);
-    const text = document.getElementById('textInput').value;
-
-    // Ajusta grid no container
-    page.style.gridTemplateColumns = `repeat(${cols}, ${labelWidthMM}mm)`;
-    page.style.gridAutoRows = `${labelHeightMM}mm`;
-
-    for(let i=0; i < cols * rows; i++) {
-      const label = document.createElement('div');
-      label.className = 'label';
-      label.style.width = `${labelWidthMM}mm`;
-      label.style.height = `${labelHeightMM}mm`;
-      label.style.fontSize = `${fontSize}px`;
-
-      // Criar imagem se tiver
-      if(imgDataURL) {
-        const img = document.createElement('img');
-        img.src = imgDataURL;
-        img.style.width = `${imgSizePercent}%`;
-        img.style.height = 'auto';
-        label.appendChild(img);
-      }
-
-      // Texto
-      const p = document.createElement('div');
-      p.className = 'label-text';
-      p.textContent = text;
-      label.appendChild(p);
-
-      page.appendChild(label);
+    function removerImagem() {
+      imgDataURL = "";
+      document.getElementById('imageInput').value = "";
+      renderLabels();
     }
-  }
 
-  function printLabels() {
-    // Garante que as etiquetas estejam atualizadas antes de imprimir
-    renderLabels();
-    window.print();
-  }
-</script>
+    function aplicarModelo() {
+      const modelo = document.getElementById('modeloEtiqueta').value;
+      if (!modelo) return;
+
+      const [largura, altura, colunas, linhas] = modelo.split(',').map(Number);
+
+      document.getElementById('labelWidth').value = largura;
+      document.getElementById('labelHeight').value = altura;
+      document.getElementById('cols').value = colunas;
+      document.getElementById('rows').value = linhas;
+
+      renderLabels();
+    }
+
+    function renderLabels() {
+      const page = document.getElementById('page');
+      page.innerHTML = '';
+
+      const labelWidthMM = Number(document.getElementById('labelWidth').value);
+      const labelHeightMM = Number(document.getElementById('labelHeight').value);
+      const cols = Number(document.getElementById('cols').value);
+      const rows = Number(document.getElementById('rows').value);
+      const fontSize = Number(document.getElementById('fontSize').value);
+      const imgSizePercent = Number(document.getElementById('imgSize').value);
+      const offsetX = Number(document.getElementById('imgOffsetX').value);
+      const offsetY = Number(document.getElementById('imgOffsetY').value);
+      const text = document.getElementById('textInput').value;
+
+      page.style.gridTemplateColumns = `repeat(${cols}, ${labelWidthMM}mm)`;
+      page.style.gridAutoRows = `${labelHeightMM}mm`;
+
+      for (let i = 0; i < cols * rows; i++) {
+        const label = document.createElement('div');
+        label.className = 'label';
+        label.style.width = `${labelWidthMM}mm`;
+        label.style.height = `${labelHeightMM}mm`;
+        label.style.fontSize = `${fontSize}px`;
+
+        if (imgDataURL) {
+          const img = document.createElement('img');
+          img.src = imgDataURL;
+          img.style.width = `${imgSizePercent}%`;
+          img.style.left = `${offsetX}%`;
+          img.style.top = `${offsetY}%`;
+          img.style.position = 'relative';
+          label.appendChild(img);
+        }
+
+        const p = document.createElement('div');
+        p.className = 'label-text';
+        p.textContent = text;
+        label.appendChild(p);
+
+        page.appendChild(label);
+      }
+    }
+
+    function printLabels() {
+      renderLabels();
+      window.print();
+    }
+  </script>
 
 </body>
 </html>
