@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Encaminhamento UBS - Mairiporã</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto 60px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .topo .logo-left, .topo .logo-right {
+      width: 120px;
+      height: auto;
+    }
+    .topo .centro {
+      flex-grow: 1;
+      text-align: center;
+      color: #166;
+    }
+    .topo .centro h1 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .topo .centro .data-geracao {
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 4px;
+      font-family: Arial, sans-serif;
+      color: #166;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .linha {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .coluna {
+      flex: 1;
+      min-width: 250px;
+    }
+    .linha.linha1 .coluna {
+      flex: 1;
+      min-width: unset;
+    }
+    .linha.linha2 .coluna.nome {
+      flex: 1.8;
+    }
+    .linha.linha2 .coluna.idade {
+      flex: 0 0 80px;
+      max-width: 80px;
+    }
+    .linha.linha2 .coluna.data {
+      flex: 0 0 160px;
+      max-width: 160px;
+    }
+    .linha.linha3 .coluna.sus {
+      flex: 0 0 160px;
+      max-width: 160px;
+    }
+    .linha.linha3 .coluna.contato {
+      flex: 0 0 120px;
+      max-width: 120px;
+    }
+    .linha.linha3 .coluna.filiacao {
+      flex: 2;
+    }
+    .linha.linha4 .coluna.endereco {
+      flex: 2.5;
+      min-width: 200px;
+    }
+    .linha.linha5 .coluna.cep {
+      flex: 0 0 140px;
+      max-width: 140px;
+    }
+    .linha.linha5 .coluna.numero {
+      flex: 0 0 80px;
+      max-width: 80px;
+    }
+    .linha.linha5 .coluna.data2 {
+      flex: 0 0 140px;
+      max-width: 140px;
+    }
+    /* Nova linha7 para observação */
+    .linha.linha7 .coluna {
+      flex: 1;
+      min-width: unset;
+    }
+    .linha.linha6 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+    .botoes {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #166;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      flex-shrink: 0;
+    }
+    button:hover {
+      background-color: #0d4444;
+    }
+    .btn-print {
+      background-color: #444;
+    }
+    .btn-print:hover {
+      background-color: #222;
+    }
+    .assinatura-box {
+      border: 2px solid #000;
+      width: 280px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+    .assinatura-box .linha-assinatura-interna {
+      border-top: 1.5px solid #000;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .footer {
+      background-color: #166;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+      color: #fff;
+      border-top: 1px solid #0d4444;
+      margin-top: 40px;
+      /* Retirado page-break para melhor impressão contínua */
+    }
+    @media print {
+      button {
+        display: none !important;
+      }
+      .footer {
+        position: static !important;
+        margin-top: 40px;
+      }
+      body, .container {
+        margin: 0;
+        box-shadow: none;
+        background: white;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topo">
+      <img class="logo-left" src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo Prefeitura Mairiporã" />
+      <div class="centro">
+        <h1>Encaminhamento UBS - Mairiporã</h1>
+        <div class="data-geracao">Mairiporã, 22 de Julho de 2025</div>
+      </div>
+      <img class="logo-right" src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Instituto Alpha" />
+    </div>
+
+    <form>
+      <div class="linha linha1">
+        <div class="coluna">
+          <label for="ubs">UBS:</label>
+          <select id="ubs" name="ubs" required>
+            <option value="">Carregando UBS...</option>
+          </select>
+        </div>
+        <div class="coluna">
+          <label for="municipio">Município:</label>
+          <input type="text" id="municipio" name="municipio" value="Mairiporã" readonly />
+        </div>
+        <div class="coluna">
+          <label for="bairro">Bairro:</label>
+          <select id="bairro" name="bairro" required>
+            <option value="">Selecione o bairro</option>
+            <option>Apolinário</option>
+            <option>Área Rural de Mairiporã</option>
+            <option>Barreiro</option>
+            <option>Boa Vista</option>
+            <option>Caceia</option>
+            <option>Canjica</option>
+            <option>Capoavinha</option>
+            <option>Caraguatá</option>
+            <option>Cardoso</option>
+            <option>Centro</option>
+            <option>Chácara Arantes</option>
+            <option>Cidade Jardim</option>
+            <option>Corumbá</option>
+            <option>Cumbari</option>
+            <option>Invernada</option>
+            <option>Jundiaizinho</option>
+            <option>Juqueri Mirim</option>
+            <option>Lavapés</option>
+            <option>Lavras</option>
+            <option>Luiz Fagundes</option>
+            <option>Parque Cerros Verdes</option>
+            <option>Quinta Carvalhos</option>
+            <option>Terra Preta</option>
+            <option>Vila Ipanema</option>
+            <option>Roseira</option>
+            <option>Samambaia</option>
+            <option>Santa Inês</option>
+            <option>Pirucaia</option>
+            <option>Pedra Vermelha</option>
+            <option>Rio Acima</option>
+            <option>Monjolinho</option>
+            <option>Pedra Verde</option>
+            <option>Rodrigues</option>
+            <option>Rio Abaixo</option>
+            <option>Santa Branca</option>
+            <option>Cerro Grande</option>
+            <option>Jardim Fernão Dias</option>
+            <option>Jardim Galrão</option>
+            <option>Jardim Mairiporã</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="linha linha2">
+        <div class="coluna nome">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="coluna idade">
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" min="0" />
+        </div>
+        <div class="coluna data">
+          <label for="data">Data de Nascimento:</label>
+          <input type="date" id="data" name="data" required />
+        </div>
+      </div>
+
+      <div class="linha linha3">
+       <div class="coluna sus">
+          <label for="cns">Cartão SUS:</label>
+          <input type="text" id="cns" name="cns" />
+        </div>
+       <div class="coluna contato">
+          <label for="contato">Contato (telefone/celular):</label>
+          <input type="text" id="contato" name="contato" />
+        </div>
+        <div class="coluna filiacao">
+          <label for="filiacao">Filiação:</label>
+          <input type="text" id="filiacao" name="filiacao" />
+        </div>
+      </div>
+
+      <div class="linha linha4">
+        <div class="coluna endereco">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" />
+        </div>
+      </div>
+
+      <div class="linha linha5">
+        <div class="coluna cep">
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" />
+        </div>
+        <div class="coluna numero">
+          <label for="numero">Número:</label>
+          <input type="text" id="numero" name="numero" />
+        </div>
+        <div class="coluna data2">
+          <label for="data2">Data:</label>
+          <input type="date" id="data2" name="data2" />
+        </div>
+      </div>
+
+      <div class="linha linha7">
+        <div class="coluna">
+          <label for="observacao">Observação:</label>
+          <input type="text" id="observacao" name="observacao" />
+        </div>
+      </div>
+
+      <div class="linha linha6">
+        <div class="botoes">
+          <button type="button" onclick="window.print()" class="btn-print">Imprimir</button>
+          <button type="submit">Salvar Encaminhamento</button>
+        </div>
+        <div class="assinatura-box">
+          <div class="linha-assinatura-interna"></div>
+          <div style="text-align:center; font-size: 12px;">Assinatura do Responsável / Profissional</div>
+        </div>
+      </div>
+    </form>
+
+    <div class="footer">
+      Razão Social: Instituto Alpha de Medicina para Saúde - CNPJ: 14.512.229/0001-10<br />
+      Endereço: Rua Amador Bueno, n° 333, Cj. 1816, Centro - Santos/SP CEP.: 11013-153<br />
+      Telefone: (13) 3394-5103 / E-mail: contato@alphainstituto.com.br<br />
+      Site: www.alphainstituto.com.br
+    </div>
+  </div>
+
+  <script>
+    async function carregarUBS() {
+      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSOyXYJ7vD_a9mwyhLfkcCC2YrneDbmsNjENKgLeRMEqrhNkz8yqQI3x15Wi3rkJTosUFmnJcmsHpcy/pubhtml';
+
+      try {
+        const response = await fetch(url);
+        const text = await response.text();
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+
+        // Seleciona as linhas da tabela da planilha pública
+        const rows = doc.querySelectorAll('table.waffle tbody tr');
+
+        const ubsSet = new Set();
+
+        rows.forEach(row => {
+          const cell = row.querySelector('td'); // primeira célula da linha
+          if(cell) {
+            const nomeUBS = cell.textContent.trim();
+            if(nomeUBS) ubsSet.add(nomeUBS);
+          }
+        });
+
+        const select = document.getElementById('ubs');
+        select.innerHTML = '<option value="">Selecione a UBS</option>';
+
+        if(ubsSet.size === 0) {
+          select.innerHTML = '<option value="">Nenhuma UBS encontrada</option>';
+        } else {
+          ubsSet.forEach(ubs => {
+            const option = document.createElement('option');
+            option.value = ubs;
+            option.textContent = ubs;
+            select.appendChild(option);
+          });
+        }
+      } catch (err) {
+        console.error('Erro ao carregar UBS:', err);
+        const select = document.getElementById('ubs');
+        select.innerHTML = '<option value="">Erro ao carregar UBS</option>';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', carregarUBS);
+  </script>
+</body>
+</html>
