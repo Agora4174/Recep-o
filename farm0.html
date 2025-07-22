@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hospital de Clinicas Anjo Gabriel</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+  }
+  header img {
+    height: 50px;
+    width: auto;
+  }
+  header h1 {
+    margin: 0 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    color: #166; /* cor principal */
+    font-weight: 700;
+  }
+  .oficio-line {
+    margin: 20px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #166; /* cor principal */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .oficio-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .oficio-left label {
+    font-weight: 600;
+  }
+  .oficio-left input[type="text"] {
+    width: 80px;
+    padding: 5px 8px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #166;
+    border-radius: 4px;
+  }
+  .oficio-left span {
+    font-weight: 600;
+  }
+  .oficio-right {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .form-carta {
+    margin: 0 auto 40px;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    max-width: 600px;
+    background: #fafafa;
+  }
+  .form-carta div {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .form-carta label {
+    width: 70px;
+    font-weight: 600;
+    color: #166;
+  }
+  .form-carta span {
+    font-weight: 500;
+    color: #222;
+    margin-left: 12px;
+  }
+  .form-carta input[type="text"],
+  .form-carta select {
+    flex-grow: 1;
+    padding: 6px 8px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+  }
+  .tipo-emprestimo-container {
+    max-width: 400px;
+    margin: 0 auto 40px;
+  }
+  .tipo-emprestimo-container h3 {
+    margin-bottom: 10px;
+    color: #166;
+    font-weight: 700;
+    text-align: center;
+  }
+  .tipo-emprestimo-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tipo-emprestimo-container td {
+    padding: 8px;
+    vertical-align: middle;
+  }
+  .tipo-emprestimo-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .tipo-emprestimo-container label {
+    white-space: nowrap;
+    display: inline-block;
+    color: #166;
+    font-weight: 600;
+  }
+
+  .saida-container {
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  .saida-container h3 {
+    margin-bottom: 10px;
+    color: #166;
+    font-weight: 700;
+    text-align: center;
+  }
+  .saida-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .saida-container th,
+  .saida-container td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  .saida-container th {
+    background-color: #ddd;
+    text-align: left;
+  }
+  .saida-container button {
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #166;
+  }
+  .saida-container button.removeLinha {
+    color: red;
+  }
+  #observacoes-saida {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 10px;
+  }
+  .recebido-por-box {
+    border: 1px solid #999;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+  }
+  .recebido-por-box > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .recebido-por-box span {
+    white-space: nowrap;
+  }
+  .btn-imprimir {
+    display: block;
+    margin: 0 auto 50px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #166;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+    text-align: center;
+  }
+  .btn-imprimir:hover {
+    background-color: #0b3b3b;
+  }
+  /* Footer */
+  .footer {
+    margin: 40px auto 20px;
+    font-size: 0.9rem;
+    color: #166;
+    text-align: center;
+    border-top: 1px solid #166;
+    padding-top: 10px;
+    max-width: 700px;
+    line-height: 1.4;
+  }
+  /* Garante que o footer seja impresso */
+  @media print {
+    .footer {
+      display: block !important;
+      page-break-after: always;
+      color: #166;
+      font-size: 0.85rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo Mairiporã" />
+  <h1>Hospital de Clinicas Anjo Gabriel</h1>
+  <img src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Alpha Instituto" />
+</header>
+
+<div class="oficio-line">
+  <div class="oficio-left">
+    <label for="oficio-numero">Ofício</label>
+    <input id="oficio-numero" type="text" maxlength="5" pattern="\d{5}" placeholder="00000" title="Digite 5 números" />
+    <span>/ 2025</span>
+  </div>
+  <div class="oficio-right" id="data-hora">
+    <!-- Data e hora serão inseridas aqui pelo JS -->
+  </div>
+</div>
+
+<div class="form-carta">
+  <div>
+    <label>De:</label>
+    <span>Hospital de Clinicas Anjo Gabriel</span>
+  </div>
+  <div>
+    <label for="farma-origem">Farma:</label>
+    <select id="farma-origem" required>
+      <option value="">Selecione</option>
+      <option value="Carla">Carla</option>
+      <option value="Danielly">Danielly</option>
+    </select>
+  </div>
+  <div>
+    <label>Endereço:</label>
+    <span>Rua Exemplo, 123 - Centro, Mairiporã - SP</span>
+  </div>
+  <div>
+    <label>Para:</label>
+    <span>UPA de Franco da Rocha</span>
+  </div>
+  <div>
+    <label for="farma-destino">Farma:</label>
+    <input type="text" id="farma-destino" placeholder="Nome do farmacêutico da UPA" />
+  </div>
+</div>
+
+<div class="tipo-emprestimo-container">
+  <h3>Tipo de Empréstimo</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label>
+            <input type="radio" name="tipo-emprestimo" value="entrada" />
+            Entrada de empréstimo
+          </label>
+        </td>
+        <td>
+          <label>
+            <input type="radio" name="tipo-emprestimo" value="saida" />
+            Saída de empréstimo
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            <input type="radio" name="tipo-emprestimo" value="devolucao" />
+            Devolução de empréstimo
+          </label>
+        </td>
+        <td>
+          <label>
+            <input type="radio" name="tipo-emprestimo" value="permuta" />
+            Permuta
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="saida-container">
+  <h3>Saída</h3>
+  <table id="tabela-saida">
+    <thead>
+      <tr>
+        <th>Material/medicamento</th>
+        <th>Apresentação</th>
+        <th>Quantidade</th>
+        <th style="width: 50px;">+</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="material[]" placeholder="Material ou medicamento" style="width: 100%;" /></td>
+        <td><input type="text" name="apresentacao[]" placeholder="Apresentação" style="width: 100%;" /></td>
+        <td><input type="number" name="quantidade[]" min="1" placeholder="Qtd" style="width: 100%;" /></td>
+        <td style="text-align: center;">
+          <button type="button" id="addLinhaSaida" title="Adicionar linha">+</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <label for="observacoes-saida" style="margin-top: 20px; display: block; font-weight: 600;">Observações:</label>
+  <textarea id="observacoes-saida" rows="4" placeholder="Escreva aqui observações..."></textarea>
+
+  <div class="recebido-por-box">
+    <div>
+      <span><strong>Recebido por:</strong> ____________________________</span>
+      <span><strong>Nome:</strong> ____________________________________________________________</span>
+      <span><strong>RG:</strong> ________________________</span>
+      <span><strong>Data:</strong> ____/_____/________</span>
+    </div>
+  </div>
+</div>
+
+<button class="btn-imprimir" id="btn-imprimir">Imprimir</button>
+
+<div class="footer">
+  Razão Social: Instituto Alpha de Medicina para Saúde - CNPJ: 14.512.229/0001-10<br />
+  Endereço: Rua Amador Bueno, n° 333, Cj. 1816, Centro - Santos/SP CEP.: 11013-153<br />
+  Telefone: (13) 3394-5103 / E-mail: contato@alphainstituto.com.br<br />
+  Site: www.alphainstituto.com.br
+</div>
+
+<script>
+  function formatarDataHora() {
+    const meses = [
+      'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+      'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+    ];
+
+    const agora = new Date();
+
+    const dia = agora.getDate();
+    const mes = meses[agora.getMonth()];
+    const ano = agora.getFullYear();
+
+    let horas = agora.getHours();
+    let minutos = agora.getMinutes();
+
+    horas = horas < 10 ? '0' + horas : horas;
+    minutos = minutos < 10 ? '0' + minutos : minutos;
+
+    return `Mairiporã, ${dia} ${mes} de ${ano} - ${horas}:${minutos}`;
+  }
+
+  document.getElementById('data-hora').textContent = formatarDataHora();
+
+  const tabelaSaida = document.getElementById('tabela-saida').getElementsByTagName('tbody')[0];
+  const botaoAdd = document.getElementById('addLinhaSaida');
+
+  botaoAdd.addEventListener('click', () => {
+    const novaLinha = document.createElement('tr');
+
+    novaLinha.innerHTML = `
+      <td><input type="text" name="material[]" placeholder="Material ou medicamento" style="width: 100%;" /></td>
+      <td><input type="text" name="apresentacao[]" placeholder="Apresentação" style="width: 100%;" /></td>
+      <td><input type="number" name="quantidade[]" min="1" placeholder="Qtd" style="width: 100%;" /></td>
+      <td style="text-align: center;">
+        <button type="button" class="removeLinha" title="Remover linha" style="color: red;">−</button>
+      </td>
+    `;
+
+    tabelaSaida.appendChild(novaLinha);
+
+    novaLinha.querySelector('.removeLinha').addEventListener('click', function() {
+      this.closest('tr').remove();
+    });
+  });
+
+  document.getElementById('btn-imprimir').addEventListener('click', () => {
+    // Validar ofício
+    const oficio = document.getElementById('oficio-numero').value.trim();
+    if (!/^\d{5}$/.test(oficio)) {
+      console.error('Erro: Ofício deve conter exatamente 5 números.');
+      alert('Por favor, preencha o número do Ofício com 5 dígitos numéricos.');
+      return;
+    }
+
+    // Validar Farma origem
+    const farmaOrigem = document.getElementById('farma-origem').value;
+    if (!farmaOrigem) {
+      console.error('Erro: Farma origem não selecionada.');
+      alert('Por favor, selecione o farmacêutico de origem.');
+      return;
+    }
+
+    // Validar Farma destino
+    const farmaDestino = document.getElementById('farma-destino').value.trim();
+    if (farmaDestino.length === 0) {
+      console.error('Erro: Farma destino não preenchida.');
+      alert('Por favor, preencha o nome do farmacêutico de destino.');
+      return;
+    }
+
+    // Validar ao menos uma linha válida na tabela de saída
+    const linhas = tabelaSaida.querySelectorAll('tr');
+    let linhaValidaEncontrada = false;
+
+    for (const linha of linhas) {
+      const material = linha.querySelector('input[name="material[]"]').value.trim();
+      const apresentacao = linha.querySelector('input[name="apresentacao[]"]').value.trim();
+      const quantidade = linha.querySelector('input[name="quantidade[]"]').value.trim();
+
+      if (material && apresentacao && quantidade && !isNaN(quantidade) && Number(quantidade) > 0) {
+        linhaValidaEncontrada = true;
+        break;
+      }
+    }
+
+    if (!linhaValidaEncontrada) {
+      console.error('Erro: Nenhuma linha válida preenchida na tabela de saída.');
+      alert('Por favor, preencha ao menos uma linha válida na tabela de saída com material, apresentação e quantidade.');
+      return;
+    }
+
+    // Se passou em todas validações, chama impressão
+    window.print();
+  });
+</script>
+</body>
+</html>
