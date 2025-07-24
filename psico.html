@@ -200,7 +200,7 @@
       <img class="logo-left" src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo Prefeitura Mairiporã" />
       <div class="centro">
         <h1>Encaminhamento UBS - Mairiporã</h1>
-        <div class="data-geracao">Mairiporã, 22 de Julho de 2025</div>
+        <div class="data-geracao" id="dataGeracao"></div>
       </div>
       <img class="logo-right" src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Instituto Alpha" />
     </div>
@@ -281,10 +281,18 @@
 
       <div class="linha linha3">
        <div class="coluna sus">
-          <label for="cns">Cartão SUS:</label>
+          <label for="cns">CNS:</label>
           <input type="text" id="cns" name="cns" />
         </div>
        <div class="coluna contato">
+          <label for="contato">Contato (telefone/celular):</label>
+          <input type="text" id="contato" name="contato" />
+        </div>
+        <div class="coluna contato">
+          <label for="contato">Contato (telefone/celular):</label>
+          <input type="text" id="contato" name="contato" />
+        </div>
+        <div class="coluna contato">
           <label for="contato">Contato (telefone/celular):</label>
           <input type="text" id="contato" name="contato" />
         </div>
@@ -310,93 +318,352 @@
           <label for="numero">Número:</label>
           <input type="text" id="numero" name="numero" />
         </div>
-        <div class="coluna data2">
-          <label for="data2">Data:</label>
-          <input type="date" id="data2" name="data2" />
-        </div>
+      
       </div>
 <label for="hd_cid">HD:</label>
 <select id="hd_cid" name="hd_cid">
   <option value="">--Selecione CID--</option>
-  <option value="F00">F00 – Demência na doença de Alzheimer</option>
-  <option value="F01">F01 – Demência vascular</option>
-  <option value="F02">F02 – Demência em outras doenças</option>
-  <option value="F03">F03 – Demência não especificada</option>
-  <option value="F04">F04 – Síndrome amnéstica orgânica</option>
-  <option value="F05">F05 – Delirium não induzido por substâncias</option>
-  <option value="F06">F06 – Outros transtornos mentais devido a lesão cerebral</option>
-  <option value="F07">F07 – Transtornos de personalidade de origem orgânica</option>
-  <option value="F09">F09 – Transtorno mental orgânico não especificado</option>
-  <option value="F10">F10 – Transtornos por uso de álcool</option>
-  <option value="F11">F11 – Transtornos por uso de opioides</option>
-  <option value="F12">F12 – Transtornos por uso de canabinóides</option>
-  <option value="F13">F13 – Transtornos por uso de sedativos ou hipnóticos</option>
-  <option value="F14">F14 – Transtornos por uso de cocaína</option>
-  <option value="F15">F15 – Transtornos por uso de outros estimulantes</option>
-  <option value="F16">F16 – Transtornos por uso de alucinógenos</option>
-  <option value="F17">F17 – Transtornos por uso de tabaco</option>
-  <option value="F18">F18 – Transtornos por uso de solventes voláteis</option>
-  <option value="F19">F19 – Transtornos por uso de múltiplas substâncias</option>
-  <option value="F20">F20 – Esquizofrenia</option>
-  <option value="F21">F21 – Transtorno esquizotípico</option>
-  <option value="F22">F22 – Transtornos delirantes persistentes</option>
-  <option value="F23">F23 – Transtornos psicóticos agudos e transitórios</option>
-  <option value="F24">F24 – Transtorno delirante induzido</option>
-  <option value="F25">F25 – Transtorno esquizoafetivo</option>
-  <option value="F28">F28 – Outros transtornos psicóticos não-orgânicos</option>
-  <option value="F29">F29 – Transtorno psicótico não especificado</option>
-  <option value="F30">F30 – Episódio maníaco</option>
-  <option value="F31">F31 – Transtorno bipolar</option>
-  <option value="F32">F32 – Episódio depressivo</option>
-  <option value="F33">F33 – Transtorno depressivo recorrente</option>
-  <option value="F34">F34 – Transtornos do humor persistentes</option>
-  <option value="F38">F38 – Outros transtornos do humor</option>
-  <option value="F39">F39 – Transtorno do humor não especificado</option>
-  <option value="F40">F40 – Fobias</option>
-  <option value="F41">F41 – Transtornos de ansiedade</option>
+ <option value="F00-F09">F00-F09 – Transtornos mentais orgânicos, inclusive os sintomáticos</option>
+<option value="F00">F00 – Demência na doença de Alzheimer</option>
+<option value="F00.0">F00.0 – Demência na doença de Alzheimer de início precoce</option>
+<option value="F00.1">F00.1 – Demência na doença de Alzheimer de início tardio</option>
+<option value="F00.2">F00.2 – Demência na doença de Alzheimer, forma atípica ou mista</option>
+<option value="F00.9">F00.9 – Demência não especificada na doença de Alzheimer</option>
+<option value="F01">F01 – Demência vascular</option>
+<option value="F01.0">F01.0 – Demência vascular de início agudo</option>
+<option value="F01.1">F01.1 – Demência por infartos múltiplos</option>
+<option value="F01.2">F01.2 – Demência vascular subcortical</option>
+<option value="F01.3">F01.3 – Demência vascular mista, cortical e subcortical</option>
+<option value="F01.8">F01.8 – Outra demência vascular</option>
+<option value="F01.9">F01.9 – Demência vascular não especificada</option>
+<option value="F02">F02 – Demência em outras doenças classificadas em outra parte</option>
+<option value="F02.0">F02.0 – Demência da doença de Pick</option>
+<option value="F02.1">F02.1 – Demência na doença de Creutzfeldt-Jakob</option>
+<option value="F02.2">F02.2 – Demência na doença de Huntington</option>
+<option value="F02.3">F02.3 – Demência na doença de Parkinson</option>
+<option value="F02.4">F02.4 – Demência na doença pelo vírus da imunodeficiência humana [HIV]</option>
+<option value="F02.8">F02.8 – Demência em outras doenças especificadas classificadas em outra parte</option>
+<option value="F03">F03 – Demência não especificada</option>
+<option value="F04">F04 – Síndrome amnésica orgânica não induzida pelo álcool ou outras substâncias psicoativas</option>
+<option value="F05">F05 – Delirium não induzido pelo álcool ou outras substâncias psicoativas</option>
+<option value="F05.0">F05.0 – Delirium não superposto a uma demência</option>
+<option value="F05.1">F05.1 – Delirium superposto a uma demência</option>
+<option value="F05.8">F05.8 – Outro delirium</option>
+<option value="F05.9">F05.9 – Delirium não especificado</option>
+<option value="F06">F06 – Outros transtornos mentais devidos a lesão e disfunção cerebral e doença física</option>
+<option value="F06.0">F06.0 – Alucinose orgânica</option>
+<option value="F06.1">F06.1 – Estado catatônico orgânico</option>
+<option value="F06.2">F06.2 – Transtorno delirante orgânico [tipo esquizofrênico]</option>
+<option value="F06.3">F06.3 – Transtornos do humor [afetivos] orgânicos</option>
+<option value="F06.4">F06.4 – Transtornos da ansiedade orgânicos</option>
+<option value="F06.5">F06.5 – Transtorno dissociativo orgânico</option>
+<option value="F06.6">F06.6 – Transtorno de labilidade emocional [astênico] orgânico</option>
+<option value="F06.7">F06.7 – Transtorno cognitivo leve</option>
+<option value="F06.8">F06.8 – Outros transtornos mentais especificados devido a lesão e disfunção cerebral e doença física</option>
+<option value="F06.9">F06.9 – Transtorno mental não especificado devido a lesão e disfunção cerebral e doença física</option>
+<option value="F07">F07 – Transtornos de personalidade e comportamento devido a doença, lesão e disfunção cerebral</option>
+<option value="F07.0">F07.0 – Transtorno orgânico da personalidade</option>
+<option value="F07.1">F07.1 – Síndrome pós-encefalítica</option>
+<option value="F07.2">F07.2 – Síndrome pós-traumática</option>
+<option value="F07.8">F07.8 – Outros transtornos orgânicos da personalidade e comportamento devido a doença cerebral</option>
+<option value="F07.9">F07.9 – Transtorno orgânico não especificado da personalidade e comportamento</option>
+<option value="F09">F09 – Transtorno mental orgânico ou sintomático não especificado</option>
+<option value="F10-F19">F10-F19 – Transtornos mentais e comportamentais devido ao uso de substância psicoativa</option>
+<option value="F10">F10 – Transtornos mentais e comportamentais devidos ao uso de álcool</option>
+<option value="F11">F11 – Transtornos mentais e comportamentais devidos ao uso de opiáceos</option>
+<option value="F12">F12 – Transtornos mentais e comportamentais devidos ao uso de canabinóides</option>
+<option value="F13">F13 – Transtornos mentais e comportamentais devidos ao uso de sedativos e hipnóticos</option>
+<option value="F14">F14 – Transtornos mentais e comportamentais devidos ao uso da cocaína</option>
+<option value="F15">F15 – Transtornos mentais e comportamentais devidos ao uso de outros estimulantes, inclusive a cafeína</option>
+<option value="F16">F16 – Transtornos mentais e comportamentais devidos ao uso de alucinógenos</option>
+<option value="F17">F17 – Transtornos mentais e comportamentais devidos ao uso de fumo</option>
+<option value="F18">F18 – Transtornos mentais e comportamentais devidos ao uso de solventes voláteis</option>
+<option value="F19">F19 – Transtornos mentais e comportamentais devido ao uso de múltiplas drogas e outras substâncias psicoativas</option>
+<option value="F20-F29">F20-F29 – Esquizofrenia, transtornos esquizotípicos e transtornos delirantes</option>
+<option value="F20">F20 – Esquizofrenia</option>
+<option value="F20.0">F20.0 – Esquizofrenia paranóide</option>
+<option value="F20.1">F20.1 – Esquizofrenia hebefrênica</option>
+<option value="F20.2">F20.2 – Esquizofrenia catatônica</option>
+<option value="F20.3">F20.3 – Esquizofrenia indiferenciada</option>
+<option value="F20.4">F20.4 – Depressão pós-esquizofrênica</option>
+<option value="F20.5">F20.5 – Esquizofrenia residual</option>
+<option value="F20.6">F20.6 – Esquizofrenia simples</option>
+<option value="F20.8">F20.8 – Outras esquizofrenias</option>
+<option value="F20.9">F20.9 – Esquizofrenia não especificada</option>
+<option value="F21">F21 – Transtorno esquizotípico</option>
+<option value="F22">F22 – Transtornos delirantes persistentes</option>
+<option value="F22.0">F22.0 – Transtorno delirante</option>
+<option value="F22.8">F22.8 – Outros transtornos delirantes persistentes</option>
+<option value="F22.9">F22.9 – Transtorno delirante persistente não especificado</option>
+<option value="F23">F23 – Transtornos psicóticos agudos e transitórios</option>
+<option value="F23.0">F23.0 – Transtorno psicótico agudo polimorfo, sem sintomas esquizofrênicos</option>
+<option value="F23.1">F23.1 – Transtorno psicótico agudo polimorfo, com sintomas esquizofrênicos</option>
+<option value="F23.2">F23.2 – Transtorno psicótico agudo de tipo esquizofrênico</option>
+<option value="F23.3">F23.3 – Outros transtornos psicóticos agudos, essencialmente delirantes</option>
+<option value="F23.8">F23.8 – Outros transtornos psicóticos agudos e transitórios</option>
+<option value="F23.9">F23.9 – Transtorno psicótico agudo e transitório não especificado</option>
+<option value="F24">F24 – Transtorno delirante induzido</option>
+<option value="F25">F25 – Transtornos esquizoafetivos</option>
+<option value="F25.0">F25.0 – Transtorno esquizoafetivo do tipo maníaco</option>
+<option value="F25.1">F25.1 – Transtorno esquizoafetivo do tipo depressivo</option>
+<option value="F25.2">F25.2 – Transtorno esquizoafetivo do tipo misto</option>
+<option value="F25.8">F25.8 – Outros transtornos esquizoafetivos</option>
+<option value="F25.9">F25.9 – Transtorno esquizoafetivo não especificado</option>
+<option value="F28">F28 – Outros transtornos psicóticos não-orgânicos</option>
+<option value="F29">F29 – Psicose não-orgânica não especificada</option>
+  
+  <option value="F30-F39">F30-F39 – Transtornos do humor [afetivos]</option>
+
+<option value="F30">F30 – Episódio maníaco</option>
+<option value="F30.0">F30.0 – Hipomania</option>
+<option value="F30.1">F30.1 – Mania sem sintomas psicóticos</option>
+<option value="F30.2">F30.2 – Mania com sintomas psicóticos</option>
+<option value="F30.8">F30.8 – Outros episódios maníacos</option>
+<option value="F30.9">F30.9 – Episódio maníaco não especificado</option>
+
+<option value="F31">F31 – Transtorno afetivo bipolar</option>
+<option value="F31.0">F31.0 – Transtorno afetivo bipolar, episódio atual hipomaníaco</option>
+<option value="F31.1">F31.1 – Transtorno afetivo bipolar, episódio atual maníaco sem sintomas psicóticos</option>
+<option value="F31.2">F31.2 – Transtorno afetivo bipolar, episódio atual maníaco com sintomas psicóticos</option>
+<option value="F31.3">F31.3 – Transtorno afetivo bipolar, episódio atual depressivo leve ou moderado</option>
+<option value="F31.4">F31.4 – Transtorno afetivo bipolar, episódio atual depressivo grave sem sintomas psicóticos</option>
+<option value="F31.5">F31.5 – Transtorno afetivo bipolar, episódio atual depressivo grave com sintomas psicóticos</option>
+<option value="F31.6">F31.6 – Transtorno afetivo bipolar, episódio atual misto</option>
+<option value="F31.7">F31.7 – Transtorno afetivo bipolar, atualmente em remissão</option>
+<option value="F31.8">F31.8 – Outros transtornos afetivos bipolares</option>
+<option value="F31.9">F31.9 – Transtorno afetivo bipolar não especificado</option>
+
+<option value="F32">F32 – Episódios depressivos</option>
+<option value="F32.0">F32.0 – Episódio depressivo leve</option>
+<option value="F32.1">F32.1 – Episódio depressivo moderado</option>
+<option value="F32.2">F32.2 – Episódio depressivo grave sem sintomas psicóticos</option>
+<option value="F32.3">F32.3 – Episódio depressivo grave com sintomas psicóticos</option>
+<option value="F32.8">F32.8 – Outros episódios depressivos</option>
+<option value="F32.9">F32.9 – Episódio depressivo não especificado</option>
+
+<option value="F33">F33 – Transtorno depressivo recorrente</option>
+<option value="F33.0">F33.0 – Transtorno depressivo recorrente, episódio atual leve</option>
+<option value="F33.1">F33.1 – Transtorno depressivo recorrente, episódio atual moderado</option>
+<option value="F33.2">F33.2 – Transtorno depressivo recorrente, episódio atual grave sem sintomas psicóticos</option>
+<option value="F33.3">F33.3 – Transtorno depressivo recorrente, episódio atual grave com sintomas psicóticos</option>
+<option value="F33.4">F33.4 – Transtorno depressivo recorrente, atualmente em remissão</option>
+<option value="F33.8">F33.8 – Outros transtornos depressivos recorrentes</option>
+<option value="F33.9">F33.9 – Transtorno depressivo recorrente sem especificação</option>
+
+<option value="F34">F34 – Transtornos de humor [afetivos] persistentes</option>
+<option value="F34.0">F34.0 – Ciclotimia</option>
+<option value="F34.1">F34.1 – Distimia</option>
+<option value="F34.8">F34.8 – Outros transtornos do humor [afetivos] persistentes</option>
+<option value="F34.9">F34.9 – Transtorno do humor [afetivo] persistente não especificado</option>
+
+<option value="F38">F38 – Outros transtornos do humor [afetivos]</option>
+<option value="F38.0">F38.0 – Outros transtornos do humor [afetivos] isolados</option>
+<option value="F38.1">F38.1 – Outros transtornos do humor [afetivos] recorrentes</option>
+<option value="F38.8">F38.8 – Outros transtornos especificados do humor [afetivos]</option>
+
+<option value="F39">F39 – Transtorno do humor [afetivo] não especificado</option>
+<option value="F40">F40 – Transtornos fóbico-ansiosos</option>
+<option value="F40.0">F40.0 – Agorafobia</option>
+<option value="F40.1">F40.1 – Fobias sociais</option>
+<option value="F40.2">F40.2 – Fobias específicas (isoladas)</option>
+<option value="F40.8">F40.8 – Outros transtornos fóbico-ansiosos</option>
+<option value="F40.9">F40.9 – Transtorno fóbico-ansioso não especificado</option>
+<option value="F41">F41 – Outros transtornos ansiosos</option>
+<option value="F41.0">F41.0 – Transtorno de pânico [ansiedade paroxística episódica]</option>
+<option value="F41.1">F41.1 – Ansiedade generalizada</option>
+<option value="F41.2">F41.2 – Transtorno misto ansioso e depressivo</option>
+<option value="F41.3">F41.3 – Outros transtornos ansiosos mistos</option>
+<option value="F41.8">F41.8 – Outros transtornos ansiosos especificados</option>
+<option value="F41.9">F41.9 – Transtorno ansioso não especificado</option>
+
+  
   <option value="F42">F42 – Transtorno obsessivo-compulsivo</option>
-  <option value="F43">F43 – Reações ao estresse e transtornos de adaptação</option>
-  <option value="F44">F44 – Transtornos dissociativos</option>
+<option value="F42.0">F42.0 – Transtorno obsessivo-compulsivo com predominância de idéias ou de ruminações obsessivas</option>
+<option value="F42.1">F42.1 – Transtorno obsessivo-compulsivo com predominância de comportamentos compulsivos [rituais obsessivos]</option>
+<option value="F42.2">F42.2 – Transtorno obsessivo-compulsivo, forma mista, com idéias obsessivas e comportamentos compulsivos</option>
+<option value="F42.8">F42.8 – Outros transtornos obsessivo-compulsivos</option>
+<option value="F42.9">F42.9 – Transtorno obsessivo-compulsivo não especificado</option>
+
+<option value="F43">F43 – Reações ao “stress” grave e transtornos de adaptação</option>
+<option value="F43.0">F43.0 – Reação aguda ao “stress”</option>
+<option value="F43.1">F43.1 – Estado de “stress” pós-traumático</option>
+<option value="F43.2">F43.2 – Transtornos de adaptação</option>
+<option value="F43.8">F43.8 – Outras reações ao “stress” grave</option>
+<option value="F43.9">F43.9 – Reação não especificada a um “stress” grave</option>
+
+  <option value="F44">F44 – Transtornos dissociativos [de conversão]</option>
+<option value="F44.0">F44.0 – Amnésia dissociativa</option>
+<option value="F44.1">F44.1 – Fuga dissociativa</option>
+<option value="F44.2">F44.2 – Estupor dissociativo</option>
+<option value="F44.3">F44.3 – Estados de transe e de possessão</option>
+<option value="F44.4">F44.4 – Transtornos dissociativos do movimento</option>
+<option value="F44.5">F44.5 – Convulsões dissociativas</option>
+<option value="F44.6">F44.6 – Anestesia e perda sensorial dissociativas</option>
+<option value="F44.7">F44.7 – Transtorno dissociativo misto [de conversão]</option>
+<option value="F44.8">F44.8 – Outros transtornos dissociativos [de conversão]</option>
+<option value="F44.9">F44.9 – Transtorno dissociativo [de conversão] não especificado</option>
+ 
   <option value="F45">F45 – Transtornos somatoformes</option>
-  <option value="F48">F48 – Outros transtornos neuróticos</option>
-  <option value="F50">F50 – Transtornos da alimentação</option>
-  <option value="F51">F51 – Transtornos do sono não-orgânicos</option>
-  <option value="F52">F52 – Disfunções sexuais não-orgânicas</option>
-  <option value="F53">F53 – Transtornos mentais do puerpério</option>
-  <option value="F54">F54 – Fatores psicológicos em doenças físicas</option>
-  <option value="F60">F60 – Transtornos específicos da personalidade</option>
-  <option value="F61">F61 – Transtornos mistos da personalidade</option>
-  <option value="F62">F62 – Alterações duradouras da personalidade</option>
-  <option value="F63">F63 – Transtornos de hábitos e impulsos</option>
-  <option value="F64">F64 – Transtornos de identidade de gênero</option>
-  <option value="F65">F65 – Transtornos de preferência sexual</option>
-  <option value="F70">F70 – Leve</option>
-  <option value="F71">F71 – Moderado</option>
-  <option value="F72">F72 – Grave</option>
-  <option value="F73">F73 – Profundo</option>
-  <option value="F78">F78 – Outros</option>
-  <option value="F79">F79 – Não especificado</option>
-  <option value="F80">F80 – Transtornos da fala e linguagem</option>
-  <option value="F81">F81 – Transtornos das habilidades escolares</option>
-  <option value="F82">F82 – Transtornos da coordenação</option>
-  <option value="F83">F83 – Transtornos mistos do desenvolvimento</option>
-  <option value="F84">F84 – Transtornos globais do desenvolvimento</option>
-  <option value="F90">F90 – Transtornos hipercinéticos (TDAH)</option>
-  <option value="F91">F91 – Transtornos de conduta</option>
-  <option value="F92">F92 – Transtornos mistos de conduta e emoções</option>
-  <option value="F93">F93 – Transtornos emocionais na infância</option>
-  <option value="F94">F94 – Transtornos do funcionamento social</option>
-  <option value="F95">F95 – Tiques</option>
-  <option value="F98">F98 – Outros transtornos da infância</option>
-  <option value="F99">F99 – Transtorno mental não especificado</option>
+<option value="F45.0">F45.0 – Transtorno de somatização</option>
+<option value="F45.1">F45.1 – Transtorno somatoforme indiferenciado</option>
+<option value="F45.2">F45.2 – Transtorno hipocondríaco</option>
+<option value="F45.3">F45.3 – Transtorno neurovegetativo somatoforme</option>
+<option value="F45.4">F45.4 – Transtorno doloroso somatoforme persistente</option>
+<option value="F45.8">F45.8 – Outros transtornos somatoformes</option>
+<option value="F45.9">F45.9 – Transtorno somatoforme não especificado</option>
+
+<option value="F48">F48 – Outros transtornos neuróticos</option>
+<option value="F48.0">F48.0 – Neurastenia</option>
+<option value="F48.1">F48.1 – Síndrome de despersonalização-desrealização</option>
+<option value="F48.8">F48.8 – Outros transtornos neuróticos especificados</option>
+<option value="F48.9">F48.9 – Transtorno neurótico não especificado</option>
+
+  <option value="F50-F59">F50-F59 – Síndromes comportamentais associadas a disfunções fisiológicas e a fatores físicos</option>
+
+<option value="F50">F50 – Transtornos da alimentação</option>
+<option value="F50.0">F50.0 – Anorexia nervosa</option>
+<option value="F50.1">F50.1 – Anorexia nervosa atípica</option>
+<option value="F50.2">F50.2 – Bulimia nervosa</option>
+<option value="F50.3">F50.3 – Bulimia nervosa atípica</option>
+<option value="F50.4">F50.4 – Hiperfagia associada a outros distúrbios psicológicos</option>
+<option value="F50.5">F50.5 – Vômitos associados a outros distúrbios psicológicos</option>
+<option value="F50.8">F50.8 – Outros transtornos da alimentação</option>
+<option value="F50.9">F50.9 – Transtorno de alimentação não especificado</option>
+
+<option value="F51">F51 – Transtornos não-orgânicos do sono devidos a fatores emocionais</option>
+<option value="F51.0">F51.0 – Insônia não-orgânica</option>
+<option value="F51.1">F51.1 – Hipersonia não-orgânica</option>
+<option value="F51.2">F51.2 – Transtorno do ciclo vigília-sono devido a fatores não-orgânicos</option>
+<option value="F51.3">F51.3 – Sonambulismo</option>
+<option value="F51.4">F51.4 – Terrores noturnos</option>
+<option value="F51.5">F51.5 – Pesadelos</option>
+<option value="F51.8">F51.8 – Outros transtornos do sono devidos a fatores não-orgânicos</option>
+<option value="F51.9">F51.9 – Transtorno do sono devido a fatores não-orgânicos não especificados</option>
+
+<option value="F52">F52 – Disfunção sexual, não causada por transtorno ou doença orgânica</option>
+<option value="F52.0">F52.0 – Ausência ou perda do desejo sexual</option>
+<option value="F52.1">F52.1 – Aversão sexual e ausência de prazer sexual</option>
+<option value="F52.2">F52.2 – Falha de resposta genital</option>
+<option value="F52.3">F52.3 – Disfunção orgásmica</option>
+<option value="F52.4">F52.4 – Ejaculação precoce</option>
+<option value="F52.5">F52.5 – Vaginismo não-orgânico</option>
+<option value="F52.6">F52.6 – Dispareunia não-orgânica</option>
+<option value="F52.7">F52.7 – Apetite sexual excessivo</option>
+<option value="F52.8">F52.8 – Outras disfunções sexuais não devidas a transtorno ou à doença orgânica</option>
+<option value="F52.9">F52.9 – Disfunção sexual não devida a transtorno ou à doença orgânica, não especificada</option>
+
+<option value="F53">F53 – Transtornos mentais e comportamentais associados ao puerpério, não classificados em outra parte</option>
+<option value="F53.0">F53.0 – Transtornos mentais e comportamentais leves associados ao puerpério</option>
+<option value="F53.1">F53.1 – Transtornos mentais e comportamentais graves associados ao puerpério</option>
+<option value="F53.8">F53.8 – Outros transtornos mentais e comportamentais associados ao puerpério</option>
+<option value="F53.9">F53.9 – Transtorno mental e comportamental associado ao puerpério, não especificado</option>
+
+<option value="F54">F54 – Fatores psicológicos ou comportamentais associados a doença ou a transtornos classificados em outra parte</option>
+
+<option value="F55">F55 – Abuso de substâncias que não produzem dependência</option>
+
+<option value="F59">F59 – Síndromes comportamentais associadas a transtornos das funções fisiológicas e a fatores físicos, não especificadas</option>
+
+  
+   <option value="F60.0">F60.0 Personalidade paranóica</option>
+  <option value="F60.1">F60.1 Personalidade esquizóide</option>
+  <option value="F60.2">F60.2 Personalidade dissocial</option>
+  <option value="F60.3">F60.3 Transtorno de personalidade com instabilidade emocional</option>
+  <option value="F60.4">F60.4 Personalidade histriônica</option>
+  <option value="F60.5">F60.5 Personalidade anancástica</option>
+  <option value="F60.6">F60.6 Personalidade ansiosa [esquiva]</option>
+  <option value="F60.7">F60.7 Personalidade dependente</option>
+  <option value="F60.8">F60.8 Outros transtornos específicos da personalidade</option>
+  <option value="F60.9">F60.9 Transtorno não especificado da personalidade</option>
+  <option value="F61">F61 Transtornos mistos da personalidade e outros transtornos da personalidade</option>
+  <option value="F62.0">F62.0 Modificação duradoura da personalidade após uma experiência catastrófica</option>
+  <option value="F62.1">F62.1 Modificação duradoura da personalidade após doença psiquiátrica</option>
+  <option value="F62.8">F62.8 Outras modificações duradouras da personalidade</option>
+  <option value="F62.9">F62.9 Modificação duradoura da personalidade, não especificada</option>
+  <option value="F63.0">F63.0 Jogo patológico</option>
+  <option value="F63.1">F63.1 Piromania</option>
+  <option value="F63.2">F63.2 Roubo patológico [cleptomania]</option>
+  <option value="F63.3">F63.3 Tricotilomania</option>
+  <option value="F63.8">F63.8 Outros transtornos dos hábitos e dos impulsos</option>
+  <option value="F63.9">F63.9 Transtorno dos hábitos e impulsos, não especificado</option>
+  <option value="F64.0">F64.0 Transexualismo</option>
+  <option value="F64.1">F64.1 Travestismo bivalente</option>
+  <option value="F64.2">F64.2 Transtorno de identidade sexual na infância</option>
+  <option value="F64.8">F64.8 Outros transtornos da identidade sexual</option>
+  <option value="F64.9">F64.9 Transtorno não especificado da identidade sexual</option>
+  <option value="F65.0">F65.0 Fetichismo</option>
+  <option value="F65.1">F65.1 Travestismo fetichista</option>
+  <option value="F65.2">F65.2 Exibicionismo</option>
+  <option value="F65.3">F65.3 Voyeurismo</option>
+  <option value="F65.4">F65.4 Pedofilia</option>
+  <option value="F65.5">F65.5 Sadomasoquismo</option>
+  <option value="F65.6">F65.6 Transtornos múltiplos da preferência sexual</option>
+  <option value="F65.8">F65.8 Outros transtornos da preferência sexual</option>
+  <option value="F65.9">F65.9 Transtorno da preferência sexual, não especificado</option>
+  <option value="F66.0">F66.0 Transtorno da maturação sexual</option>
+  <option value="F66.1">F66.1 Orientação sexual egodistônica</option>
+  <option value="F66.2">F66.2 Transtorno do relacionamento sexual</option>
+  <option value="F66.8">F66.8 Outros transtornos do desenvolvimento psicossexual</option>
+  <option value="F66.9">F66.9 Transtorno do desenvolvimento sexual, não especificado</option>
+  <option value="F68.0">F68.0 Sintomas físicos aumentados por fatores psicológicos</option>
+  <option value="F68.1">F68.1 Produção deliberada ou simulação de sintomas ou incapacidades [transtorno fictício]</option>
+  <option value="F68.8">F68.8 Outros transtornos especificados da personalidade e do comportamento do adulto</option>
+  <option value="F69">F69 Transtorno da personalidade e do comportamento do adulto, não especificado</option>
+  
+   <option value="F70">F70.- Retardo mental leve</option>
+  <option value="F71">F71.- Retardo mental moderado</option>
+  <option value="F72">F72.- Retardo mental grave</option>
+  <option value="F73">F73.- Retardo mental profundo</option>
+  <option value="F78">F78.- Outro retardo mental</option>
+  <option value="F79">F79.- Retardo mental não especificado</option>
+   <option value="F80">F80 - Transtornos específicos do desenvolvimento da fala e da linguagem</option>
+  <option value="F80.0">F80.0 - Transtorno específico da articulação da fala</option>
+  <option value="F80.1">F80.1 - Transtorno expressivo de linguagem</option>
+  <option value="F80.2">F80.2 - Transtorno receptivo da linguagem</option>
+  <option value="F80.3">F80.3 - Afasia adquirida com epilepsia (síndrome de Landau-Kleffner)</option>
+  <option value="F80.8">F80.8 - Outros transtornos de desenvolvimento da fala ou da linguagem</option>
+  <option value="F80.9">F80.9 - Transtorno não especificado do desenvolvimento da fala ou da linguagem</option>
+
+  <option value="F81">F81 - Transtornos específicos do desenvolvimento das habilidades escolares</option>
+  <option value="F81.0">F81.0 - Transtorno específico de leitura</option>
+  <option value="F81.1">F81.1 - Transtorno específico da soletração</option>
+  <option value="F81.2">F81.2 - Transtorno específico da habilidade em aritmética</option>
+  <option value="F81.3">F81.3 - Transtorno misto de habilidades escolares</option>
+  <option value="F81.8">F81.8 - Outros transtornos do desenvolvimento das habilidades escolares</option>
+  <option value="F81.9">F81.9 - Transtorno não especificado do desenvolvimento das habilidades escolares</option>
+
+  <option value="F82">F82 - Transtorno específico do desenvolvimento motor</option>
+
+  <option value="F83">F83 - Transtornos específicos mistos do desenvolvimento</option>
+
+  <option value="F84">F84 - Transtornos globais do desenvolvimento</option>
+  <option value="F84.0">F84.0 - Autismo infantil</option>
+  <option value="F84.1">F84.1 - Autismo atípico</option>
+  <option value="F84.2">F84.2 - Síndrome de Rett</option>
+  <option value="F84.3">F84.3 - Outro transtorno desintegrativo da infância</option>
+  <option value="F84.4">F84.4 - Transtorno com hipercinesia associada a retardo mental e movimentos estereotipados</option>
+  <option value="F84.5">F84.5 - Síndrome de Asperger</option>
+  <option value="F84.8">F84.8 - Outros transtornos globais do desenvolvimento</option>
+  <option value="F84.9">F84.9 - Transtornos globais não especificados do desenvolvimento</option>
+
+  <option value="F88">F88 - Outros transtornos do desenvolvimento psicológico</option>
+
+  <option value="F89">F89 - Transtorno do desenvolvimento psicológico não especificado</option>
+  
+  
+  <option value="F99">F99 - Transtorno mental não especificado</option>
+
+    
+
+  
+  
 </select>
 
-      <div class="linha linha7">
-        <div class="coluna">
-          <label for="observacao">Observação:</label>
-          <input type="text" id="observacao" name="observacao" />
-        </div>
-      </div>
+     <div class="linha linha7">
+  <div class="coluna">
+    <label for="observacao">O PACIENTE EM QUESTÃO ESTEVE EM AMBIENTE DE URGÊNCIA E EMERGÊNCIA, TENDO SIDO AVALIADO PELA EQUIPE DE PSICOLOGIA, A QUAL INDICOU A NECESSIDADE DE CONTINUIDADE DO CUIDADO POR MEIO DE PSICOTERAPIA EM CONTEXTO AMBULATORIAL.</label>
+  </div>
+</div>
 
       <div class="linha linha6">
         <div class="botoes">
@@ -417,7 +684,15 @@
       Site: www.alphainstituto.com.br
     </div>
   </div>
-
+<script>
+  const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                 "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+  const hoje = new Date();
+  const dia = hoje.getDate();
+  const mes = meses[hoje.getMonth()];
+  const ano = hoje.getFullYear();
+  document.getElementById("dataGeracao").textContent = `Mairiporã, ${dia} de ${mes} de ${ano}`;
+</script>
   <script>
     async function carregarUBS() {
       const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSOyXYJ7vD_a9mwyhLfkcCC2YrneDbmsNjENKgLeRMEqrhNkz8yqQI3x15Wi3rkJTosUFmnJcmsHpcy/pubhtml';
