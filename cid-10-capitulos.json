@@ -1,0 +1,156 @@
+[
+ {
+  "NUMCAP": 1,
+  "CATINIC": "A00",
+  "CATFIM": "B99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 2,
+  "CATINIC": "C00",
+  "CATFIM": "D48",
+  "DESCRICAO": false,
+  "DESCRABREV": "II.  Neoplasias (tumores)"
+ },
+ {
+  "NUMCAP": 3,
+  "CATINIC": "D50",
+  "CATFIM": "D89",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 4,
+  "CATINIC": "E00",
+  "CATFIM": "E90",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 5,
+  "CATINIC": "F00",
+  "CATFIM": "F99",
+  "DESCRICAO": false,
+  "DESCRABREV": "V.   Transtornos mentais e comportamentais"
+ },
+ {
+  "NUMCAP": 6,
+  "CATINIC": "G00",
+  "CATFIM": "G99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 7,
+  "CATINIC": "H00",
+  "CATFIM": "H59",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 8,
+  "CATINIC": "H60",
+  "CATFIM": "H95",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 9,
+  "CATINIC": "I00",
+  "CATFIM": "I99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 10,
+  "CATINIC": "J00",
+  "CATFIM": "J99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 11,
+  "CATINIC": "K00",
+  "CATFIM": "K93",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 12,
+  "CATINIC": "L00",
+  "CATFIM": "L99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 13,
+  "CATINIC": "M00",
+  "CATFIM": "M99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 14,
+  "CATINIC": "N00",
+  "CATFIM": "N99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 15,
+  "CATINIC": "O00",
+  "CATFIM": "O99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 16,
+  "CATINIC": "P00",
+  "CATFIM": "P96",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 17,
+  "CATINIC": "Q00",
+  "CATFIM": "Q99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 18,
+  "CATINIC": "R00",
+  "CATFIM": "R99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 19,
+  "CATINIC": "S00",
+  "CATFIM": "T98",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 20,
+  "CATINIC": "V01",
+  "CATFIM": "Y98",
+  "DESCRICAO": false,
+  "DESCRABREV": "XX.  Causas externas de morbidade e mortalidade"
+ },
+ {
+  "NUMCAP": 21,
+  "CATINIC": "Z00",
+  "CATFIM": "Z99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ },
+ {
+  "NUMCAP": 22,
+  "CATINIC": "U04",
+  "CATFIM": "U99",
+  "DESCRICAO": false,
+  "DESCRABREV": false
+ }
+]

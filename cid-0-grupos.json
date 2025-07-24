@@ -1,0 +1,318 @@
+[
+ {
+  "CATINIC": "M800",
+  "CATFIM": "M800",
+  "DESCRICAO": "Neoplasias SOE"
+ },
+ {
+  "CATINIC": "M801",
+  "CATFIM": "M801",
+  "DESCRICAO": "Neoplasias epiteliais SOE"
+ },
+ {
+  "CATINIC": "M805",
+  "CATFIM": "M805",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M809",
+  "CATFIM": "M809",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M812",
+  "CATFIM": "M812",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M814",
+  "CATFIM": "M814",
+  "DESCRICAO": "Adenomas e adenocarcinomas"
+ },
+ {
+  "CATINIC": "M839",
+  "CATFIM": "M839",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M843",
+  "CATFIM": "M843",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M844",
+  "CATFIM": "M844",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M850",
+  "CATFIM": "M850",
+  "DESCRICAO": "Neoplasias ductais, lobulares e medulares"
+ },
+ {
+  "CATINIC": "M855",
+  "CATFIM": "M855",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M856",
+  "CATFIM": "M856",
+  "DESCRICAO": "Neoplasias epiteliais complexas"
+ },
+ {
+  "CATINIC": "M859",
+  "CATFIM": "M859",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M868",
+  "CATFIM": "M868",
+  "DESCRICAO": "Paragangliomas e tumores do glomo"
+ },
+ {
+  "CATINIC": "M872",
+  "CATFIM": "M872",
+  "DESCRICAO": "Nevos e melanomas"
+ },
+ {
+  "CATINIC": "M880",
+  "CATFIM": "M880",
+  "DESCRICAO": "Tumores e sarcomas de tecidos moles SOE"
+ },
+ {
+  "CATINIC": "M881",
+  "CATFIM": "M881",
+  "DESCRICAO": "Neoplasias fibromatosas"
+ },
+ {
+  "CATINIC": "M884",
+  "CATFIM": "M884",
+  "DESCRICAO": "Neoplasias mixomatosas"
+ },
+ {
+  "CATINIC": "M885",
+  "CATFIM": "M885",
+  "DESCRICAO": "Neoplasias lipomatosas"
+ },
+ {
+  "CATINIC": "M889",
+  "CATFIM": "M889",
+  "DESCRICAO": "Neoplasias miomatosas"
+ },
+ {
+  "CATINIC": "M893",
+  "CATFIM": "M893",
+  "DESCRICAO": "Neoplasias complexas mistas e do estroma"
+ },
+ {
+  "CATINIC": "M900",
+  "CATFIM": "M900",
+  "DESCRICAO": "Neoplasias fibroepitelias"
+ },
+ {
+  "CATINIC": "M904",
+  "CATFIM": "M904",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M905",
+  "CATFIM": "M905",
+  "DESCRICAO": "Neoplasias mesoteliais"
+ },
+ {
+  "CATINIC": "M906",
+  "CATFIM": "M906",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M910",
+  "CATFIM": "M910",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M911",
+  "CATFIM": "M911",
+  "DESCRICAO": "Mesonefromas"
+ },
+ {
+  "CATINIC": "M912",
+  "CATFIM": "M912",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M917",
+  "CATFIM": "M917",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M918",
+  "CATFIM": "M918",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M925",
+  "CATFIM": "M925",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M926",
+  "CATFIM": "M926",
+  "DESCRICAO": false,
+  "REFER": "C40.-,C41.-"
+ },
+ {
+  "CATINIC": "M927",
+  "CATFIM": "M927",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M935",
+  "CATFIM": "M935",
+  "DESCRICAO": "Tumores diversos"
+ },
+ {
+  "CATINIC": "M938",
+  "CATFIM": "M938",
+  "DESCRICAO": "Gliomas"
+ },
+ {
+  "CATINIC": "M949",
+  "CATFIM": "M949",
+  "DESCRICAO": "Neoplasias neuroepiteliomatosas"
+ },
+ {
+  "CATINIC": "M953",
+  "CATFIM": "M953",
+  "DESCRICAO": "Meningiomas"
+ },
+ {
+  "CATINIC": "M954",
+  "CATFIM": "M954",
+  "DESCRICAO": "Tumores da bainha nervosa"
+ },
+ {
+  "CATINIC": "M958",
+  "CATFIM": "M958",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M959",
+  "CATFIM": "M959",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M959",
+  "CATFIM": "M959",
+  "DESCRICAO": "Linfomas malignos SOE ou difuso"
+ },
+ {
+  "CATINIC": "M965",
+  "CATFIM": "M965",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M967",
+  "CATFIM": "M967",
+  "DESCRICAO": "Linfoma maligno tipo especificado, difuso ou SOE"
+ },
+ {
+  "CATINIC": "M969",
+  "CATFIM": "M969",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M970",
+  "CATFIM": "M970",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M971",
+  "CATFIM": "M971",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M972",
+  "CATFIM": "M972",
+  "DESCRICAO": "Outras neoplasias linforreticulares"
+ },
+ {
+  "CATINIC": "M973",
+  "CATFIM": "M973",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M974",
+  "CATFIM": "M974",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M976",
+  "CATFIM": "M976",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M980",
+  "CATFIM": "M980",
+  "DESCRICAO": "Leucemias"
+ },
+ {
+  "CATINIC": "M980",
+  "CATFIM": "M980",
+  "DESCRICAO": "Leucemias SOE"
+ },
+ {
+  "CATINIC": "M982",
+  "CATFIM": "M982",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M983",
+  "CATFIM": "M983",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M984",
+  "CATFIM": "M984",
+  "DESCRICAO": "Eritroleucemias"
+ },
+ {
+  "CATINIC": "M985",
+  "CATFIM": "M985",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M986",
+  "CATFIM": "M986",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M987",
+  "CATFIM": "M987",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M988",
+  "CATFIM": "M988",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M989",
+  "CATFIM": "M989",
+  "DESCRICAO": false
+ },
+ {
+  "CATINIC": "M990",
+  "CATFIM": "M990",
+  "DESCRICAO": "Outras leucemias"
+ },
+ {
+  "CATINIC": "M995",
+  "CATFIM": "M995",
+  "DESCRICAO": "Transtornos mieloproleferativos e linfoproliferativos diversos"
+ },
+ {
+  "CATINIC": "M998",
+  "CATFIM": "M998",
+  "DESCRICAO": false
+ }
+]
