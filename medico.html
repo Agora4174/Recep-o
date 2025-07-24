@@ -1,112 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guia Médico da Unidade - CIDs JSON</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: #004d40; color: #fff; padding: 20px; text-align: center; }
-    nav a { margin: 0 10px; color: #fff; text-decoration: none; }
-    main { padding: 20px; max-width: 800px; margin: auto; }
-    section { margin-bottom: 40px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    input[type="text"] { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    ul#listaCIDs { max-height: 300px; overflow-y: auto; padding-left: 20px; border: 1px solid #ccc; border-radius: 5px; background: #fafafa; }
-    ul#listaCIDs li { margin-bottom: 5px; }
-  </style>
+<meta charset="UTF-8" />
+<title>Busca CID + Procedimentos</title>
+<style>
+  /* Fundo com imagem 1.gif */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Removido margin para topo fixo */
+    background: url('1.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+  }
+
+  /* Camada semitransparente para melhorar leitura */
+  body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(255,255,255,0.85);
+    z-index: -1;
+  }
+
+  /* Topo fixo */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background-color: #166;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 20;
+  }
+
+  header img {
+    height: 40px;
+    object-fit: contain;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    user-select: none;
+  }
+
+  /* Conteúdo abaixo do topo */
+  main {
+    padding: 100px 20px 20px 20px; /* Espaço para o topo fixo */
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 2px solid #166;
+    border-radius: 5px;
+    outline-offset: 2px;
+    transition: outline-offset 0.2s;
+  }
+
+  input[type="text"]:focus {
+    outline: 2px solid #166;
+    outline-offset: 4px;
+  }
+
+  button.pesquisar {
+    background-color: #166;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s;
+  }
+
+  button.pesquisar:hover {
+    background-color: #0d3a0d;
+  }
+
+  .cid-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+
+  .cid-item strong {
+    color: #166;
+  }
+
+  pre {
+    background: #f0f0f0;
+    padding: 12px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-family: Consolas, monospace;
+    color: #333;
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Guia Médico da Unidade Hospital Anjo Gabriel</h1>
-    <nav>
-      <a href="#cids">Dicionario de CIDs</a>
-      <a href="index.html">Voltar a pagina inicial</a>
-    </nav>
-  </header>
-  <main>
-    <section id="cids">
-      <h2>Dicas de CIDs</h2>
-      <input type="text" id="buscaCID" placeholder="Buscar CID ou termo..." disabled />
-      <ul id="listaCIDs"><li>Carregando dados...</li></ul>
-    </section>
-  </main>
+<header>
+  <img src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo 1" />
+  <h1>Hospital de Clínicas Anjo Gabriel</h1>
+  <img src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo 2" />
+</header>
 
-  <script>
-    const jsonUrls = [
-      'CID-10-SUBCATEGORIAS.json',
-      'CID-10-CATEGORIAS.json',
-      'CID-10-GRUPOS.json',
-      'CID-10-CAPITULOS.json'
-    ];
+<main>
+  <input type="text" id="searchInput" placeholder="Digite código ou nome do CID" />
+  <button class="pesquisar" onclick="buscar()">Pesquisar</button>
 
-    const lista = document.getElementById('listaCIDs');
-    const buscaCID = document.getElementById('buscaCID');
+  <div id="result"></div>
+</main>
 
-    let subcategorias = [];
-    let categorias = {};
-    let grupos = [];
-    let capitulos = [];
+<script>
+let capitulos = [];
+let grupos = [];
+let categorias = {};
+let subcategorias = [];
+let procedimentos = [];
 
-    async function carregarJSON(url) {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('Erro ao carregar: ' + url);
-      return res.json();
-    }
+// Função para carregar JSON via fetch
+async function carregarJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('Erro ao carregar ' + url);
+  return res.json();
+}
 
-    async function carregarDados() {
-      const [subcatData, catData, grupoData, capituloData] = await Promise.all(jsonUrls.map(carregarJSON));
+// Carregar todos os JSONs e armazenar em variáveis
+async function carregarDados() {
+  try {
+    capitulos = await carregarJSON('cid-10-capitulos.json');
+    grupos = await carregarJSON('cid-10-grupos.json');
+    const categoriasArray = await carregarJSON('cid-10-categorias.json');
+    subcategorias = await carregarJSON('cid-10-subcategorias.json');
+    procedimentos = await carregarJSON('cid.json'); 
 
-      subcategorias = subcatData;
-      grupos = grupoData;
-      capitulos = capituloData;
+    categoriasArray.forEach(c => {
+      categorias[c.CAT] = c.DESCRICAO || c.DESCRABREV || '';
+    });
 
-      catData.forEach(cat => {
-        categorias[cat.CAT] = cat.DESCRICAO || cat.DESCRABREV || '';
-      });
-    }
+  } catch (e) {
+    document.getElementById('result').textContent = 'Erro ao carregar dados: ' + e.message;
+  }
+}
 
-    function mostrarCIDs(filtro = '') {
-      const f = filtro.toLowerCase();
-      lista.innerHTML = '';
+// Função que associa um código CID com procedimentos
+function getProcedimentosPorCID(cidCodigo) {
+  const prefixo = cidCodigo.replace('.', '').slice(0, 4); 
 
-      const filtrados = subcategorias.filter(cid =>
-        cid.SUBCAT.toLowerCase().includes(f) ||
-        (cid.DESCRICAO || cid.DESCRABREV || '').toLowerCase().includes(f)
-      );
+  const encontrados = procedimentos.filter(proc => {
+    const texto = proc["ESTADO DA BAHIA"];
+    if (!texto) return false;
+    const codigoProc = texto.trim().split(/\s+/)[0];
+    return codigoProc.startsWith(prefixo);
+  });
 
-      if (filtrados.length === 0) {
-        lista.innerHTML = '<li>Nenhum CID encontrado.</li>';
-        return;
-      }
+  return encontrados;
+}
 
-      filtrados.forEach(cid => {
-        const descricao = cid.DESCRICAO || cid.DESCRABREV || '(sem descrição)';
-        const categoriaCodigo = cid.SUBCAT.slice(0, 3);
-        const categoriaNome = categorias[categoriaCodigo] ? ` (${categorias[categoriaCodigo]})` : '';
-        const li = document.createElement('li');
-        li.textContent = `${cid.SUBCAT} - ${descricao}${categoriaNome}`;
-        lista.appendChild(li);
-      });
-    }
+function formatarProcedimentos(procArray) {
+  if (procArray.length === 0) return 'Nenhum procedimento encontrado.';
 
-    async function init() {
-      buscaCID.disabled = true;
-      lista.innerHTML = '<li>Carregando dados...</li>';
-      try {
-        await carregarDados();
-        buscaCID.disabled = false;
-        mostrarCIDs();
-      } catch (e) {
-        console.error(e);
-        lista.innerHTML = '<li>Erro ao carregar dados dos CIDs.</li>';
-      }
-    }
+  return procArray.map(p => {
+    const texto = p["ESTADO DA BAHIA"];
+    const partes = texto.trim().split(/\s{2,}/); 
+    return partes[0] + ' ' + (partes[1] || '');
+  }).join('\n');
+}
 
-    buscaCID.addEventListener('input', () => mostrarCIDs(buscaCID.value));
+function buscar() {
+  const termo = document.getElementById('searchInput').value.trim().toLowerCase();
+  const resultadoDiv = document.getElementById('result');
+  resultadoDiv.innerHTML = '';
 
-    init();
-  </script>
-  
+  if (!termo) {
+    resultadoDiv.textContent = 'Digite um código ou nome para pesquisar.';
+    return;
+  }
+
+  const encontrados = subcategorias.filter(cid => {
+    const codigo = cid.SUBCAT || '';
+    const nome = (cid.DESCRICAO || cid.DESCRABREV || '').toLowerCase();
+    return codigo.toLowerCase().includes(termo) || nome.includes(termo);
+  });
+
+  if (encontrados.length === 0) {
+    resultadoDiv.textContent = 'Nenhum CID encontrado.';
+    return;
+  }
+
+  encontrados.forEach(cid => {
+    const codigo = cid.SUBCAT || '';
+    const nome = cid.DESCRICAO || cid.DESCRABREV || '(sem descrição)';
+
+    const procs = getProcedimentosPorCID(codigo);
+    const procsFormatados = formatarProcedimentos(procs);
+
+    const capituloTexto = capitulos.find(cap => {
+      const catIni = cap.CATINIC || cap.CATINIC?.toUpperCase();
+      const catFim = cap.CATFIM || cap.CATFIM?.toUpperCase();
+      return codigo >= catIni && codigo <= catFim;
+    })?.DESCRABREV || 'Capítulo desconhecido';
+
+    const grupoTexto = grupos.find(g => {
+      const catIni = g.CATINIC || g.CATINIC?.toUpperCase();
+      const catFim = g.CATFIM || g.CATFIM?.toUpperCase();
+      return codigo >= catIni && codigo <= catFim;
+    })?.DESCRABREV || '';
+
+    const categoriaCodigo = codigo.slice(0, 3);
+    const categoriaNome = categorias[categoriaCodigo] || '';
+
+    resultadoDiv.innerHTML += `
+      <div class="cid-item">
+        <strong>${capituloTexto}</strong><br>
+        <em>${grupoTexto}</em><br>
+        <strong>Categoria:</strong> ${categoriaCodigo} - ${categoriaNome}<br>
+        <strong>CID:</strong> ${codigo} - ${nome.replace(/\s+/g,' ')}<br>
+        <pre>
+Procedimentos:
+${procsFormatados}
+        </pre>
+      </div>
+    `;
+  });
+}
+
+window.onload = carregarDados;
+</script>
+
 </body>
 </html>
