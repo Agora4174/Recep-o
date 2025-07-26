@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cadastro de Medicamentos</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f0f4f8;
+    color: #166;
+  }
+  h1 {
+    margin-bottom: 15px;
+  }
+  form#form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  form#form > * {
+    flex-shrink: 0;
+  }
+  select, input, textarea, button {
+    padding: 6px 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  select, input[type="number"] {
+    width: 150px;
+  }
+  textarea {
+    width: 200px;
+    height: 38px;
+    resize: vertical;
+  }
+  button {
+    background: #166;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 14px;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background: #0d4d4d;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    border: 1px solid #999;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  th {
+    background: #eee;
+  }
+  .btn-excluir {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-excluir:hover {
+    background: #c0392b;
+  }
+  .btn-editar {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 6px;
+  }
+  .btn-editar:hover {
+    background: #d68910;
+  }
+
+  /* Aqui está o CSS pra esconder tudo na impressão */
+  @media print {
+  /* Esconder form, botões e botões de ação ao imprimir */
+  form#form,
+  #btnPrint,
+  #btnExport,
+  #btnImport,
+  .btn-excluir,
+  .btn-editar {
+    display: none !important;
+  }
+
+  /* Esconder a última coluna da tabela (coluna de ações) ao imprimir */
+  table thead tr th:last-child,
+  table tbody tr td:last-child {
+    display: none !important;
+  }
+}
+
+  }
+</style>
+</head>
+<body>
+
+<h1>Cadastro de Medicamentos</h1>
+
+<form id="form" autocomplete="off">
+  <select id="medicamento" required title="Medicamento">
+    <option value="">Carregando medicamentos...</option>
+  </select>
+
+  <select id="apres" required title="Apresentação">
+    <option value="">Apresentação</option>
+    <option value="AMP">AMP</option>
+    <option value="CP">CP</option>
+    <option value="FA">FA</option>
+    <option value="BL">BL</option>
+    <option value="SE">SE</option>
+    <option value="ENV">ENV</option>
+  </select>
+
+  <textarea id="anotacao" placeholder="Anotação (opcional)" title="Anotação"></textarea>
+
+  <input type="number" id="soma" min="1" value="1" required title="Quantidade" />
+
+  <button type="submit" title="Salvar">Salvar</button>
+</form>
+
+<button id="btnPrint" onclick="window.print()">Imprimir Tabela</button>
+<button id="btnExport">Exportar JSON</button>
+<input type="file" id="fileInput" style="display:none" accept=".json" />
+<button id="btnImport">Importar JSON</button>
+
+<table aria-label="Tabela de medicamentos">
+  <thead>
+    <tr>
+      <th>Data / Hora</th>
+      <th>Medicamento</th>
+      <th>Apresentação</th>
+      <th>Anotação</th>
+      <th>Quantidade</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
+
+<script>
+  const CSV_MEDICAMENTOS = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3onMoICxw19XYkO89U5HOunAMWBF8WqOsJQbrq5bxlIU2P2hCLTriopIpA1UEgBw5klfG1AJMi5gf/pub?output=csv';
+
+  let registros = [];
+  let editIndex = null;
+
+  async function carregarMedicamentos() {
+    try {
+      const res = await fetch(CSV_MEDICAMENTOS);
+      const csv = await res.text();
+      const linhas = csv.trim().split('\n').slice(1);
+      const medsUnicos = new Set();
+      const select = document.getElementById('medicamento');
+      select.innerHTML = '<option value="">Selecione Medicamento...</option>';
+
+      linhas.forEach(linha => {
+        const cols = linha.split(',');
+        const medicamento = cols[0]?.replace(/"/g, '').trim();
+        if(medicamento && !medsUnicos.has(medicamento)) {
+          medsUnicos.add(medicamento);
+          const opt = document.createElement('option');
+          opt.value = medicamento;
+          opt.textContent = medicamento;
+          select.appendChild(opt);
+        }
+      });
+    } catch(err) {
+      console.error('Erro ao carregar medicamentos:', err);
+      const select = document.getElementById('medicamento');
+      select.innerHTML = '<option value="">Erro ao carregar medicamentos</option>';
+    }
+  }
+
+  function salvarLocalStorage() {
+    localStorage.setItem('registros', JSON.stringify(registros));
+  }
+
+  function carregarLocalStorage() {
+    const dados = localStorage.getItem('registros');
+    if(dados) {
+      registros = JSON.parse(dados);
+    } else {
+      registros = [];
+    }
+  }
+
+  function atualizarTabela() {
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = '';
+
+    registros.forEach((reg, i) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${reg.dataHora}</td>
+        <td>${reg.medicamento}</td>
+        <td>${reg.apres}</td>
+        <td>${reg.anotacao}</td>
+        <td>${reg.soma}</td>
+        <td>
+          <button class="btn-editar" onclick="editarRegistro(${i})" title="Editar">✏️</button>
+          <button class="btn-excluir" onclick="excluirRegistro(${i})" title="Excluir">🗑️</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function editarRegistro(i) {
+    const reg = registros[i];
+    document.getElementById('medicamento').value = reg.medicamento;
+    document.getElementById('apres').value = reg.apres;
+    document.getElementById('anotacao').value = reg.anotacao;
+    document.getElementById('soma').value = reg.soma;
+    editIndex = i;
+  }
+
+  function excluirRegistro(i) {
+    if(confirm('Deseja excluir este registro?')) {
+      registros.splice(i,1);
+      salvarLocalStorage();
+      atualizarTabela();
+      resetForm();
+    }
+  }
+
+  function resetForm() {
+    document.getElementById('form').reset();
+    editIndex = null;
+  }
+
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    const medicamento = document.getElementById('medicamento').value.trim();
+    const apres = document.getElementById('apres').value;
+    const anotacao = document.getElementById('anotacao').value.trim();
+    const soma = parseInt(document.getElementById('soma').value);
+
+    if(!medicamento || !apres || isNaN(soma) || soma < 1) {
+      alert('Preencha todos os campos corretamente!');
+      return;
+    }
+
+    const dataHora = new Date().toLocaleString('pt-BR');
+
+    if(editIndex !== null) {
+      registros[editIndex] = { dataHora, medicamento, apres, anotacao, soma };
+    } else {
+      registros.push({ dataHora, medicamento, apres, anotacao, soma });
+    }
+
+    salvarLocalStorage();
+    atualizarTabela();
+    resetForm();
+  });
+
+  // Exportar JSON
+  document.getElementById('btnExport').addEventListener('click', () => {
+    if(registros.length === 0) {
+      alert('Não há registros para exportar.');
+      return;
+    }
+    const blob = new Blob([JSON.stringify(registros, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'registros.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  // Importar JSON
+  document.getElementById('btnImport').addEventListener('click', () => {
+    document.getElementById('fileInput').click();
+  });
+
+  document.getElementById('fileInput').addEventListener('change', e => {
+    const file = e.target.files[0];
+    if(!file) return;
+
+    const reader = new FileReader();
+    reader.onload = evt => {
+      try {
+        const imported = JSON.parse(evt.target.result);
+        if(Array.isArray(imported)) {
+          registros = imported;
+          salvarLocalStorage();
+          atualizarTabela();
+          alert('Importação concluída com sucesso!');
+        } else {
+          alert('Arquivo JSON inválido.');
+        }
+      } catch {
+        alert('Erro ao ler arquivo JSON.');
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  // Inicialização
+  carregarMedicamentos();
+  carregarLocalStorage();
+  atualizarTabela();
+</script>
+
+</body>
+</html>
