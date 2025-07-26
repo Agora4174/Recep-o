@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Galeria com Logos</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    margin: 20px;
+    text-align: center;
+  
+  }
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  .logos img {
+    max-height: 80px;
+    object-fit: contain;
+   
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .gallery a img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .gallery a:hover img {
+    transform: scale(1.05);
+  }
+  .gallery p a {
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+}
+.gallery p a:hover {
+  text-decoration: underline;
+}
+
+  footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+</style>
+</head>
+<body>
+
+<div class="logos">
+  <img src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo Instituto Alpha" />
+  <h1>Hospital de Clínicas Anjo Gabriel</h1>
+  <img src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo Prefeitura Mairiporã" />
+</div>
+
+
+<div class="gallery">
+  <div>
+    <a href="seg.png" target="_blank" rel="noopener noreferrer"><img src="seg.png" alt="Imagem 1" /></a>
+    <p><a href="seguranca.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="pal.png" target="_blank" rel="noopener noreferrer"><img src="pal.png" alt="Imagem 2" /></a>
+    <p><a href="palestra.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="aph.jpeg" target="_blank" rel="noopener noreferrer"><img src="aph.jpeg" alt="Imagem 3" /></a>
+    <p><a href="rph.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="lid.jpeg" target="_blank" rel="noopener noreferrer"><img src="lid.jpeg" alt="Imagem 4" /></a>
+    <p><a href="lider.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="sau.png" target="_blank" rel="noopener noreferrer"><img src="sau.png" alt="Imagem 5" /></a>
+    <p><a href="saude.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="sment.png" target="_blank" rel="noopener noreferrer"><img src="sment.png" alt="Imagem 6" /></a>
+    <p><a href="mental.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="km.jpeg" target="_blank" rel="noopener noreferrer"><img src="km.jpeg" alt="Imagem 7" /></a>
+    <p><a href="corri.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="aut.jpeg" target="_blank" rel="noopener noreferrer"><img src="aut.jpeg" alt="Imagem 8" /></a>
+    <p><a href="autismo.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="hos.png" target="_blank" rel="noopener noreferrer"><img src="hos.png" alt="Imagem 9" /></a>
+    <p><a href="hospp.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="men.png" target="_blank" rel="noopener noreferrer"><img src="men.png" alt="Imagem 10" /></a>
+    <p><a href="man.html" target="_blank">Ver mais</a></p>
+  </div>
+  <div>
+    <a href="fundo.png" target="_blank" rel="noopener noreferrer"><img src="fundo.png" alt="Imagem 11" /></a>
+    <p><a href="pagina11.html" target="_blank">Ver mais</a></p>
+  </div>
+</div>
+
+<footer>
+      Razão Social: Instituto Alpha de Medicina para Saúde - CNPJ: 14.512.229/0001-10
+      Endereço: Rua Amador Bueno, n° 333, Cj. 1816, Centro - Santos/SP CEP.: 11013-153
+      Telefone: (13) 3394-5103 / E-mail: contato@alphainstituto.com.br
+      Site: www.alphainstituto.com.br
+    </footer>
+</body>
+</html>
