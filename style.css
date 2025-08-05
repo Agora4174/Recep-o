@@ -38,7 +38,7 @@ header {
 section {
   height: calc(100vh - 3rem);
   width: 100%;
-  background: url('1.gif') no-repeat top center / cover;
+  background: url('download.gif') no-repeat top center / cover;
   overflow: hidden;
 }
 
@@ -458,7 +458,7 @@ section {
   border: 2px solid #004d40;
   padding: 20px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
+  border-radius: 32px;
   z-index: 1999;
   display: none;
   overflow-y: auto;
@@ -508,15 +508,20 @@ section {
 
 #toggleSugestao {
   position: fixed;
-  left: 0;
+ right: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2000;
-  padding: 10px 15px;
+  padding: 20px 20px;
   background: #004d40;
   color: white;
   border: none;
-  border-radius: 0 10px 10px 0;
+  border-radius: 40px ;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
+}
+#toggleSugestao:hover {
+  
+   background: white;
+  color: #004d40;
 }
