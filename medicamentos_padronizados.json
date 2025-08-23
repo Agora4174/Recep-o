@@ -1,0 +1,747 @@
+[
+  {
+    "codigo": null,
+    "medicamento": "ACETATO",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "00082",
+    "medicamento": "ACICLOVIR 200mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00089",
+    "medicamento": "ACIDO ACETIL SALICILICO 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00104",
+    "medicamento": "ACIDO ASCORBICO 200mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "00194",
+    "medicamento": "ACIDO FOLICO 5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00194",
+    "medicamento": "ACIDO FOLICO 0,2mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "00196",
+    "medicamento": "ACIDO FOLINICO 15mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00458",
+    "medicamento": "ALBENDAZOL 400mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00458",
+    "medicamento": "ALBENDAZOL 40mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "00097",
+    "medicamento": "ALENDRONATO DE SODIO 70mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00585",
+    "medicamento": "ALOPURINOL 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00632",
+    "medicamento": "AMBROXOL, CLORIDRATO DE 3MG SOLUÇÃO",
+    "forma_farmaceutica": "ORAL"
+  },
+  {
+    "codigo": "00632",
+    "medicamento": "AMBROXOL, CLORIDRATO DE 6MG SOLUÇÃO",
+    "forma_farmaceutica": "ORAL"
+  },
+  {
+    "codigo": "00685",
+    "medicamento": "AMINOFILINA 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00699",
+    "medicamento": "AMIODARONA, CLORIDRATO DE 200mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00736",
+    "medicamento": "AMOXICILINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00736",
+    "medicamento": "AMOXICILINA 50mg/mL Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "00804",
+    "medicamento": "ANLODIPINO, BESILATO 10mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00804",
+    "medicamento": "ANLODIPINO, BESILATO 5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00911",
+    "medicamento": "ATENOLOL 50mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00997",
+    "medicamento": "AZITROMICINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00997",
+    "medicamento": "AZITROMICINA 40mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "01166",
+    "medicamento": "BENZOILMETRONIDAZOL 40mg/mL Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "01699",
+    "medicamento": "CAPTOPRIL 25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "01748",
+    "medicamento": "CALCIO, CARBONATO 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "CALCIO,",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "01808",
+    "medicamento": "CARVEDILOL 6,25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "01808",
+    "medicamento": "CARVEDILOL 12,5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "01808",
+    "medicamento": "CARVEDILOL 25MG",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "01826",
+    "medicamento": "CEFALEXINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "01826",
+    "medicamento": "CEFALEXINA 50mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "01956",
+    "medicamento": "CETOCONAZOL 2%",
+    "forma_farmaceutica": "Pomada"
+  },
+  {
+    "codigo": "01956",
+    "medicamento": "CETOCONAZOL 200mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "01960",
+    "medicamento": "CETOPROFENO 50mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02067",
+    "medicamento": "CILOSTAZOL 50 MG",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02067",
+    "medicamento": "CILOSTAZOL 100 MG",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02089",
+    "medicamento": "CINARIZINA 75mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02137",
+    "medicamento": "CIPROFLOXACINA, CLORIDRATO 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02137",
+    "medicamento": "CIPROFLOXACINO 3,5%",
+    "forma_farmaceutica": "Colírio"
+  },
+  {
+    "codigo": "02200",
+    "medicamento": "CLARITROMICINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02229",
+    "medicamento": "CLINDAMICINA 300mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02319",
+    "medicamento": "CLOPIDROGEL 75mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "02421",
+    "medicamento": "CLORETO DE SODIO 0,9% Solução",
+    "forma_farmaceutica": "Nasal"
+  },
+  {
+    "codigo": "02748",
+    "medicamento": "DELTAMETRINA 0,2mg/mL",
+    "forma_farmaceutica": "Xampu"
+  },
+  {
+    "codigo": "02817",
+    "medicamento": "DEXAMETASONA 0,1%",
+    "forma_farmaceutica": "Creme"
+  },
+  {
+    "codigo": "02817",
+    "medicamento": "DEXAMETASONA 0,1mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "02837",
+    "medicamento": "DEXCLORFENIRAMINA, MALEATO 2mg/5ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": null,
+    "medicamento": "DEXTRANO",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "02929",
+    "medicamento": "DICLOFENACO POTASSICO 50mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03010",
+    "medicamento": "DIGOXINA 0,25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "DIMENIDRATO",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "DIMENIDRATO",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "DIOSMINA",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "03121",
+    "medicamento": "DIPIRONA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03121",
+    "medicamento": "DIPIRONA 500mg/ml Solução Oral",
+    "forma_farmaceutica": "(Gotas)"
+  },
+  {
+    "codigo": "03209",
+    "medicamento": "DOXAZOSINA 2mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03217",
+    "medicamento": "DOXICICLINA, CLORIDRATO 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03370",
+    "medicamento": "ENALAPRIL, MALEATO 10mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03370",
+    "medicamento": "ENALAPRIL, MALEATO 20mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03490",
+    "medicamento": "ERITROMICINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03546",
+    "medicamento": "ESPIRAMICINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03561",
+    "medicamento": "ESPIRONOLACTONA 25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03561",
+    "medicamento": "ESPIRONOLACTONA 50mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "09380",
+    "medicamento": "ESTROGENOS CONJUGADOS 0,625mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04055",
+    "medicamento": "FINASTERIDA 5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04109",
+    "medicamento": "FLUCONAZOL 150mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04361",
+    "medicamento": "FUROSEMIDA 40mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04451",
+    "medicamento": "GLIBENCLAMIDA 5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04474",
+    "medicamento": "GLICLAZIDA 30mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04474",
+    "medicamento": "GLICLAZIDA 60mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04652",
+    "medicamento": "HIDROCLOROTIAZIDA 25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04694",
+    "medicamento": "HIDROXIDO DE ALUMINIO Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "03514",
+    "medicamento": "HIOSCINA 10mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "03514",
+    "medicamento": "HIOSCINA 10mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "04731",
+    "medicamento": "HIPOCLORITO DE SODIO 2,5%",
+    "forma_farmaceutica": "Frasco"
+  },
+  {
+    "codigo": "04766",
+    "medicamento": "IBUPROFENO 300mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04766",
+    "medicamento": "IBUPROFENO 600mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "04766",
+    "medicamento": "IBUPROFENO 50mg/mL Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "04918",
+    "medicamento": "INSULINA HUMANA NPH 100UI/ml",
+    "forma_farmaceutica": "Injetável"
+  },
+  {
+    "codigo": "04918",
+    "medicamento": "INSULINA HUMANA REGULAR 100UI/ml",
+    "forma_farmaceutica": "Injetável"
+  },
+  {
+    "codigo": "04918",
+    "medicamento": "INSULINA HUMANA NPH 100UI/ml CANETA",
+    "forma_farmaceutica": "Injetável"
+  },
+  {
+    "codigo": "04918",
+    "medicamento": "INSULINA HUMANA REGULAR 100UI/ml CANETA",
+    "forma_farmaceutica": "Injetável"
+  },
+  {
+    "codigo": "05103",
+    "medicamento": "ISOSSORBIDA, MONONITRATO 20mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05122",
+    "medicamento": "ITRACONAZOL 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05128",
+    "medicamento": "IVERMECTINA 6mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "LEVODOPA",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "LEVODOPA",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "05257",
+    "medicamento": "LEVOFLOXACINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "LEVONORGESTREL",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "05294",
+    "medicamento": "LEVOTIROXINA 25mcg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05294",
+    "medicamento": "LEVOTIROXINA 50mcg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05294",
+    "medicamento": "LEVOTIROXINA 75mcg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05294",
+    "medicamento": "LEVOTIROXINA 100mcg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05294",
+    "medicamento": "LEVOTIROXINA 150mcg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05416",
+    "medicamento": "LORATADINA 10mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05416",
+    "medicamento": "LORATADINA 1mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "05431",
+    "medicamento": "LOSARTANA 50mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05515",
+    "medicamento": "MEBENDAZOL 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05515",
+    "medicamento": "MEBENDAZOL 20mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "05563",
+    "medicamento": "MEDROXIPROGESTERONA, ACETATO DE 150MG/ML Solução",
+    "forma_farmaceutica": "Injetável"
+  },
+  {
+    "codigo": "05781",
+    "medicamento": "METFORMINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05781",
+    "medicamento": "METFORMINA 850mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05799",
+    "medicamento": "METILDOPA 250mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05861",
+    "medicamento": "METOCLOPRAMIDA 10mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "05902",
+    "medicamento": "METRONIDAZOL 100mg/g Creme",
+    "forma_farmaceutica": "Vaginal"
+  },
+  {
+    "codigo": "05902",
+    "medicamento": "METRONIDAZOL 250mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "00067",
+    "medicamento": "N-ACETILCISTEINA Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": null,
+    "medicamento": "N-BUTIL",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "N-BUTIL",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "NEOMICINA,",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "06394",
+    "medicamento": "NIMODIPINA 30mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "06410",
+    "medicamento": "NISTATINA 100.000UI/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "06410",
+    "medicamento": "NISTATINA 25.000UI/g Creme",
+    "forma_farmaceutica": "Vaginal"
+  },
+  {
+    "codigo": "06438",
+    "medicamento": "NITROFURANTOINA 100mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "06491",
+    "medicamento": "NORETISTERONA 0,35mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "NORESTITERONA,",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "OLEO",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "06602",
+    "medicamento": "OMEPRAZOL 20mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "06827",
+    "medicamento": "PARACETAMOL 200mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "06827",
+    "medicamento": "PARACETAMOL 500MG",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "07001",
+    "medicamento": "PERMETRINA 50mg/ml Creme ou",
+    "forma_farmaceutica": "Loção"
+  },
+  {
+    "codigo": "07170",
+    "medicamento": "PIRIMETAMINA 25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "POLIVITAMINICO",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "07333",
+    "medicamento": "PREDNISOLONA 3mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "07341",
+    "medicamento": "PREDNISONA 20mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "07341",
+    "medicamento": "PREDNISONA 5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "07429",
+    "medicamento": "PROMETAZINA 25mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "07444",
+    "medicamento": "PROPATILNITRATO 10mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "07481",
+    "medicamento": "PROPRANOLOL 40mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "09637",
+    "medicamento": "RIVAROXABANA 15mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "09637",
+    "medicamento": "RIVAROXABANA 20mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "SAIS",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "07866",
+    "medicamento": "SALBUTAMOL, SULFATO 0,4mg/ml Solução Oral –",
+    "forma_farmaceutica": "100ml"
+  },
+  {
+    "codigo": "07866",
+    "medicamento": "SALBUTAMOL 100mcg/dose SPRAY 200 doses",
+    "forma_farmaceutica": "Frasco"
+  },
+  {
+    "codigo": "07918",
+    "medicamento": "SECNIDAZOL 1g",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "08016",
+    "medicamento": "SINVASTATINA 20mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "08116",
+    "medicamento": "SULFADIAZINA 500mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "SULFAMETOXAZOL",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "SULFAMETOXAZOL",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": "08176",
+    "medicamento": "SULFATO FERROSO 25mg/ml Solução",
+    "forma_farmaceutica": "Oral"
+  },
+  {
+    "codigo": "08176",
+    "medicamento": "SULFATO FERROSO 40mg de FEII",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "08511",
+    "medicamento": "TIAMINA, CLORIDRATO – 300mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "08603",
+    "medicamento": "TIMOLOL, MALEATO 0,5%",
+    "forma_farmaceutica": "Colírio"
+  },
+  {
+    "codigo": "08709",
+    "medicamento": "TOBRAMICINA 0,3%",
+    "forma_farmaceutica": "Colírio"
+  },
+  {
+    "codigo": "09101",
+    "medicamento": "VARFARINA SÓDICA 5mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": "09118",
+    "medicamento": "VERAPAMIL 80mg",
+    "forma_farmaceutica": "Comprimido"
+  },
+  {
+    "codigo": null,
+    "medicamento": "Vitamina",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "VITAMINA",
+    "forma_farmaceutica": ""
+  },
+  {
+    "codigo": null,
+    "medicamento": "VITAMINAS",
+    "forma_farmaceutica": ""
+  }
+]

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Medicamentos</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      background: #f4f6f9; 
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #116666; /* cor principal */
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    header img {
+      height: 60px;
+      background: white;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    select {
+      padding: 10px;
+      margin: 15px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 2px solid #116666;
+      background: #fff;
+      color: #116666;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 400px;
+    }
+
+    select:hover {
+      background: #116666;
+      color: white;
+    }
+
+    .resultado { 
+      margin: 10px auto; 
+      padding: 15px; 
+      border: 1px solid #116666; 
+      text-align: left; 
+      width: 700px; 
+      border-radius: 8px; 
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      word-wrap: break-word;
+    }
+
+    .resultado strong {
+      color: #116666;
+    }
+
+    .erro { 
+      margin-top: 20px; 
+      color: red; 
+      font-weight: bold; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo esquerda -->
+    <img src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Prefeitura de Mairiporã">
+
+    <!-- Título -->
+    <h1>Consulta de Medicamentos</h1>
+
+    <!-- Logo direita -->
+    <img src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Instituto Alpha">
+  </header>
+
+  <main>
+    <label for="classe">Escolha a Classe:</label><br>
+    <select id="classe">
+      <option value="">-- Selecione --</option>
+      <option value="medicamentos.json">Medicamentos</option>
+      <option value="medicamentos_ambulatorial.json">Ambulatorial</option>
+      <option value="medicamentos_controle_especial.json">Controle Especial</option>
+      <option value="medicamentos_padronizados.json">Padronizados</option>
+      <option value="medicamentos_pronto_atendimento.json">Pronto Atendimento</option>
+      <option value="relacao_medicamentos_contra_especial.json">Relação Contra Especial</option>
+    </select>
+
+    <div id="resultados"></div>
+  </main>
+
+  <script>
+    document.getElementById("classe").addEventListener("change", function() {
+      const arquivo = this.value;
+      document.getElementById("resultados").innerHTML = "";
+
+      if (arquivo) {
+        fetch(arquivo)
+          .then(res => res.json())
+          .then(dados => {
+            if (dados.length > 0) {
+              document.getElementById("resultados").innerHTML = dados.map(med => `
+                <div class="resultado">
+                  ${Object.entries(med).map(([k, v]) => `<strong>${k}:</strong> ${v}`).join("<br>")}
+                </div>
+              `).join("");
+            } else {
+              document.getElementById("resultados").innerHTML = 
+                `<p class="erro">Nenhum medicamento encontrado nesta classe.</p>`;
+            }
+          })
+          .catch(err => {
+            console.error("Erro ao carregar:", err);
+            document.getElementById("resultados").innerHTML = 
+              `<p class="erro">Erro ao carregar os dados desta classe.</p>`;
+          });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+    {
+        "DCB": "02904",
+        "Medicamento": "DIAZEPAN",
+        "Forma_Farmaceutica": "5mg/ml Injetável"
+    },
+    {
+        "DCB": "03954",
+        "Medicamento": "FENITOINA SODICA",
+        "Forma_Farmaceutica": "50mg/ml Injetável"
+    },
+    {
+        "DCB": "04004",
+        "Medicamento": "FENTANILA",
+        "Forma_Farmaceutica": "50mcg/ml Injetável"
+    },
+    {
+        "DCB": "04589",
+        "Medicamento": "HALOPERIDOL",
+        "Forma_Farmaceutica": "5mg/ml Injetável"
+    },
+    {
+        "DCB": "04591",
+        "Medicamento": "HALOPERIDOL DECANOATO",
+        "Forma_Farmaceutica": "70,52mg Injetável"
+    },
+    {
+        "DCB": "05937",
+        "Medicamento": "MIDAZOLAN",
+        "Forma_Farmaceutica": "5mg/ml Injetável"
+    },
+    {
+        "DCB": "06090",
+        "Medicamento": "MORFINA",
+        "Forma_Farmaceutica": "0,1mg/ml Injetável"
+    },
+    {
+        "DCB": "07008",
+        "Medicamento": "PETIDINA, CLORIDRATO",
+        "Forma_Farmaceutica": "50mg/ml Injetável"
+    },
+    {
+        "DCB": "08807",
+        "Medicamento": "TRAMADOL, CLORIDRATO",
+        "Forma_Farmaceutica": "50mg/ml Injetável"
+    }
+]

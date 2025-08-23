@@ -1,0 +1,838 @@
+ [
+    {
+      "id": 1,
+      "descricao": "ACITRETINA 10 MG - POR CÁPSULA"
+    },
+    {
+      "id": 2,
+      "descricao": "ACITRETINA 25 MG - POR CÁPSULA"
+    },
+    {
+      "id": 3,
+      "descricao": "ADALIMUMABE 40MG-INJET-SERINGA PREENC-TRAT.MENSAL"
+    },
+    {
+      "id": 4,
+      "descricao": "ALENDRONATO 70 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 5,
+      "descricao": "ALENDRONATO(Q) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 6,
+      "descricao": "ALFACALCIDOL(R) 0,25 MCG - POR CÁPSULA"
+    },
+    {
+      "id": 7,
+      "descricao": "ALFACALCIDOL(R) 1,0 MCG - POR CÁPSULA"
+    },
+    {
+      "id": 8,
+      "descricao": "ALFADORNASE 2,5 MG - POR AMPOLA"
+    },
+    {
+      "id": 9,
+      "descricao": "LFAEPOETINA 1.000 UI - INJETÁVEL - POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 10,
+      "descricao": "ALFAEPOETINA 10.000 UI -INJETÁVEL -POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 11,
+      "descricao": "ALFAEPOETINA 2.000 UI - INJETÁVEL - POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 12,
+      "descricao": "ALFAEPOETINA 3.000 UI - INJETÁVEL - POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 13,
+      "descricao": "ALFAEPOETINA 4.000 UI - INJETÁVEL - POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 14,
+      "descricao": "ALFAINTERFERONA 2A/2B - 3.000.000 UI - INJETAVEL - PO"
+    },
+    {
+      "id": 15,
+      "descricao": "ALFAINTERFERONA 2A/2B 9.000.000/10.000.000 UI INJETÁVEL"
+    },
+    {
+      "id": 16,
+      "descricao": "ALFAINTERFERONA 2B 5.000.000 UI INJETAVEL P/FRASCO"
+    },
+    {
+      "id": 17,
+      "descricao": "ALFAPEGINTERFERON 2A 180MCG POR FRASCO AMPOLA"
+    },
+    {
+      "id": 18,
+      "descricao": "ALFAPEGINTERFERON 2B 100MCG POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 19,
+      "descricao": "ALFAPEGINTERFERON 2B 120MCG POR FRASCO-AMPOLA"
+    },
+    {
+      "id": 20,
+      "descricao": "ALFAPEGINTERFERON 2B 80MCG POR FRASCO AMPOLA"
+    },
+    {
+      "id": 21,
+      "descricao": "AMANTADINA 100 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 22,
+      "descricao": "ATORVASTATINA(J) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 23,
+      "descricao": "ATORVASTATINA(J) 20 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 24,
+      "descricao": "AZATIOPRINA 50 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 25,
+      "descricao": "BECLOMETASONA(C) 200 MCG - PÓ INALANTE - POR FRASCO DE 100 DOSES"
+    },
+    {
+      "id": 26,
+      "descricao": "BECLOMETASONA(C) 200 MCG -POR CÁPSULA INALANTE"
+    },
+    {
+      "id": 27,
+      "descricao": "BECLOMETASONA(C) 250 MCG - SPRAY - POR FRASCO DE 200 DOSES"
+    },
+    {
+      "id": 28,
+      "descricao": "BECLOMETASONA(C) 400 MCG - PÓ INALANTE - POR FRASCO DE 100 DOSES"
+    },
+    {
+      "id": 29,
+      "descricao": "BECLOMETASONA(C) 400 MCG -POR CÁPSULA INALANTE"
+    },
+    {
+      "id": 30,
+      "descricao": "BETAINTERFERONA(L) 1A 12.000.000 UI (44 MCG) –INJETÁVEL"
+    },
+    {
+      "id": 31,
+      "descricao": "BETAINTERFERONA(L) 1A 6.000.000 UI (22 MCG) -INJETETÁVEL"
+    },
+    {
+      "id": 32,
+      "descricao": "BETAINTERFERONA(L) 1A 6.000.000 UI (30 MCG) -INJETETÁVEL"
+    },
+    {
+      "id": 33,
+      "descricao": "BETAINTERFERONA(L) 1B 9.600.000 UI (300 MCG) -INJETÁVEL"
+    },
+    {
+      "id": 34,
+      "descricao": "BEZAFIBRATO(K) 200 MG - POR DRÁGEA"
+    },
+    {
+      "id": 35,
+      "descricao": "BEZAFIBRATO(K) 400 MG - POR DRÁGEA"
+    },
+    {
+      "id": 36,
+      "descricao": "BIPERIDENO 2 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 37,
+      "descricao": "BIPERIDENO 4 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 38,
+      "descricao": "BROMOCRIPTINA 2,5 MG - POR COMPRIMIDO BUDESONIDA 200 MCG- PO INALANTE OU AEROSOL BUCAL POR FRASCO C/ 100 DOSES"
+    },
+    {
+      "id": 39,
+      "descricao": "BUDESONIDA(C) 200 MCG - POR CAPSULA INALANTE"
+    },
+    {
+      "id": 40,
+      "descricao": "CABERGOLINA 0,5 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 41,
+      "descricao": "CALCITONINA 100 UI - INJETÁVEL - POR AMPOLA"
+    },
+    {
+      "id": 42,
+      "descricao": "CALCITONINA 200 UI - SPRAY NASAL - POR FRASCO"
+    },
+    {
+      "id": 43,
+      "descricao": "CALCITRIOL 1,0 MCG - INJETÁVEL - POR AMPOLA"
+    },
+    {
+      "id": 44,
+      "descricao": "CALCITRIOL(R) 0,25 MCG - POR CÁPSULA"
+    },
+    {
+      "id": 45,
+      "descricao": "CICLOFOSFAMIDA 50 MG (POR DRAGEA)"
+    },
+    {
+      "id": 46,
+      "descricao": "CICLOSPORINA 10 MG - POR CÁPSULA"
+    },
+    {
+      "id": 47,
+      "descricao": "CICLOSPORINA 100 MG - POR CÁPSULA"
+    },
+    {
+      "id": 48,
+      "descricao": "CICLOSPORINA 100 MG/ML - SOLUÇÃO ORAL - POR FRASCO"
+    },
+    {
+      "id": 49,
+      "descricao": "CICLOSPORINA 25 MG - POR CÁPSULA"
+    },
+    {
+      "id": 50,
+      "descricao": "CICLOSPORINA 50 MG - POR CÁPSULA"
+    },
+    {
+      "id": 51,
+      "descricao": "CIPROFIBRATO(K) 100 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 52,
+      "descricao": "CIPROFLOXACINA 250 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 53,
+      "descricao": "CIPROFLOXACINA 500 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 54,
+      "descricao": "CIPROTERONA 50 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 55,
+      "descricao": "CLOROQUINA(E) 150 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 56,
+      "descricao": "CLOZAPINA 100 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 57,
+      "descricao": "CLOZAPINA 25 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 58,
+      "descricao": "CODEÍNA 3 MG /ML - SOLUÇÃO ORAL - POR FRASCO DE 120 ML"
+    },
+    {
+      "id": 59,
+      "descricao": "CODEÍNA 30 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 60,
+      "descricao": "CODEÍNA 30 MG/ML - POR AMPOLA DE 2 ML"
+    },
+    {
+      "id": 61,
+      "descricao": "CODEÍNA 60 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 62,
+      "descricao": "COMPL. ALIM P/ FEN. FÓRM. AMIN. IS. FEN.> DE 1 ANO"
+    },
+    {
+      "id": 63,
+      "descricao": "COMPL. ALIM P/FEN.-FORM. AMIN IS FENIL < 1 ANO"
+    },
+    {
+      "id": 64,
+      "descricao": "DANAZOL 100 MG - POR CÁPSULA"
+    },
+    {
+      "id": 65,
+      "descricao": "DEFERASIROX 125 MG (POR COMPRIMIDO)"
+    },
+    {
+      "id": 66,
+      "descricao": "DEFERASIROX 250 MG (POR COMPRIMIDO)"
+    },
+    {
+      "id": 67,
+      "descricao": "DEFERASIROX 500 MG (POR COMPRIMIDO)"
+    },
+    {
+      "id": 68,
+      "descricao": "DEFERIPRONA 500 MG -POR COMPRIMIDO"
+    },
+    {
+      "id": 69,
+      "descricao": "DESFERROXAMINA 500 MG - INJETÁVEL - POR FRASCO - AMPOLA"
+    },
+    {
+      "id": 70,
+      "descricao": "DESMOPRESSINA 0,1 MG/ML -APLICAÇÃO NASAL - POR FRASCO"
+    },
+    {
+      "id": 71,
+      "descricao": "DONEPEZILA(N) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 72,
+      "descricao": "DONEPEZILA(N) 5 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 73,
+      "descricao": "ENTACAPONA(F) 200 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 74,
+      "descricao": "ETANERCEPTE 25MG INJET - FRSC-AMP -TRAT MENSAL"
+    },
+    {
+      "id": 75,
+      "descricao": "ETANERCEPTE 50MG INJET - FRSC-AMP - TRAT MENSAL"
+    },
+    {
+      "id": 76,
+      "descricao": "ETOFIBRATO(K) 500 MG - POR CÁPSULA"
+    },
+    {
+      "id": 77,
+      "descricao": "EVEROLIMO 0,5 MG (POR COMPRIMIDO)"
+    },
+    {
+      "id": 78,
+      "descricao": "EVEROLIMO 1 MG - (POR COMPRIMIDO)"
+    },
+    {
+      "id": 79,
+      "descricao": "FENOFIBRATO(K) 200 MG - POR CÁPSULA"
+    },
+    {
+      "id": 80,
+      "descricao": "FENOFIBRATO(K) 250 MG - POR CÁPSULA"
+    },
+    {
+      "id": 81,
+      "descricao": "FENOTEROL 200 MCG - AEROSOL POR FRASCO DE 300 DOSE"
+    },
+    {
+      "id": 82,
+      "descricao": "FILGRASTIM(I) 300 MCG - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 83,
+      "descricao": "FLUDROCORTISONA 0,1 MG - POR COMPRIMIDO FLUTAMIDA 250 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 84,
+      "descricao": "FLUVASTATINA(J) 20 MG - POR CÁPSULA"
+    },
+    {
+      "id": 85,
+      "descricao": "FLUVASTATINA(J) 40 MG - POR CÁPSULA"
+    },
+    {
+      "id": 86,
+      "descricao": "FORMOTEROL 12 MCG + BUDESONIDA 400 MCG ( FRASCO)"
+    },
+    {
+      "id": 87,
+      "descricao": "FORMOTEROL 12 MCG + BUDESONIDA 400 MCG-CAPSULA 60 DOSES"
+    },
+    {
+      "id": 88,
+      "descricao": "FORMOTEROL 12 MCG- PO INALANTE - ( FRASCO ) DE 60 DOSES"
+    },
+    {
+      "id": 89,
+      "descricao": "FORMOTEROL 6 MCG+BUDESONIDA 200 MCG ( CAPSULA )"
+    },
+    {
+      "id": 90,
+      "descricao": "FORMOTEROL 6 MCG+BUDESONIDA-200MCG ( FRASCO )"
+    },
+    {
+      "id": 91,
+      "descricao": "FUMARATO DE FORMOTEROL - 12 MCG - CAPSULA-COM 30 COMPRIMIDOS"
+    },
+    {
+      "id": 92,
+      "descricao": "GABAPENTINA 300 MG - POR CÁPSULA"
+    },
+    {
+      "id": 93,
+      "descricao": "GABAPENTINA 400 MG - POR CÁPSULA"
+    },
+    {
+      "id": 94,
+      "descricao": "GALANTAMINA 16MG CAPSULAS LIBERAÇÃO PROLONGADA"
+    },
+    {
+      "id": 95,
+      "descricao": "GALANTAMINA 24MG CAPSULAS LIBERAÇÃO PROLONGADA"
+    },
+    {
+      "id": 96,
+      "descricao": "GALANTAMINA 8 MG CAPSULAS LIBERAÇÃO PROLONGADA"
+    },
+    {
+      "id": 97,
+      "descricao": "GENFIBROZILA(K) 600 MG - POR CÁPSULA OU COMPRIMIDO"
+    },
+    {
+      "id": 98,
+      "descricao": "GENFIBROZILA(K) 900 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 99,
+      "descricao": "GLATIRÂMER 20 MG - INJETÁVEL - POR FRASCO-AMPOLA OU SERINGA PREENCHIDA"
+    },
+    {
+      "id": 100,
+      "descricao": "GOSSERRELINA(O) 3,60 MG -INJ - POR SER. PREE"
+    },
+    {
+      "id": 101,
+      "descricao": "GOSSERRELINA(P) 10,80 MG - INJETÁVEL - POR SERINGA"
+    },
+    {
+      "id": 102,
+      "descricao": "HIDROXICLOROQUINA(E) 400 MG -POR COMPRIMIDO"
+    },
+    {
+      "id": 103,
+      "descricao": "HIDROXIURÉIA 500 MG - POR CÁPSULA"
+    },
+    {
+      "id": 104,
+      "descricao": "IMIGLUCERASE 200 UI - INJETÁVEL - POR FRASCO- AMPO"
+    },
+    {
+      "id": 105,
+      "descricao": "IMUNOGLOBULINA ANTI-HEPATITE B 1000 UI - INJETÁVEL"
+    },
+    {
+      "id": 106,
+      "descricao": "IMUNOGLOBULINA ANTI-HEPATITE B 500 UI - INJETÁVEL"
+    },
+    {
+      "id": 107,
+      "descricao": "IMUNOGLOBULINA DA HEPATITE B - 100 MG - INJETAVEL"
+    },
+    {
+      "id": 108,
+      "descricao": "IMUNOGLOBULINA HUMANA 0,5 G - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 109,
+      "descricao": "IMUNOGLOBULINA HUMANA 1,0 G - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 110,
+      "descricao": "IMUNOGLOBULINA HUMANA 2,5 G - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 111,
+      "descricao": "IMUNOGLOBULINA HUMANA 3,0 G - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 112,
+      "descricao": "IMUNOGLOBULINA HUMANA 5,0 G - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 113,
+      "descricao": "IMUNOGLOBULINA HUMANA 6,0 G - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 114,
+      "descricao": "INFLIXIMABE 10MG/ML - INJETÁVEL (KROHN)"
+    },
+    {
+      "id": 115,
+      "descricao": "INFLIXIMABE 10MG/ML INJETÁVELTRAT.MENSAL (ARTRITE)"
+    },
+    {
+      "id": 116,
+      "descricao": "ISOTRETINOÍNA 10 MG - POR CÁPSULA"
+    },
+    {
+      "id": 117,
+      "descricao": "ISOTRETINOÍNA 20 MG - POR CÁPSULA"
+    },
+    {
+      "id": 118,
+      "descricao": "LAMIVUDINA 10 MG/ML - SOLUÇÃO ORAL -FRASCO DE 240 ML"
+    },
+    {
+      "id": 119,
+      "descricao": "LAMIVUDINA 150 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 120,
+      "descricao": "LAMOTRIGINA 100 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 121,
+      "descricao": "LAMOTRIGINA 25 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 122,
+      "descricao": "LEFLUNOMIDA 20 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 123,
+      "descricao": "LENOGRASTIM(I) 33,6 MUI - INJETÁVEL -POR FRASCO"
+    },
+    {
+      "id": 124,
+      "descricao": "LEUPRORRELINA 11,25 MG INJ. POR SER. PREENCH"
+    },
+    {
+      "id": 125,
+      "descricao": "LEUPRORRELINA(O) 3,75 MG - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 126,
+      "descricao": "LEVODOPA 100 MG + BENSERAZIDA 25 MG -POR CÁPSULA OU COMPRIMIDO"
+    },
+    {
+      "id": 127,
+      "descricao": "LEVODOPA 200 MG + BENSERAZIDA 50 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 128,
+      "descricao": "LEVODOPA 200 MG + CARBIDOPA 50 MG - POR CÁPSULA OU COMPRIMIDO"
+    },
+    {
+      "id": 129,
+      "descricao": "LEVODOPA 250 MG + CARBIDOPA 25 MG "},
+   {"id":209,
+    "descricao": "POR COMPRIMIDO LEVOTIROXINA 100 MCG - POR COMPRIMIDO"},
+      
+     
+
+    {
+      "id": 130,
+      "descricao": "LEVOTIROXINA 150 MCG - POR COMPRIMIDO"
+    },
+    {
+      "id": 131,
+      "descricao": "LEVOTIROXINA 25 MCG - POR COMPRIMIDO"
+    },
+    {
+      "id": 132,
+      "descricao": "LEVOTIROXINA 50 MCG - POR COMPRIMIDO"
+    },
+    {
+      "id": 133,
+      "descricao": "LOVASTATINA(J) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 134,
+      "descricao": "LOVASTATINA(J) 20 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 135,
+      "descricao": "LOVASTATINA(J) 40 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 136,
+      "descricao": "MESALAZINA 1000 MG - POR SUPOSITÓRIO"
+    },
+    {
+      "id": 137,
+      "descricao": "MESALAZINA 1G+DILUENTE 100ML(ENEMA)-POR DOSE"
+    },
+    {
+      "id": 138,
+      "descricao": "MESALAZINA 250 MG - POR SUPOSITÓRIO"
+    },
+    {
+      "id": 139,
+      "descricao": "MESALAZINA 3 G + DILUENTE 100 ML (ENEMA) - POR DOSE"
+    },
+    {
+      "id": 140,
+      "descricao": "MESALAZINA 400 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 141,
+      "descricao": "MESALAZINA 500 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 142,
+      "descricao": "MESALAZINA 500 MG - POR SUPOSITÓRIO"
+    },
+    {
+      "id": 143,
+      "descricao": "MESALAZINA 800 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 144,
+      "descricao": "MESALAZINA 800 MG - POR SUPOSITÓRIO"
+    },
+    {
+      "id": 145,
+      "descricao": "METADONA 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 146,
+      "descricao": "METADONA 10 MG /ML - INJETÁVEL - POR AMPOLA DE 1ML"
+    },
+    {
+      "id": 147,
+      "descricao": "METADONA 5 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 148,
+      "descricao": "METILPREDNISOLONA 500 MG - INJETÁVEL - POR AMPOLA"
+    },
+    {
+      "id": 149,
+      "descricao": "METOTREXATO 25 MG/ML - INJ - 2 ML"
+    },
+    {
+      "id": 150,
+      "descricao": "METOTREXATO 25 MG/ML-INJ 20 ML - FRAMP"
+    },
+    {
+      "id": 151,
+      "descricao": "MICOFENOLATO DE MOFETILA(M)"
+    },
+    {
+      "id": 152,
+      "descricao": "MICOFENOLATO DE SÓDIO(M) 180 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 153,
+      "descricao": "MICOFENOLATO DE SÓDIO(M) 360 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 154,
+      "descricao": "MOLGRAMOSTIM(I) 300 MCG - INJETÁVEL - POR FRASCO"
+    },
+    {
+      "id": 155,
+      "descricao": "MORFINA 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 156,
+      "descricao": "MORFINA 10 MG/ML - POR AMPOLA DE 1 ML"
+    },
+    {
+      "id": 157,
+      "descricao": "MORFINA 10 MG/ML - SOLUÇÃO ORAL - POR FRASCO DE 60 ML"
+    },
+    {
+      "id": 158,
+      "descricao": "MORFINA 30 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 159,
+      "descricao": "MORFINA LC 100 MG - POR CÁPSULA"
+    },
+    {
+      "id": 160,
+      "descricao": "MORFINA LC 30 MG - POR CÁPSULA"
+    },
+    {
+      "id": 161,
+      "descricao": "MORFINA LC 60 MG - POR CÁPSULA"
+    },
+    {
+      "id": 162,
+      "descricao": "OCTREOTIDA 0,1 MG/ML - INJETÁVEL - POR AMPOLA"
+    },
+    {
+      "id": 163,
+      "descricao": "OCTREOTIDA LAR 10 MG - INJETÁVEL - POR FRASCO- AMPOLA"
+    },
+    {
+      "id": 164,
+      "descricao": "OCTREOTIDA LAR 20 MG - INJETÁVEL - POR FRASCO- AMPOLA"
+    },
+    {
+      "id": 165,
+      "descricao": "OCTREOTIDA LAR 30 MG - INJETÁVEL - POR FRASCO- AMPOLA"
+    },
+    {
+      "id": 166,
+      "descricao": "OLANZAPINA(G) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 167,
+      "descricao": "OLANZAPINA(G) 5 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 168,
+      "descricao": "PAMIDRONATO 30 MG INJETÁVEL - POR FRASCO / AMPOLA"
+    },
+    {
+      "id": 169,
+      "descricao": "PAMIDRONATO 60 MG INJETÁVEL - POR FRASCO / AMPOLA"
+    },
+    {
+      "id": 170,
+      "descricao": "PAMIDRONATO 90 MG INJETÁVEL - POR FRASCO / AMPOLA"
+    },
+    {
+      "id": 171,
+      "descricao": "PANCRELIPASE 10.000 UI - POR CÁPSULA"
+    },
+    {
+      "id": 172,
+      "descricao": "PANCRELIPASE 12.000 UI - POR CÁPSULA"
+    },
+    {
+      "id": 173,
+      "descricao": "PANCRELIPASE 18.000 UI - POR CÁPSULA"
+    },
+    {
+      "id": 174,
+      "descricao": "PANCRELIPASE 20.000 UI - POR CÁPSULA"
+    },
+    {
+      "id": 175,
+      "descricao": "PANCRELIPASE 25.000 UI POR CÁPSULA  , PANCRELIPASE 4.500 UI - POR CÁPSULA"
+    },
+    {
+      "id": 176,
+      "descricao": "PENICILAMINA 250 MG - POR CÁPSULA"
+    },
+    {
+      "id": 177,
+      "descricao": "PRAMIPEXOL 0,125 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 178,
+      "descricao": "PRAMIPEXOL 0,25 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 179,
+      "descricao": "PRAMIPEXOL 1 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 180,
+      "descricao": "PRAVASTATINA(J) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 181,
+      "descricao": "PRAVASTATINA(J) 20 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 182,
+      "descricao": "PRAVASTATINA(J) 40 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 183,
+      "descricao": "QUETIAPINA(G) 100 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 184,
+      "descricao": "QUETIAPINA(G) 200 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 185,
+      "descricao": "QUETIAPINA(G) 25 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 186,
+      "descricao": "RALOXIFENO 60 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 187,
+      "descricao": "RIBAVIRINA 250 MG - POR CÁPSULA"
+    },
+    {
+      "id": 188,
+      "descricao": "RILUZOL 50 MG -POR COMPRIMIDO"
+    },
+    {
+      "id": 189,
+      "descricao": "RISEDRONATO(Q) 35 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 190,
+      "descricao": "RISEDRONATO(Q) 5 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 191,
+      "descricao": "RISPERIDONA 1 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 192,
+      "descricao": "RISPERIDONA 2 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 193,
+      "descricao": "RIVASTIGMINA(N) 1,5 MG - POR CÁPSULA"
+    },
+    {
+      "id": 194,
+      "descricao": "RIVASTIGMINA(N) 2,0 MG/ML - SOLUÇÃO ORAL - POR FRASCO"
+    },
+    {
+      "id": 195,
+      "descricao": "RIVASTIGMINA(N) 3 MG - POR CÁPSULA"
+    },
+    {
+      "id": 196,
+      "descricao": "RIVASTIGMINA(N) 4,5 MG - POR CÁPSULA"
+    },
+    {
+      "id": 197,
+      "descricao": "RIVASTIGMINA(N) 6 MG - POR CÁPSULA"
+    },
+    {
+      "id": 198,
+      "descricao": "SACARATO DE HIDRÓXIDO FÉRRICO 100 MG - INJETÁVEL –"
+    },
+    {
+      "id": 199,
+      "descricao": "SALBUTAMOL(B) 100 MCG - AEROSOL - POR FRASCO DE 200 DOSES"
+    },
+    {
+      "id": 200,
+      "descricao": "SALMETEROL(D) 50 MCG - PÓ INALANTE OU AEROSSOL BUCAL POR FRASCO DE 60 DOSES"
+    },
+    {
+      "id": 201,
+      "descricao": "SELEGILINA 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 202,
+      "descricao": "SELEGILINA 5 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 203,
+      "descricao": "SEVELÂMER 400 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 204,
+      "descricao": "SEVELÂMER 800 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 205,
+      "descricao": "SINVASTATINA(J) 10 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 206,
+      "descricao": "SINVASTATINA(J) 20 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 207,
+      "descricao": "SINVASTATINA(J) 40 MG - POR COMPRIMIDO"
+    },
+    {
+      "id": 208,
+      "descricao": "SINVASTATINA(J) 5 MG - POR COMPRIMIDO"
+    }
+   ]
