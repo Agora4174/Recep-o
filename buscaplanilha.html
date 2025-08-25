@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesquisa • Planilha Google</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- PapaParse para ler CSV com segurança -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    /* Destaque de palavras-chave */
+  :root {
+  --cor-principal: #166; /* cor principal */
+}
+
+/* Botões principais */
+button,
+.btn-primary {
+  background-color: var(--cor-principal);
+  color: #fff;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: background 0.2s ease-in-out;
+}
+button:hover,
+.btn-primary:hover {
+  background-color: #004d33; /* tom mais escuro */
+}
+
+/* Inputs e selects */
+input,
+select {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+input:focus,
+select:focus {
+  border-color: var(--cor-principal);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 17, 102, 0.2);
+}
+
+/* Links de ação */
+a,
+.link {
+  color: var(--cor-principal);
+  text-decoration: none;
+}
+a:hover,
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalho da tabela */
+table thead {
+  background: rgba(0, 17, 102, 0.1);
+  color: var(--cor-principal);
+  font-weight: 700;
+}
+
+/* Destaque de busca */
+mark {
+  background: #166;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 2px;
+    /* Tabela responsiva em telas pequenas */
+    @media (max-width: 640px){
+      table thead { display: none; }
+      table tr { display: block; margin-bottom: 0.75rem; }
+      table td { display: grid; grid-template-columns: 9ch 1fr; gap: .5rem; }
+      table td::before { content: attr(data-label); font-weight: 600; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div class="max-w-7xl mx-auto p-4 sm:p-6">
+    <header class="mb-6">
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">🔎 Busca na Planilha</h1>
+      <p class="text-slate-600 mt-1">Este site lê sua planilha publicada e mostra resultados com filtros e palavras‑chave.</p>
+    </header>
+
+    <!-- Configuração da fonte de dados -->
+    <section class="mb-4">
+      <label class="block text-sm font-medium text-slate-700 mb-1" for="sheetUrl">URL da planilha publicada</label>
+      <div class="flex gap-2 items-center">
+        <input id="sheetUrl" class="flex-1 px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" type="url" placeholder="Cole aqui o link publicado da sua planilha" value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQZMC8SwCVC4p4ptZaXWdA_ofqZo0ckcZO3TiIOyOnPOf5HTcKkoC7r1rBcHtjHu-KY1wyfJCB_QNWf/pubhtml" />
+        <button id="btnLoad" class="px-4 py-2 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700">Carregar</button>
+      </div>
+      <p class="text-xs text-slate-500 mt-1">Dica: se seu link termina com <code>/pubhtml</code>, eu converto automaticamente para CSV (<code>/pub?output=csv</code>). Primeiro carregamento usa o link acima.</p>
+    </section>
+
+    <!-- Barra de busca -->
+    <section class="bg-white rounded-2xl shadow p-4 sm:p-5 mb-6">
+      <div class="grid sm:grid-cols-3 gap-3 items-end">
+        <div class="sm:col-span-2">
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="q">Palavras‑chave</label>
+          <input id="q" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Digite termos (separe por vírgula)" />
+          <p class="text-xs text-slate-500 mt-1">Busca em todas as colunas. Ex.: <em>aspirina, 500mg</em></p>
+        </div>
+        <div class="flex gap-3 items-center">
+          <label class="inline-flex items-center gap-2">
+            <input id="matchAll" type="checkbox" class="rounded border-slate-300">
+            <span class="text-sm">Exigir <strong>todas</strong> as palavras</span>
+          </label>
+          <button id="btnSearch" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 w-full sm:w-auto">Filtrar</button>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <button id="toggleAdvanced" class="text-sm text-indigo-700 hover:underline">Mostrar filtros avançados ▾</button>
+        <div id="advanced" class="mt-3 hidden">
+          <div id="advancedFilters" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <button id="btnClearFilters" class="px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700">Limpar filtros</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="bg-white rounded-2xl shadow">
+      <div class="px-4 sm:px-5 py-3 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200">
+        <div>
+          <span id="count" class="font-semibold">0</span>
+          <span class="text-slate-600">resultados</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <label class="text-sm text-slate-700">Itens por página</label>
+          <select id="pageSize" class="px-2 py-1 rounded-lg border border-slate-300">
+            <option>10</option>
+            <option selected>25</option>
+            <option>50</option>
+            <option>100</option>
+          </select>
+          <button id="btnExport" class="ml-2 px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700">Exportar CSV</button>
+        </div>
+      </div>
+
+      <div class="overflow-auto">
+        <table id="results" class="min-w-full text-sm">
+          <thead class="bg-slate-100 text-slate-700 sticky top-0">
+            <tr id="theadRow"></tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="px-4 sm:px-5 py-3 flex items-center justify-between gap-3 border-t border-slate-200">
+        <button id="prev" class="px-3 py-1.5 rounded-lg border border-slate-300 disabled:opacity-40">◀ Anterior</button>
+        <div class="text-sm text-slate-700">Página <span id="page">1</span> de <span id="pages">1</span></div>
+        <button id="next" class="px-3 py-1.5 rounded-lg border border-slate-300 disabled:opacity-40">Próxima ▶</button>
+      </div>
+    </section>
+
+    <p id="status" class="mt-4 text-sm text-slate-600"></p>
+  </div>
+
+  <script>
+    // ======= Helpers =======
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+    function pubHtmlToCsv(url){
+      try{
+        const u = new URL(url);
+        if(u.pathname.endsWith('/pubhtml')){
+          u.pathname = u.pathname.replace(/\/pubhtml$/, '/pub');
+          u.search = 'output=csv';
+          return u.toString();
+        }
+        // Caso já seja CSV publicado via /pub?output=csv, mantém
+        if(u.searchParams.get('output') === 'csv') return url;
+      }catch(e){ /* ignore */ }
+      return url; // fallback
+    }
+
+    function normalize(s){
+      return (s ?? '').toString().toLowerCase();
+    }
+
+    function highlight(text, terms){
+      if(!terms?.length) return escapeHtml(text ?? '');
+      let safe = escapeHtml(text ?? '');
+      for(const t of terms){
+        if(!t) continue;
+        const re = new RegExp(`(${escapeRegExp(t)})`, 'ig');
+        safe = safe.replace(re, '<mark>$1</mark>');
+      }
+      return safe;
+    }
+
+    function escapeHtml(str){
+      return (str??'').toString()
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+        .replace(/\"/g,'&quot;').replace(/\'/g,'&#39;');
+    }
+    function escapeRegExp(str){
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // ======= Estado =======
+    let rawRows = []; // linhas originais (objetos)
+    let columns = []; // nomes das colunas
+    let filtered = []; // linhas filtradas
+    let pageIndex = 0;
+
+    // ======= UI: construir cabeçalho e filtros =======
+    function buildTableHeader(){
+      const tr = $('#theadRow');
+      tr.innerHTML = '';
+      columns.forEach(col => {
+        const th = document.createElement('th');
+        th.className = 'py-2 px-3 text-left font-semibold cursor-pointer select-none';
+        th.innerHTML = escapeHtml(col) + ' <span class="opacity-50">↕</span>';
+        th.addEventListener('click', () => sortBy(col));
+        tr.appendChild(th);
+      });
+    }
+
+    function buildAdvancedFilters(){
+      const box = $('#advancedFilters');
+      box.innerHTML = '';
+      columns.forEach(col => {
+        const wrap = document.createElement('div');
+        wrap.className = 'p-3 border border-slate-200 rounded-xl';
+        wrap.innerHTML = `
+          <label class="block text-xs font-semibold text-slate-700 mb-1">${escapeHtml(col)}</label>
+          <input data-col="${escapeHtml(col)}" class="w-full px-2 py-1.5 rounded-lg border border-slate-300" placeholder="contém..." />
+        `;
+        box.appendChild(wrap);
+      });
+      // listeners
+      $$('#advancedFilters input').forEach(inp => inp.addEventListener('input', applyFilters));
+    }
+
+    // ======= Sort =======
+    let sortState = { col: null, dir: 1 };
+    function sortBy(col){
+      if(sortState.col === col){ sortState.dir *= -1; }
+      else { sortState = { col, dir: 1 }; }
+      const dir = sortState.dir;
+      filtered.sort((a,b)=>{
+        const va = (a[col] ?? '').toString();
+        const vb = (b[col] ?? '').toString();
+        return va.localeCompare(vb, undefined, { numeric: true }) * dir;
+      });
+      pageIndex = 0;
+      render();
+    }
+
+    // ======= Filtro principal + avançado =======
+    function getTerms(){
+      const raw = $('#q').value;
+      return raw.split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+    function applyFilters(){
+      const terms = getTerms().map(t => normalize(t));
+      const requireAll = $('#matchAll').checked;
+      const adv = {};
+      $$('#advancedFilters input').forEach(inp => {
+        const col = inp.getAttribute('data-col');
+        if(inp.value.trim()) adv[col] = normalize(inp.value.trim());
+      });
+
+      filtered = rawRows.filter(row => {
+        // palavras‑chave (busca em todas as colunas)
+        if(terms.length){
+          const hay = columns.map(c => normalize(row[c])).join(' ');
+          if(requireAll){
+            if(!terms.every(t => hay.includes(t))) return false;
+          }else{
+            if(!terms.some(t => hay.includes(t))) return false;
+          }
+        }
+        // filtros avançados por coluna (contém)
+        for(const [col, val] of Object.entries(adv)){
+          const cell = normalize(row[col]);
+          if(!cell.includes(val)) return false;
+        }
+        return true;
+      });
+
+      // Ordena novamente se necessário
+      if(sortState.col){
+        sortBy(sortState.col); // mantém direção
+      } else {
+        pageIndex = 0;
+        render();
+      }
+    }
+
+    // ======= Paginação =======
+    function render(){
+      const tbody = $('#tbody');
+      const pageSize = parseInt($('#pageSize').value, 10) || 25;
+      const total = filtered.length;
+      const pages = Math.max(1, Math.ceil(total / pageSize));
+      if(pageIndex >= pages) pageIndex = pages - 1;
+
+      $('#count').textContent = total.toLocaleString('pt-BR');
+      $('#page').textContent = (pageIndex + 1);
+      $('#pages').textContent = pages;
+
+      const start = pageIndex * pageSize;
+      const rows = filtered.slice(start, start + pageSize);
+
+      const terms = getTerms();
+      const lcTerms = terms.map(normalize);
+
+      tbody.innerHTML = '';
+      for(const row of rows){
+        const tr = document.createElement('tr');
+        tr.className = 'border-b border-slate-100 hover:bg-slate-50';
+        columns.forEach(col => {
+          const td = document.createElement('td');
+          td.className = 'px-3 py-2 align-top';
+          td.setAttribute('data-label', col);
+          const val = (row[col] ?? '').toString();
+          // destaque
+          let shown = val;
+          if(lcTerms.length){
+            shown = highlight(val, terms);
+          }
+          td.innerHTML = shown;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      }
+
+      // controles
+      $('#prev').disabled = pageIndex <= 0;
+      $('#next').disabled = pageIndex >= pages - 1;
+    }
+
+    // ======= Export =======
+    function exportCsv(rows){
+      const csv = Papa.unparse(rows, { columns });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'resultados.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // ======= Carregar dados =======
+    async function loadData(){
+      const inputUrl = $('#sheetUrl').value.trim();
+      const csvUrl = pubHtmlToCsv(inputUrl);
+      $('#status').textContent = 'Carregando dados…';
+      try{
+        const res = await fetch(csvUrl, { cache: 'no-store' });
+        if(!res.ok) throw new Error('Falha no download do CSV');
+        const text = await res.text();
+        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+        if(parsed.errors?.length){
+          console.warn(parsed.errors);
+        }
+        rawRows = parsed.data;
+        columns = parsed.meta.fields || Object.keys(rawRows[0] || {});
+        buildTableHeader();
+        buildAdvancedFilters();
+        filtered = rawRows.slice();
+        sortState = { col: null, dir: 1 };
+        pageIndex = 0;
+        render();
+        $('#status').textContent = `Pronto! ${rawRows.length.toLocaleString('pt-BR')} linhas carregadas, ${columns.length} colunas.`;
+      }catch(err){
+        console.error(err);
+        $('#status').innerHTML = `❌ Erro ao carregar. Verifique se a planilha está <em>publicada</em> e acessível. URL usada: <code>${csvUrl}</code>`;
+      }
+    }
+
+    // ======= Eventos =======
+    $('#btnLoad').addEventListener('click', loadData);
+    $('#btnSearch').addEventListener('click', applyFilters);
+    $('#q').addEventListener('keydown', e => { if(e.key === 'Enter') applyFilters(); });
+    $('#matchAll').addEventListener('change', applyFilters);
+    $('#pageSize').addEventListener('change', render);
+    $('#prev').addEventListener('click', ()=>{ if(pageIndex>0){ pageIndex--; render(); } });
+    $('#next').addEventListener('click', ()=>{ pageIndex++; render(); });
+    $('#btnExport').addEventListener('click', ()=> exportCsv(filtered));
+    $('#toggleAdvanced').addEventListener('click', ()=>{
+      const adv = $('#advanced');
+      adv.classList.toggle('hidden');
+      $('#toggleAdvanced').textContent = adv.classList.contains('hidden') ? 'Mostrar filtros avançados ▾' : 'Ocultar filtros avançados ▴';
+    });
+    $('#btnClearFilters').addEventListener('click', ()=>{
+      $$('#advancedFilters input').forEach(i=> i.value='');
+      $('#q').value='';
+      $('#matchAll').checked=false;
+      applyFilters();
+    });
+
+    // Carrega automaticamente na primeira visita
+    window.addEventListener('DOMContentLoaded', loadData);
+  </script>
+</body>
+</html>
