@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesquisa • Planilha Google</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+  :root { --cor-principal: #166; }
+  button { background-color: var(--cor-principal); color:#fff; border-radius:0.75rem; font-weight:600; }
+  button:hover { background-color:#004d33; }
+  table thead { background:rgba(0,17,102,0.1); color:var(--cor-principal); font-weight:700; }
+  mark { background:#166; color:#fff; border-radius:3px; padding:0 2px; }
+  @media (max-width: 640px){
+    table thead { display:none; }
+    table tr { display:block; margin-bottom:0.75rem; }
+    table td { display:grid; grid-template-columns:9ch 1fr; gap:.5rem; }
+    table td::before { content:attr(data-label); font-weight:600; }
+  }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 flex-1">
+    
+    <!-- TOPO -->
+    <header class="mb-6 flex items-center justify-between gap-4">
+      <img src="https://alphainstituto.com.br/wp-content/uploads/2019/03/cropped-logo2-1.jpg" alt="Logo esquerda" class="h-16 w-auto rounded-xl shadow">
+      <h1 class="text-3xl font-bold text-center flex-1">🔎 Procedimentos Medicos</h1>
+      <img src="https://www.mairiporaeducasim.com.br/assets/img/prefeitura-mairipora.png" alt="Logo direita" class="h-16 w-auto rounded-xl shadow">
+    </header>
+
+    <!-- URL OCULTA -->
+    <input id="sheetUrl" type="hidden" 
+      value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQZMC8SwCVC4p4ptZaXWdA_ofqZo0ckcZO3TiIOyOnPOf5HTcKkoC7r1rBcHtjHu-KY1wyfJCB_QNWf/pubhtml">
+
+    <!-- Barra de busca -->
+    <section class="bg-white rounded-2xl shadow p-4 sm:p-5 mb-6">
+      <div class="grid sm:grid-cols-3 gap-3 items-end">
+        <div class="sm:col-span-2">
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="q">Palavras-chave</label>
+          <input id="q" class="w-full px-3 py-2 rounded-xl border border-slate-300" placeholder="Digite termos (separe por vírgula)" />
+        </div>
+        <div class="flex gap-3 items-center">
+          <label class="inline-flex items-center gap-2">
+            <input id="matchAll" type="checkbox" class="rounded border-slate-300">
+            <span class="text-sm">Exigir todas</span>
+          </label>
+          <button id="btnSearch" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800">Filtrar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="bg-white rounded-2xl shadow">
+      <div class="px-4 sm:px-5 py-3 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200">
+        <div><span id="count" class="font-semibold">0</span> <span class="text-slate-600">resultados</span></div>
+        <div class="flex items-center gap-2">
+          <label class="text-sm text-slate-700">Itens por página</label>
+          <select id="pageSize" class="px-2 py-1 rounded-lg border border-slate-300">
+            <option>10</option><option selected>25</option><option>50</option><option>100</option>
+          </select>
+          <button id="btnExport" class="ml-2 px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="overflow-auto">
+        <table id="results" class="min-w-full text-sm">
+          <thead><tr id="theadRow"></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="px-4 sm:px-5 py-3 flex items-center justify-between gap-3 border-t border-slate-200">
+        <button id="prev" class="px-3 py-1.5 rounded-lg border border-slate-300 disabled:opacity-40">◀ Anterior</button>
+        <div class="text-sm text-slate-700">Página <span id="page">1</span> de <span id="pages">1</span></div>
+        <button id="next" class="px-3 py-1.5 rounded-lg border border-slate-300 disabled:opacity-40">Próxima ▶</button>
+      </div>
+    </section>
+
+    <p id="status" class="mt-4 text-sm text-slate-600"></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white text-center py-4">
+    <p class="text-sm">&copy; 2025 • Agora Consultoria TI • Desenvolvido com  Por Alexandre Agora</p>
+  </footer>
+
+  <script>
+    // Helpers
+    const $ = (sel) => document.querySelector(sel);
+    function pubHtmlToCsv(url){
+      try{
+        const u = new URL(url);
+        if(u.pathname.endsWith('/pubhtml')){
+          u.pathname = u.pathname.replace(/\/pubhtml$/, '/pub');
+          u.search = 'output=csv';
+          return u.toString();
+        }
+        if(u.searchParams.get('output') === 'csv') return url;
+      }catch(e){}
+      return url;
+    }
+
+    // Estado
+    let rawRows=[], columns=[], filtered=[], pageIndex=0;
+    let sortState={ col:null, dir:1 };
+
+    function buildTableHeader(){
+      const tr=$('#theadRow'); tr.innerHTML='';
+      columns.forEach(col=>{
+        const th=document.createElement('th');
+        th.className='py-2 px-3 text-left font-semibold cursor-pointer';
+        th.textContent=col;
+        th.addEventListener('click',()=>sortBy(col));
+        tr.appendChild(th);
+      });
+    }
+    function sortBy(col){
+      if(sortState.col===col){ sortState.dir*=-1; } else { sortState={col,dir:1}; }
+      const dir=sortState.dir;
+      filtered.sort((a,b)=> (a[col]??'').localeCompare(b[col]??'',undefined,{numeric:true})*dir);
+      pageIndex=0; render();
+    }
+    function getTerms(){ return $('#q').value.split(',').map(s=>s.trim()).filter(Boolean); }
+    function applyFilters(){
+      const terms=getTerms().map(t=>t.toLowerCase());
+      const requireAll=$('#matchAll').checked;
+      filtered=rawRows.filter(r=>{
+        const text=columns.map(c=>(r[c]??'').toLowerCase()).join(' ');
+        if(terms.length){
+          if(requireAll && !terms.every(t=>text.includes(t))) return false;
+          if(!requireAll && !terms.some(t=>text.includes(t))) return false;
+        }
+        return true;
+      });
+      render();
+    }
+    function render(){
+      const tbody=$('#tbody'); const ps=parseInt($('#pageSize').value)||25;
+      const total=filtered.length; const pages=Math.max(1,Math.ceil(total/ps));
+      if(pageIndex>=pages) pageIndex=pages-1;
+      $('#count').textContent=total; $('#page').textContent=pageIndex+1; $('#pages').textContent=pages;
+      const start=pageIndex*ps; const rows=filtered.slice(start,start+ps);
+      tbody.innerHTML='';
+      if(!rows.length){ tbody.innerHTML='<tr><td colspan="'+columns.length+'" class="text-center py-6 text-slate-500">Nenhum resultado encontrado</td></tr>'; return; }
+      rows.forEach(r=>{
+        const tr=document.createElement('tr');
+        tr.className='border-b hover:bg-slate-50';
+        columns.forEach(c=>{
+          const td=document.createElement('td');
+          td.className='px-3 py-2'; td.setAttribute('data-label',c);
+          td.textContent=r[c]??''; tr.appendChild(td);
+        }); tbody.appendChild(tr);
+      });
+      $('#prev').disabled=pageIndex<=0; $('#next').disabled=pageIndex>=pages-1;
+    }
+    function exportCsv(rows){
+      const csv=Papa.unparse(rows,{columns}); const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+      const url=URL.createObjectURL(blob); const a=document.createElement('a');
+      a.href=url; a.download='resultados.csv'; document.body.appendChild(a); a.click();
+      document.body.removeChild(a); URL.revokeObjectURL(url);
+    }
+    async function loadData(){
+      const inputUrl=$('#sheetUrl').value.trim(); const csvUrl=pubHtmlToCsv(inputUrl);
+      $('#status').textContent='Carregando...';
+      try{
+        const res=await fetch(csvUrl,{cache:'no-store'}); if(!res.ok) throw new Error();
+        const text=await res.text();
+        const parsed=Papa.parse(text,{header:true,skipEmptyLines:true});
+        rawRows=parsed.data; columns=parsed.meta.fields;
+        filtered=rawRows.slice(); buildTableHeader(); render();
+        $('#status').textContent=`Pronto! ${rawRows.length} linhas carregadas.`;
+      }catch(e){ $('#status').textContent='❌ Erro ao carregar planilha.'; }
+    }
+
+    // Eventos
+    $('#btnSearch').addEventListener('click',applyFilters);
+    $('#q').addEventListener('keydown',e=>{if(e.key==='Enter')applyFilters();});
+    $('#pageSize').addEventListener('change',render);
+    $('#prev').addEventListener('click',()=>{if(pageIndex>0){pageIndex--;render();}});
+    $('#next').addEventListener('click',()=>{pageIndex++;render();});
+    $('#btnExport').addEventListener('click',()=>exportCsv(filtered));
+
+    // Auto carregar
+    window.addEventListener('DOMContentLoaded',loadData);
+  </script>
+</body>
+</html>
