@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Planilha de Casos de Diarreia – SUS/CENEPI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      margin: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      margin: 4px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 3px;
+      text-align: center;
+    }
+    .left {
+      text-align: left;
+    }
+    input[type="text"], input[type="number"], input[type="date"], select {
+      width: 100%;
+      border: none;
+      font-size: 12px;
+    }
+    button {
+      margin: 10px 5px 10px 0;
+      padding: 6px 12px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    #addRowBtn { background: #28a745; }
+    .removeRowBtn {
+      background: #dc3545;
+      padding: 2px 6px;
+      font-size: 11px;
+    }
+    @media print {
+      #printBtn, #addRowBtn, .removeRowBtn { display: none; }
+    }
+    .checkbox-cell {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #000;
+      text-align: center;
+      line-height: 18px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>MINISTÉRIO DA SAÚDE – FUNASA – CENEPI</h2>
+  <h1>SUS – PLANILHA DE CASOS DE DIARREIA</h1>
+
+  <button id="printBtn" onclick="window.print()">Imprimir</button>
+  <button id="addRowBtn">Adicionar Linha</button>
+
+  <table>
+    <tr>
+      <td class="left">Município: <input type="text"></td>
+      <td class="left">DS/DIR: <input type="text"></td>
+      <td class="left">Serviço de Saúde: <input type="text"></td>
+    </tr>
+    <tr>
+      <td class="left">Semana Epidemiológica: <input type="text"></td>
+      <td class="left">Ano: <input type="text"></td>
+      <td class="left">Tipo de Serviço: 
+        <select>
+          <option value="">Selecione</option>
+          <option>1. Unidade Básica de Saúde</option>
+          <option>2. Ambulatório</option>
+          <option>3. Pronto-Atendimento/Pronto-Socorro</option>
+          <option>4. Enfermaria</option>
+          <option>5. Internação</option>
+          <option>6. Outros</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nº Ord.</th>
+        <th>Data Atendimento</th>
+        <th>Sobrenome e iniciais</th>
+        <th>< 1</th>
+        <th>1 a 4</th>
+        <th>5 a 9</th>
+        <th>10 a 14</th>
+        <th>15 e +</th>
+        <th>IGN</th>
+        <th>Diarreia com sangue</th>
+        <th>Endereço (Rua, Bairro, Localidade, etc.)</th>
+        <th>Zona U</th>
+        <th>Zona R</th>
+        <th>Data 1º sintomas</th>
+        <th>Exame Laboratorial</th>
+        <th>Plano A</th>
+        <th>Plano B</th>
+        <th>Plano C</th>
+        <th>IGN</th>
+        <th class="no-print">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="number"></td>
+        <td><input type="date"></td>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+        <td>
+          <select>
+            <option value="">Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+        <td>
+          <select>
+            <option value="">Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            <option value="">Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </td>
+        <td><input type="date"></td>
+        <td><input type="text"></td>
+        <!-- Planos com X -->
+        <td><div class="checkbox-cell" data-plan="A"></div></td>
+        <td><div class="checkbox-cell" data-plan="B"></div></td>
+        <td><div class="checkbox-cell" data-plan="C"></div></td>
+        <td><div class="checkbox-cell" data-plan="IGN"></div></td>
+        <td class="no-print"><button class="removeRowBtn">Apagar Linha</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table style="margin-top:20px;">
+    <tr>
+      <td class="left">Responsável: <input type="text"></td>
+      <td class="left">Assinatura: __________________________</td>
+    </tr>
+  </table>
+
+  <div style="margin-top:20px; font-size:12px;">
+    <p>* <strong>Faixa Etária</strong> – Escrever a idade do paciente na faixa etária correspondente (em dias até 1 mês, em meses até 1 ano e depois em anos).</p>
+    <p>** <strong>Zona</strong> – Assinalar com (X) (Urbano ou Rural).</p>
+    <p>*** <strong>Exame Laboratorial</strong> – Resultados: anotar o patógeno isolado, caso tenha sido feito o exame de fezes.</p>
+    <p>**** <strong>Plano de Tratamento</strong> – Assinalar com um (X) se o plano de tratamento for A, B ou C.</p>
+  </div>
+
+  <script>
+    const tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+    const addRowBtn = document.getElementById('addRowBtn');
+
+    function atualizarNumeros() {
+      tabela.querySelectorAll('tr').forEach((linha, index) => {
+        linha.cells[0].querySelector('input').value = index + 1;
+      });
+    }
+
+    addRowBtn.addEventListener('click', function(){
+      const novaLinha = tabela.rows[0].cloneNode(true);
+      novaLinha.querySelectorAll('input').forEach(input => {
+        if(input.type === "text" || input.type === "number" || input.type === "date") input.value = "";
+      });
+      novaLinha.querySelectorAll('select').forEach(select => select.value = "");
+      novaLinha.querySelectorAll('.checkbox-cell').forEach(cell => cell.textContent = "");
+      tabela.appendChild(novaLinha);
+      atualizarNumeros();
+    });
+
+    tabela.addEventListener('click', function(e){
+      // Marcar/desmarcar X
+      if(e.target && e.target.classList.contains('checkbox-cell')){
+        e.target.textContent = e.target.textContent === 'X' ? '' : 'X';
+      }
+      // Apagar linha
+      if(e.target && e.target.classList.contains('removeRowBtn')){
+        const row = e.target.closest('tr');
+        if(tabela.rows.length > 1){
+          row.remove();
+          atualizarNumeros();
+        } else {
+          alert("Não é possível apagar a última linha.");
+        }
+      }
+    });
+
+    atualizarNumeros();
+  </script>
+</body>
+</html>
