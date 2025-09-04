@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard 3 Painéis</title>
+<style>
+:root {
+  --primary:#166;
+  --bg:#f7f9fb;
+  --card:#fff;
+}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+}
+header {
+  background:var(--primary);
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  font-size:22px;
+  font-weight:bold;
+}
+.container {
+  max-width:1200px;
+  margin:20px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card {
+  background:var(--card);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+.card h2 {
+  margin:0 0 12px;
+  font-size:18px;
+  color:var(--primary);
+  text-align:center;
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+th, td {
+  padding:6px;
+  border:1px solid #eef3f7;
+  text-align:left;
+  font-size:13px;
+}
+th { background:#fbfdff; }
+.controls {
+  text-align:center;
+  margin:15px;
+}
+.controls button {
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+}
+footer {
+  text-align:center;
+  padding:12px;
+  background:var(--primary);
+  color:#fff;
+  margin-top:20px;
+}
+@media print{
+  body *{visibility:hidden;}
+  #resumos,#resumos *{visibility:visible;}
+  #resumos{position:absolute;top:0;left:0;width:100%;}
+  .no-print{display:none;}
+}
+</style>
+</head>
+<body>
+<header>Controle de Papel A Gabriel</header>
+
+<div class="controls no-print">
+  <button onclick="window.print()">🖨️ Imprimir os 3 Painéis</button>
+</div>
+
+<main class="container" id="resumos">
+  <!-- Painel 1 -->
+  <div class="card">
+    <h2>📊 Controle Papel A4 por Dia</h2>
+    <table id="tabelaGrupo1">
+      <thead><tr><th>Data</th><th>Caixas</th><th>Abastecimento</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <!-- Painel 2 -->
+  <div class="card">
+    <h2>🏢 Resmas por Setores</h2>
+    <table id="tabelaGrupo2">
+      <thead><tr><th>Setor</th><th>Resmas</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <!-- Painel 3 -->
+  <div class="card">
+    <h2>📦 Entrada de Caixas</h2>
+    <table id="tabelaGrupo3">
+      <thead><tr><th>Entrada</th><th>Data</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>Agora Consultoria TI</footer>
+
+<script>
+const CSV_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vT-EvxfCrEn8HMJwmvXRmrrAGaIdHpwD7Fj5iPO_O4GtQYBrdxHqMai9j1sB3JniFhFpQcnWjrh93xH/pub?output=csv';
+
+function parseCSV(text){
+  return text.split(/\r?\n/).filter(r=>r.trim()!=='')
+    .map(r=>r.split(',').map(c=>c.trim()));
+}
+
+async function loadPainels(){
+  const res=await fetch(CSV_URL+'&nocache='+new Date().getTime());
+  const txt=await res.text();
+  const parsed=parseCSV(txt);
+
+  const rows = parsed.slice(1);
+
+  const t1 = document.querySelector('#tabelaGrupo1 tbody');
+  const t2 = document.querySelector('#tabelaGrupo2 tbody');
+  const t3 = document.querySelector('#tabelaGrupo3 tbody');
+
+  t1.innerHTML=''; t2.innerHTML=''; t3.innerHTML='';
+
+  for(const r of rows){
+    // Painel 1: DATA | CAIXAS | ABASTECIMENTO
+    if((r[0] && r[0]!=='') || (r[1] && r[1]!=='') || (r[2] && r[2]!=='') ){
+      const data = r[0] || '';
+      const caixas = r[1] || '';
+      let abastecimento = r[2] || '0';
+      abastecimento = parseFloat(abastecimento.replace(',','.')) || 0;
+      t1.innerHTML += `<tr><td>${data}</td><td>${caixas}</td><td>${abastecimento}</td></tr>`;
+    }
+
+    // Painel 2: SETORES | RESMAS
+    if((r[3] && r[3]!=='') || (r[4] && r[4]!=='') ){
+      const setor = r[3] || '';
+      let resmas = r[4] || '0';
+      resmas = parseFloat(resmas.replace(',','.')) || 0;
+      t2.innerHTML += `<tr><td>${setor}</td><td>${resmas}</td></tr>`;
+    }
+
+    // Painel 3: ENTRADA | DATA
+    if((r[5] && r[5]!=='') || (r[6] && r[6]!=='') ){
+      let entrada = r[5] || '0';
+      entrada = parseFloat(entrada.replace(',','.')) || 0;
+      const receb = r[6] || '';
+      t3.innerHTML += `<tr><td>${entrada}</td><td>${receb}</td></tr>`;
+    }
+  }
+}
+
+loadPainels();
+</script>
+
+</body>
+</html>
